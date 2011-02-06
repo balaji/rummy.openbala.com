@@ -41,5 +41,6 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "home"
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  map.session '/auth/:provider/callback', :controller => 'session', :action => 'create'
   map.open_id_complete 'session', :controller => "session", :action => "create", :requirements => { :method => :get }
 end
