@@ -1,11 +1,22 @@
 <html>
 <head>
   <title>Rammi</title>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag :all%>
 </head>
 <body>
-  <h1>Under Construction. ICC World Cup 2011 - Game</h1>
-<%- @players.each do |player| -%>
-  <%= player.display_name %>&nbsp;
- <%- end -%>
+  <div align="center">
+    <div class="banner">Rammi</div>
+    <h6>under construction</h6>
+    <table>
+      <tr>
+        <td><a href="/auth/twitter" class="auth_provider"><%= image_tag "twitter_64.png", :size => "64x64", :alt => "Twitter" %></a></td>
+        <td><a href="/auth/facebook" class="auth_provider"><%= image_tag "facebook_64.png", :size => "64x64", :alt => "Facebook" %></a></td>
+        <td><a href="/auth/google" class="auth_provider"><%= image_tag "google_64.png", :size => "64x64", :alt => "Google" %></a></td>
+        <td><a href="/auth/yahoo" class="auth_provider"><%= image_tag "yahoo_64.png", :size => "64x64", :alt => "Yahoo" %></a></td>
+        <td><a href="/auth/open_id" class="auth_provider"><%= image_tag "openid_64.png", :size => "64x64", :alt => "Open ID" %></a></td>
+      </tr>
+  </table>
+  </div>
 </body>
 </html>
