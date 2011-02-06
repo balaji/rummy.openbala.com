@@ -1,0 +1,63 @@
+Feb 12, 2011	7	13	Warm-Up	5	false
+Feb 12, 2011	12	8	Warm-Up	9	false
+Feb 12, 2011	2	3 	Warm-Up	4	true
+Feb 12, 2011	6	9 	Warm-Up	13	true
+Feb 12, 2011	11	14 	Warm-Up	3	true
+Feb 13, 2011	5	1 	Warm-Up	2	true
+Feb 15, 2011	6	14	Warm-Up	13	false
+Feb 15, 2011	7	8	Warm-Up	9	false
+Feb 15, 2011	2	10 	Warm-Up	7	true
+Feb 15, 2011	1	11 	Warm-Up	2	true
+Feb 16, 2011	3	4	Warm-Up	7	false
+Feb 16, 2011	12	13	Warm-Up	5	false
+Feb 16, 2011	5	9 	Warm-Up	3	true
+Feb 18, 2011	4	10 	Warm-Up	7	true
+Feb 19, 2011	2	5 	Group B	7	true
+Feb 20, 2011	9	7	Group A	3	false
+Feb 20, 2011	12	3 	Group A	8	true
+Feb 21, 2011	1	14 	Group A	1	true
+Feb 22, 2011	4	8 	Group B	13	true
+Feb 23, 2011	10	7 	Group A	8	true
+Feb 24, 2011	11	13 	Group B	6	true
+Feb 25, 2011	2	6	Group B	7	false
+Feb 25, 2011	1	9 	Group A	13	true
+Feb 26, 2011	10	12 	Group A	5	true
+Feb 27, 2011	5	4 	Group B	2	true
+Feb 28, 2011	3	14	Group A	13	false
+Feb 28, 2011	13	8 	Group B	6	true
+Mar 1, 2011	12	7 	Group A	5	true
+Mar 2, 2011	4	6 	Group B	2	true
+Mar 3, 2011	11	8	Group B	11	false
+Mar 3, 2011	10	3 	Group A	5	true
+Mar 4, 2011	9	14	Group A	1	false
+Mar 4, 2011	2	13 	Group B	7	true
+Mar 5, 2011	1	12 	Group A	5	true
+Mar 6, 2011	11	4	Group B	3	false
+Mar 6, 2011	5	6 	Group B	2	true
+Mar 7, 2011	3	7 	Group A	6	true
+Mar 8, 2011	10	9 	Group A	9	true
+Mar 9, 2011	5	8 	Group B	6	true
+Mar 10, 2011	12	14 	Group A	9	true
+Mar 11, 2011	13	6	Group B	11	false
+Mar 11, 2011	2	4 	Group B	4	true
+Mar 12, 2011	5	11 	Group B	13	true
+Mar 13, 2011	9	3	Group A	12	false
+Mar 13, 2011	1	7 	Group A	2	true
+Mar 14, 2011	2	8	Group B	4	false
+Mar 14, 2011	10	14 	Group A	9	true
+Mar 15, 2011	11	6 	Group B	10	true
+Mar 16, 2011	1	3 	Group A	2	true
+Mar 17, 2011	4	13 	Group B	3	true
+Mar 18, 2011	6	8	Group A	10	false
+Mar 18, 2011	12	9 	Group A	12	true
+Mar 19, 2011	2	11	Group B	7	false
+Mar 19, 2011	10	1 	Group A	5	true
+Mar 20, 2011	14	7	Group A	10	false
+Mar 20, 2011	5	13 	Group B	3	true
+Mar 23, 2011	15	15  	Quarter Final	7	true
+Mar 24, 2011	15	15  	Quarter Final	5	true
+Mar 25, 2011	15	15  	Quarter Final	7	true
+Mar 26, 2011	15	15  	Quarter Final	1	true
+Mar 29, 2011	15	15  	Semi Final	5	true
+Mar 30, 2011	15	15  	Semi Final	11	true
+Apr 2, 2011	15	15  	Final	12	true
