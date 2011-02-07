@@ -11,11 +11,13 @@
     <h3 class="inner_shadow">under construction</h3>
     <table>
       <tr>
-        <td><a href="/auth/twitter" class="auth_provider"><%= image_tag "twitter_64.png", :size => "64x64", :alt => "Twitter" %></a></td>
-        <td><a href="/auth/facebook" class="auth_provider"><%= image_tag "facebook_64.png", :size => "64x64", :alt => "Facebook" %></a></td>
-        <td><a href="/auth/google" class="auth_provider"><%= image_tag "google_64.png", :size => "64x64", :alt => "Google" %></a></td>
-        <td><a href="/auth/yahoo" class="auth_provider"><%= image_tag "yahoo_64.png", :size => "64x64", :alt => "Yahoo" %></a></td>
-        <td><a href="/auth/open_id" class="auth_provider"><%= image_tag "openid_64.png", :size => "64x64", :alt => "Open ID" %></a></td>
+        <td colspan="3" align="center"><a href="/auth/open_id?openid_url=https://www.google.com/accounts/o8/id" class="auth_provider"><%= image_tag "google.png", :size => "48x48", :alt => "Google" %></a></td>
+        <td colspan="3" align="center"><a href="/auth/open_id?openid_url=https://me.yahoo.com" class="auth_provider"><%= image_tag "yahoo.png", :size => "48x48", :alt => "Yahoo" %></a></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center"><a href="/auth/twitter" class="auth_provider"><%= image_tag "twitter.png", :size => "24x24", :alt => "Twitter" %></a></td>
+        <td colspan="2" align="center"><a href="/auth/facebook" class="auth_provider"><%= image_tag "facebook.png", :size => "24x24", :alt => "Facebook" %></a></td>
+        <td colspan="2" align="center"><a href="/auth/open_id" class="auth_provider"><%= image_tag "openid.png", :size => "24x24", :alt => "Open ID" %></a></td>
       </tr>
   </table>
   </div>

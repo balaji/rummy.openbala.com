@@ -14,6 +14,10 @@ body {
   color: gray;
 }
 
+td {
+  margin: 15px;
+}
+
 .auth_provider img {
   display: block;
   border: 0px;
