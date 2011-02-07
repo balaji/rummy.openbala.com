@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>
+    </title>
+      <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+  </head>
+  <body style="font-family: 'Molengo'">
+    Hi! <strong><%=current_user.name%></strong>, come back soon.&nbsp;&nbsp;<a href="<%=logout_path%>">sign out</a><br/>
+
+    <% @matches.each do |match| %>
+      <%= match.country_one.name %> vs. <%= match.country_two.name %> in <%= match.stadium.city %> on <%= match.date%><br/>
+    <% end %>
+  </body>
+</html>

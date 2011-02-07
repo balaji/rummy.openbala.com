@@ -12,13 +12,18 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by_id(session[:user_id])
   end
 
+  def authenticate
+    redirect_to root_path unless signed_in?
+  end
   def signed_in?
+    p "#"*80
     !!current_user
   end
 
   helper_method :current_user, :signed_in?
 
   def current_user=(user)
+    p "*"*80
     @current_user = user
     session[:user_id] = user.id
   end

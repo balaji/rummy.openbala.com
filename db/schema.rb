@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110206180713) do
+ActiveRecord::Schema.define(:version => 20110207195449) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(:version => 20110206180713) do
 
   create_table "countries", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "daily_games", :force => true do |t|
+    t.integer  "match_id"
+    t.string   "player_thread"
+    t.integer  "points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -49,6 +57,14 @@ ActiveRecord::Schema.define(:version => 20110206180713) do
   create_table "stadia", :force => true do |t|
     t.string   "name"
     t.string   "city"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_game_datas", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "match_id"
+    t.integer  "daily_game_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
