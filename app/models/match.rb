@@ -5,6 +5,5 @@ class Match < ActiveRecord::Base
   validates_associated :stadium
   validates_associated :country_one
   validates_associated :country_two
-  has_many :daily_games
   has_many :user_game_data
 end
