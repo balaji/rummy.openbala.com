@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110209053557) do
+ActiveRecord::Schema.define(:version => 20110210165759) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -19,8 +19,41 @@ ActiveRecord::Schema.define(:version => 20110209053557) do
     t.datetime "updated_at"
   end
 
+  create_table "batting_score_cards", :force => true do |t|
+    t.integer  "match_id"
+    t.integer  "player_id"
+    t.string   "wicket_desc"
+    t.integer  "score"
+    t.integer  "fours"
+    t.integer  "sixes"
+    t.float    "strike_rate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bowling_score_cards", :force => true do |t|
+    t.integer  "match_id"
+    t.integer  "player_id"
+    t.float    "overs"
+    t.integer  "maidens"
+    t.integer  "runs"
+    t.integer  "wickets"
+    t.integer  "extras"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "countries", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "match_totals", :force => true do |t|
+    t.integer  "match_id"
+    t.integer  "country_id"
+    t.integer  "score"
+    t.integer  "balls"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -56,7 +89,6 @@ ActiveRecord::Schema.define(:version => 20110209053557) do
   create_table "user_game_datas", :force => true do |t|
     t.integer  "user_id"
     t.integer  "match_id"
-    t.integer  "daily_game_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "player_order"
