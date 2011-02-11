@@ -1,6 +1,6 @@
-KD Mills	10	0	42	3	4.20		
+KD Mills	10.3	0	42	3	4.20
 NL McCullum	9	0	53	0	5.88	(1w)	
-SB Styris	6	0	26	0	4.33		
+SB Styris	6.2	0	26	0	4.33
 KS Williamson	1	0	11	0	11.00		
 A Nehra	9	0	44	1	4.88	(1w)	
 R Ashwin	10	1	50	3	5.00	(1w)	
