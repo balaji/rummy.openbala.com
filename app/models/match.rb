@@ -5,8 +5,8 @@ class Match < ActiveRecord::Base
   validates_associated :stadium
   validates_associated :country_one
   validates_associated :country_two
-  has_many :user_game_data
-  has_many :batting_score_card
-  has_many :bowling_score_card
-  has_many :match_total
+  has_many :user_game_datas
+  has_many :batting_score_cards
+  has_many :bowling_score_cards
+  has_many :match_totals
 end
