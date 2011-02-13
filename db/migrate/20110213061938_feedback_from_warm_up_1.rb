@@ -1,4 +1,4 @@
-class ChangeSammyOfWestIndies < ActiveRecord::Migration
+class FeedbackFromWarmUp1 < ActiveRecord::Migration
   def self.up
     sammy = Player.find_by_short_name('DJ Sammy')
     sammy.short_name = 'DJG Sammy'

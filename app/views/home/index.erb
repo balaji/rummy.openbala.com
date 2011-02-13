@@ -1,20 +1,17 @@
 <html>
 <head>
-  <title>Rammi</title>
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Kreon:light' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag :all%>
+    <title>Rammi</title>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Kreon:light' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag :all %>
 </head>
 <body>
-  <div align="center">
+<div align="center">
     <div class="inner_shadow banner">Rammi</div>
     <h3 class="inner_shadow">under construction</h3>
-    <table>
-      <tr>
-        <td align="center"><a href="/auth/twitter" class="auth_provider"><%= image_tag "twitter.png", :size => "48x48", :alt => "Twitter" %></a></td>
-        <td align="center"><a href="/auth/facebook" class="auth_provider"><%= image_tag "facebook.png", :size => "48x48", :alt => "Facebook" %></a></td>
-      </tr>
-  </table>
-  </div>
+    <a href="/auth/facebook" class="fb_button fb_button_medium grid_1">
+        <span class="fb_button_text">Login with Facebook</span>
+    </a>
+</div>
 </body>
 </html>

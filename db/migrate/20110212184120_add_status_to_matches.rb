@@ -1,14 +1,9 @@
 class AddStatusToMatches < ActiveRecord::Migration
   def self.up
-    add_column(:matches, :status, :string)
-    all = Match.all
-    all.each do |m|
-      m.status = 'active'
-      m.save
-    end
+    add_column(:matches, :match_status, :string)
   end
 
   def self.down
-    remove_column(:matches, :status)
+    remove_column(:matches, :match_status)
   end
 end

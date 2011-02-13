@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>
+    </title>
+    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+</head>
+<body style="font-family: 'Molengo'">
+<%= link_to 'Schedule', :controller => 'schedule' %>
+<%= link_to 'Play', :controller => 'game' %>
+<%= link_to 'Trends', :controller => 'trends' %>
+<%= link_to 'Feedback', :controller => 'feedback' %>
+Hi! <strong><%= current_user.name %></strong>, come back soon.&nbsp;&nbsp;<a href="<%= logout_path %>">sign out</a><br/>
+<%= yield %>
+</body>
+</html>

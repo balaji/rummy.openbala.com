@@ -9,4 +9,10 @@ class Match < ActiveRecord::Base
   has_many :batting_score_cards
   has_many :bowling_score_cards
   has_many :match_totals
+  has_many :player_match_points
+  validates_presence_of :stadium, :country_one, :country_two, :date
+
+  def validate
+    errors.add_to_base "invalid data." if country_one.id == country_two.id
+  end
 end

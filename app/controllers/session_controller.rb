@@ -1,7 +1,10 @@
 class SessionController < ApplicationController
   before_filter :authenticate, :except => :create
+  layout "standard"
+
   def create
     auth = request.env['rack.auth']
+    p auth
     unless @auth = Authorization.find_from_hash(auth)
       @auth = Authorization.create_from_hash(auth, current_user)
     end
@@ -15,5 +18,6 @@ class SessionController < ApplicationController
   end
 
   def index
+    render :text => 'think...', :layout => "standard"
   end
 end
