@@ -1,0 +1,14 @@
+Khurram Chohan	2	0	12	0	6.00
+H Osinde	2	0	20	0	10.00	(2w)
+JM Davison	3	0	27	0	9.00
+HS Baidwan	6	0	30	0	5.00
+AS Hansra	1	0	1	0	1.00
+Rizwan Cheema	4	0	16	1	4.00
+PA Desai	1.2	0	6	0	4.50	(1w)
+Shafiul Islam	4	0	5	2	1.25
+Rubel Hossain	8	1	42	2	5.25	(1w)
+Nazmul Hossain	4	1	10	0	2.50
+Abdur Razzak	8	1	28	0	3.50	(4w)
+Naeem Islam	5	0	13	1	2.60
+Shakib Al Hasan	3.3	2	5	3	1.42
+Mahmudullah	5	0	9	2	1.80

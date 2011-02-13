@@ -1,15 +1,11 @@
 class GameController < ApplicationController
   before_filter :authenticate
   def index
-    user_game_data = UserGameData.find(:all, :conditions => ["match_id = ? and user_id = ?", params[:match], current_user.id])
-    @game_data = if(user_game_data[0])
-                   user_game_data[0]
-                else 
-                   UserGameData.new(:user_id => current_user.id, :match_id => params[:match])
-                end
+    @latest_matches = Match.find(:all, :conditions => ['date >= ? and date <= ? and status = ?', Time.now, 3.days.from_now, 'active'])
   end
 
-  def update
-
+  def play
+    id = params[:match]
+    @match = Match.find_by_id(id)
   end
 end

@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Rammi</title>
+    <%= stylesheet_link_tag "grid" %>
+    <%= stylesheet_link_tag "main" %>
+    <%= javascript_include_tag "jquery-1.4.4.min" %>
+    <%= javascript_include_tag "jquery-ui-1.8.9.custom.min" %>
+    <script>
+        $(function() {
+            $(".draggable").draggable();
+            $(".droppable").droppable({
+                drop: function(event, ui) {
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container_12">
+    <div class="grid_3" align="center"><h3><%= @match.country_one.name %></h3></div>
+    <div class="grid_1">&nbsp;</div>
+    <div class="grid_3" align="center"><h3><%= @match.country_two.name %></h3></div>
+    <div class="clear">&nbsp;</div>
+
+    <% @match.country_one.players.zip(@match.country_two.players).each do |player1, player2| %>
+        <div class="grid_3 draggable"><%= player1.display_name %></div>
+        <div class="grid_1">&nbsp;</div>
+        <div class="grid_3 draggable"><%= player2.display_name %></div>
+        <div class="clear">&nbsp;</div>
+    <% end %>
+    <div class="grid_1">&nbsp;</div>
+    <div class="droppable grid_4">x 5</div>
+    <div class="clear">&nbsp;</div>
+    <div class="grid_2">&nbsp;</div>
+    <div class="droppable grid_3">x 4</div>
+    <div class="clear">&nbsp;</div>
+    <div class="grid_2">&nbsp;</div>
+    <div class="droppable grid_3">x 3</div>
+    <div class="clear">&nbsp;</div>
+    <div class="grid_2">&nbsp;</div>
+    <div class="droppable grid_3">x 2</div>
+    <div class="clear">&nbsp;</div>
+    <div class="grid_2">&nbsp;</div>
+    <div class="droppable grid_3">x 1</div>
+</div>
+</body>
+</html>

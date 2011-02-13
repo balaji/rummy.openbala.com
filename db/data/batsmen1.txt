@@ -1,0 +1,23 @@
+DS Smith	 b Odoyo	0	12	9	0	0	0.00
+AB Barath	c Ouma b Odoyo	17	40	25	2	0	68.00
+DM Bravo	c Ouma b Ongondo	12	31	20	0	1	60.00
+RR Sarwan	run out (Patel)	123	176	125	11	5	98.40
+S Chanderpaul	c Tikolo b Obanda	7	52	26	1	0	26.92
+DJ Bravo	c Ngoche b Tikolo	54	63	56	6	1	96.42
+DJG Sammy	lbw b Tikolo	7	17	17	0	0	41.17
+CS Baugh	c Patel b Odoyo	12	29	18	1	0	66.66
+KAJ Roach
+NO Miller
+KA Pollard
+SR Waters	st Baugh b Miller	43	101	72	5	0	59.72
+AA Obanda	lbw b Russell	15	30	18	1	1	83.33
+CO Obuya	 b Roach	68	116	105	4	2	64.76
+SO Tikolo	 b Sammy	15	27	25	1	0	60.00
+MA Ouma	lbw b Roach	5	20	11	0	0	45.45
+RR Patel	 b DJ Bravo	2	7	7	0	0	28.57
+JK Kamande	not out	19	34	14	2	0	135.71
+TM Odoyo	c Miller b Russell	5	4	3	1	0	166.66
+NN Odhiambo	 b Russell	7	8	6	1	0	116.66
+PJ Ongondo	 b Russell	0	1	1	0	0	0.00
+E Otieno	 b Roach	6	14	11	1	0	54.54
+JO Ngoche

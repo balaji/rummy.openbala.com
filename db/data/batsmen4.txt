@@ -1,0 +1,22 @@
+MJ Guptill	c Rankin b Johnston	130	195	134	12	3	97.01
+BB McCullum	 b Rankin	1	14	6	0	0	16.66
+JD Ryder	c Porterfield b Stirling	48	69	53	5	1	90.56
+LRPL Taylor	c & b Botha	33	27	38	2	2	86.84
+JEC Franklin	c Porterfield b KJ O'Brien	49	64	44	3	1	111.36
+SB Styris	not out	29	28	15	1	3	193.33
+JDP Oram	c NJ O'Brien b Johnston	5	8	7	0	0	71.42
+NL McCullum	not out	5	4	3	0	0	166.66
+KD Mills
+HK Bennett
+DL Vettori
+WTS Porterfield	c Franklin b Bennett	72	83	74	8	1	97.29
+PR Stirling	lbw b Vettori	39	50	33	2	3	118.18
+EC Joyce	c BB McCullum b Mills	41	68	53	3	0	77.35
+NJ O'Brien	 b Mills	32	82	43	1	0	74.41
+AC Botha	c Guptill b Vettori	11	14	15	2	0	73.33
+KJ O'Brien	c NL McCullum b Bennett	17	22	24	0	1	70.83
+JF Mooney	lbw b Vettori	6	13	4	1	0	150.00
+DT Johnston	lbw b Ryder	33	41	27	3	0	122.22
+AR White	lbw b Vettori	0	1	1	0	0	0.00
+GH Dockrell	c Guptill b Mills	9	17	13	1	0	69.23
+WB Rankin	not out	5	9	4	0	0	125.00

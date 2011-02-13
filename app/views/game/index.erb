@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Rammi</title>
+    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "grid" %>
+    <%= stylesheet_link_tag "main" %>
+</head>
+<body style="font-family: 'Molengo'">
+<div class="container container_12">
+    <% @latest_matches.each do |match| %>
+        <div class="grid_2 country"><%= match.country_one.name %></div>
+        <div class="grid_1">v.</div>
+        <div class="grid_2 country"><%= match.country_two.name %></div>
+        <div class="grid_2"><%= match.stadium.city %></div>
+        <div class="grid_2"><%= match.date.strftime("%d-%b, %a") %>&nbsp;<%= image_tag "moon.png", :size => "24x24", :valign => 'bottom' if match.day_night? %></div>
+        <%= link_to 'Play', {:action => 'play', :match => match.id}, :class => 'grid_1' %>
+        <div class='clear'>&nbsp;</div>
+    <% end %>
+</div>
+</body>
+</html>

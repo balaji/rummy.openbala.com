@@ -7,8 +7,7 @@
   <body style="font-family: 'Molengo'">
     Hi! <strong><%=current_user.name%></strong>, come back soon.&nbsp;&nbsp;<a href="<%=logout_path%>">sign out</a><br/>
     <br/><br/>
-    <% @matches.each do |match| %>
-      <%= match.country_one.name %> vs. <%= match.country_two.name %> in <%= match.stadium.city %> on <%= match.date%><%=link_to "Play!", :controller => 'game', :match => match.id %><br/>
-    <% end %>
+  <%= link_to 'Schedule', :controller => 'schedule', :action => 'index' %>
+  <%= link_to 'Play', :controller => 'game', :action => 'index' %>
   </body>
 </html>

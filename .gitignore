@@ -5,6 +5,6 @@ doc/api
 doc/app
 rammi.iml
 .idea
-db/batsmen.txt
-db/bowlers.txt
-db/totals.txt
+db/batsmen*.txt
+db/bowlers*.txt
+db/totals*.txt

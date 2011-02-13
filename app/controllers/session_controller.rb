@@ -15,6 +15,5 @@ class SessionController < ApplicationController
   end
 
   def index
-    @matches = Match.all
   end
 end
