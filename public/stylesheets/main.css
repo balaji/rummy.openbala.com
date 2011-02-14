@@ -8,11 +8,6 @@
     text-shadow: 1px 1px white, -1px -1px #444;
 }
 
-.country {
-    font-family: verdana;
-    font-size: large;
-}
-
 .ui-draggable {
     border: blue solid 1px;
     background-color: #add8e6;
@@ -32,22 +27,6 @@
 
 .ui-draggable-dragging {
     z-index: 1000;
-}
-
-td {
-    margin: 15px;
-}
-
-.auth_provider img {
-    display: block;
-    border: 0px;
-}
-
-.auth_provider {
-    text-decoration: none;
-    margin-right: 20px;
-    text-align: center;
-    margin-bottom: 10px;
 }
 
 .fb_button_text {

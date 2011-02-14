@@ -1,10 +1,22 @@
 <html>
 <head>
-    <title>
-    </title>
+    <title>Rammi</title>
     <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag :all %>
+    <%= javascript_include_tag "jquery-1.4.4.min" %>
+    <%= javascript_include_tag "jquery-ui-1.8.9.custom.min" %>
+    <script>
+        $(function() {
+            $(".draggable").draggable();
+            $(".droppable").droppable({
+                drop: function(event, ui) {
+                }
+            });
+        });
+    </script>
 </head>
 <body style="font-family: 'Molengo'">
+<%= link_to 'Home', :controller => 'session' %>
 <%= link_to 'Schedule', :controller => 'schedule' %>
 <%= link_to 'Play', :controller => 'game' %>
 <%= link_to 'Trends', :controller => 'trends' %>

@@ -3,6 +3,6 @@ class TrendsController < ApplicationController
   layout "standard"
 
   def index
-    render :text => "this is hardcore.", :layout => "standard"
+    @matches = Match.find(:all, :conditions => ['date <= ?', Time.now])
   end
 end
