@@ -4,20 +4,21 @@ class SessionController < ApplicationController
 
   def create
     auth = request.env['rack.auth']
-    p auth
     unless @auth = Authorization.find_from_hash(auth)
       @auth = Authorization.create_from_hash(auth, current_user)
     end
     self.current_user = @auth.user
-    redirect_to :controller => 'session', :action => 'index'
+    self.token = auth["credentials"]["token"]
+    redirect_to :action => 'index'
   end
 
   def destroy
     session[:user_id] = nil
+    session[:token] = nil
     redirect_to root_path
   end
 
   def index
-    render :text => 'think...', :layout => "standard"
+    @friends ||= self.fb_graph.get_connections("me", "friends")
   end
 end

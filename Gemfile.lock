@@ -16,6 +16,10 @@ GEM
       addressable (~> 2.2.2)
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
+    json (1.4.6-x86-mingw32)
+    koala (1.0.0.beta)
+      json (>= 1.0)
+      multipart-post (>= 1.0)
     mime-types (1.16)
     multi_json (0.0.5)
     multipart-post (1.1.0)
@@ -79,6 +83,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  koala (~> 1.0.0.beta)
   omniauth
   pg
   rails (~> 2.3.10)
