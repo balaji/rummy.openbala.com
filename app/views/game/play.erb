@@ -1,27 +1,31 @@
-<div class="container_12">
-    <div class="grid_3" align="center"><h3><%= @match.country_one.name %></h3></div>
-    <div class="grid_1">&nbsp;</div>
-    <div class="grid_3" align="center"><h3><%= @match.country_two.name %></h3></div>
-    <div class="clear">&nbsp;</div>
+<div class="grid_3" align="center"><h3><%= @match.country_one.name %></h3></div>
+<div class="grid_1">&nbsp;</div>
+<div class="grid_3" align="center"><h3><%= @match.country_two.name %></h3></div>
+<div class="clear">&nbsp;</div>
 
-    <% @match.country_one.players.zip(@match.country_two.players).each do |player1, player2| %>
-        <div class="grid_3 draggable"><%= player1.display_name %></div>
+<% @match.country_one.players.zip(@match.country_two.players).each do |player1, player2| %>
+    <% if player1 %>
+        <div id="player_<%= player1.id %>" class="grid_3 draggable"><%= player1.display_name if player1 %></div>
         <div class="grid_1">&nbsp;</div>
-        <div class="grid_3 draggable"><%= player2.display_name %></div>
+    <% end %>
+    <% if player2 %>
+        <div id="player_<%= player2.id %>" class="grid_3 draggable"><%= player2.display_name if player2 %></div>
         <div class="clear">&nbsp;</div>
     <% end %>
-    <div class="grid_1">&nbsp;</div>
-    <div class="droppable grid_4">x 5</div>
-    <div class="clear">&nbsp;</div>
-    <div class="grid_2">&nbsp;</div>
-    <div class="droppable grid_3">x 4</div>
-    <div class="clear">&nbsp;</div>
-    <div class="grid_2">&nbsp;</div>
-    <div class="droppable grid_3">x 3</div>
-    <div class="clear">&nbsp;</div>
-    <div class="grid_2">&nbsp;</div>
-    <div class="droppable grid_3">x 2</div>
-    <div class="clear">&nbsp;</div>
-    <div class="grid_2">&nbsp;</div>
-    <div class="droppable grid_3">x 1</div>
-</div>
+
+<% end %>
+<div class="clear">&nbsp;</div>
+<div class="grid_1">&nbsp;</div>
+<div id="drop_five" class="droppable five" align="right">x 5</div>
+<div class="clear">&nbsp;</div>
+<div class="grid_1">&nbsp;</div>
+<div id="drop_four" class="droppable four" align="right">x 4</div>
+<div class="clear">&nbsp;</div>
+<div class="grid_1">&nbsp;</div>
+<div id="drop_three" class="droppable three" align="right">x 3</div>
+<div class="clear">&nbsp;</div>
+<div class="grid_1">&nbsp;</div>
+<div id="drop_two" class="droppable two" align="right">x 2</div>
+<div class="clear">&nbsp;</div>
+<div class="grid_1">&nbsp;</div>
+<div id="drop_one" class="droppable one" align="right">x 1</div>

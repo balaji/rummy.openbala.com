@@ -1,27 +1,34 @@
 <html>
 <head>
     <title>Rammi</title>
-    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>-->
     <%= stylesheet_link_tag :all %>
-    <%= javascript_include_tag "jquery-1.4.4.min" %>
-    <%= javascript_include_tag "jquery-ui-1.8.9.custom.min" %>
-    <script>
-        $(function() {
-            $(".draggable").draggable();
-            $(".droppable").droppable({
-                drop: function(event, ui) {
-                }
-            });
-        });
-    </script>
+    <%= javascript_include_tag "jquery-1.5.min" %>
+    <%= javascript_include_tag "prototype" %>
+    <%= javascript_include_tag "effects" %>
+    <%= javascript_include_tag "dragdrop" %>
+    <%= javascript_include_tag "application" %>
 </head>
-<body style="font-family: 'Molengo'">
-<%= link_to 'Home', :controller => 'session' %>
-<%= link_to 'Schedule', :controller => 'schedule' %>
-<%= link_to 'Play', :controller => 'game' %>
-<%= link_to 'Trends', :controller => 'trends' %>
-<%= link_to 'Feedback', :controller => 'feedback' %>
-Hi! <strong><%= current_user.name %></strong>, come back soon.&nbsp;&nbsp;<a href="<%= logout_path %>">sign out</a><br/>
-<%= yield %>
+<body>
+<div class="container container_12">
+    <div align="center" class="grid_1"><%= link_to 'Home', :controller => 'session' %></div>
+    <div align="center" class="grid_1"><%= link_to 'Schedule', :controller => 'schedule' %></div>
+    <div align="center" class="grid_1"><%= link_to 'Play', :controller => 'game' %></div>
+    <div align="center" class="grid_1"><%= link_to 'Trends', :controller => 'trends' %></div>
+    <div align="center" class="grid_1"><%= link_to 'Feedback', :controller => 'feedback' %> </div>
+    <div align="center" class="grid_1"><%= link_to 'Rules', :controller => 'rules' %> </div>
+    <div align="center" class="grid_6" align="right">
+        Hi! <%= image_tag(current_user.image) %> &nbsp;&nbsp;<%= link_to 'sign out', logout_path %><br/>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <%= yield %>
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+
+    <div class="footer grid_12" align="center">A product of Balaji Damodaran</div>
+</div>
 </body>
 </html>

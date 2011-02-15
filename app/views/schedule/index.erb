@@ -1,11 +1,14 @@
-<div class="container container_12">
-    <% @schedule.each do |match| %>
-        <div class="grid_2"><%= match.country_one.name %></div>
-        <div class="grid_1">v.</div>
-        <div class="grid_2"><%= match.country_two.name %></div>
-        <div class="grid_2"><%= match.stadium.city %></div>
-        <div class="grid_2"><%= match.date.strftime("%d-%b, %a") %></div>
-        <div class="grid_1"><%= image_tag "moon.png", :size => "24x24" if match.day_night? %></div>
-        <div class='clearfix'>&nbsp;</div>
-    <% end %>
-</div>
+<% @schedule.each do |match| %>
+    <div class="grid_2"><%= match.country_one.name %></div>
+    <div class="grid_1">v.</div>
+    <div class="grid_2"><%= match.country_two.name %></div>
+    <div class="grid_2"><%= match.stadium.city %></div>
+    <div class="grid_2"><%= match.date.strftime("%d-%b, %a") %>&nbsp;
+        <% if match.day_night? %>
+            <%= image_tag "moon.png", :size => "16x16" %>
+        <% else %>
+            &nbsp;
+        <% end %>
+    </div>
+    <div class='clear'>&nbsp;</div>
+<% end %>

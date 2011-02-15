@@ -1,6 +1,6 @@
 .banner {
     font-family: 'Lobster', arial, serif;
-    font-size: 84;
+    font-size: 84px;
     color: #B4045F;
 }
 
@@ -8,25 +8,51 @@
     text-shadow: 1px 1px white, -1px -1px #444;
 }
 
-.ui-draggable {
+.footer {
+    color: gray;
+    font-size: small;
+}
+
+.draggable {
     border: blue solid 1px;
     background-color: #add8e6;
-    font-family: verdana;
-    font-size: large;
     margin: 2px 2px 2px 2px;
     padding-left: 2px;
     cursor: pointer;
 }
 
-.ui-droppable {
+.droppable {
     border: black solid 1px;
     background-color: gray;
     margin: 5px 5px 5px 5px;
-    font-size: xx-large;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 25px;
+    z-index: -1;
 }
 
-.ui-draggable-dragging {
-    z-index: 1000;
+.five {
+    width: 280px;
+}
+
+.four {
+    width: 270px;
+}
+
+.three {
+    width: 260px;
+}
+
+.two {
+    width: 250px;
+}
+
+.one {
+    width: 240px;
+}
+
+div.droppable.hover {
+    background-color: #efefef;
 }
 
 .fb_button_text {

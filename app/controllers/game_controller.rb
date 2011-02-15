@@ -1,12 +1,12 @@
 class GameController < ApplicationController
   before_filter :authenticate
   layout "standard"
+
   def index
-    @latest_matches = Match.find(:all, :conditions => ['date >= ? and date <= ? and match_status = ?', Time.now, 3.days.from_now, 'active'])
+    @latest_matches = Match.find(:all, :conditions => ['date >= ? and date <= ?', Time.now.in_time_zone('UTC'), 3.days.from_now.in_time_zone('UTC')])
   end
 
   def play
-    id = params[:match]
-    @match = Match.find_by_id(id)
+    @match = Match.find_by_id(params[:match])
   end
 end
