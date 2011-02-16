@@ -1,0 +1,13 @@
+H Osinde	8	1	42	2	5.25	(6w)
+Khurram Chohan	9	0	34	3	3.77	(1w)
+PA Desai	4	0	25	0	6.25
+HS Baidwan	9.4	0	50	3	5.17
+WD Balaji Rao	10	0	38	1	3.80	(1w)
+Rizwan Cheema	4	0	17	0	4.25	(1w)
+JM Davison	5	0	32	1	6.40	(2w)
+A Shahzad	8	1	44	2	5.50	(6w)
+SCJ Broad	8.1	0	37	5	4.53	(1nb, 2w)
+LJ Wright	4	0	25	0	6.25
+MH Yardy	10	0	40	1	4.00
+JC Tredwell	8	0	36	1	4.50
+PD Collingwood	8	2	41	1	5.12	(1nb)

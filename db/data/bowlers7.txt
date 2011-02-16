@@ -1,0 +1,16 @@
+WB Rankin	9	1	49	1	5.44	(1nb, 5w)
+DT Johnston	5	2	9	2	1.80
+JF Mooney	5	0	13	0	2.60
+KJ O'Brien	3	0	17	0	5.66	(1w)
+GH Dockrell	6	0	27	0	4.50
+A van der Merwe	7	0	28	1	4.00
+AC Botha	10	0	58	2	5.80	(1w)
+AR Cusack	5	0	36	1	7.20	(1w)
+EC Rainsford	0.1	0	0	0	0.00
+SW Masakadza	6.2	0	39	2	6.15	(3w)
+P Utseya	10	0	34	0	3.40
+RW Price	10	0	37	2	3.70
+GA Lamb	10	1	52	0	5.20	(1w)
+AG Cremer	9	0	58	1	6.44
+BRM Taylor	2	0	9	0	4.50
+SC Williams	2	0	9	1	4.50

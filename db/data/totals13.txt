@@ -1,0 +1,2 @@
+India	360	300
+New Zealand	243	259
