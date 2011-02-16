@@ -14,6 +14,26 @@ document.observe("dom:loaded", function() {
         }
     }
 
+    $('save_players').observe('click', (function(event) {
+        if (mappedSlots.keys().size() < 5) {
+            alert('choose all 5');
+            return;
+        }
+
+        mappedSlots.toJSON();
+
+        new Ajax.Request("/game/save", {
+            method: 'get',
+            parameters: {preferences: mappedSlots.toJSON(), match_id: $('match_id').value},
+            onSuccess:function() {
+                alert('saved!');
+            },
+            onFailure:function() {
+                alert('boo ya!');
+            }
+        });
+    }));
+
     $$('.draggable').each(function(item, index) {
         new Draggable(item.id, {
             revert: function(element) {

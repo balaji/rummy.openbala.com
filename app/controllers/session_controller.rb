@@ -19,6 +19,9 @@ class SessionController < ApplicationController
   end
 
   def index
-    @friends ||= self.fb_graph.get_connections("me", "friends")
+    friends ||= self.fb_graph.get_connections("me", "friends")
+    ids = Array.new
+    friends.each { |friend| ids.push(friend["id"]) }
+    @authorizations = Authorization.find(:all, :conditions => ["uid in (?)", ids])
   end
 end

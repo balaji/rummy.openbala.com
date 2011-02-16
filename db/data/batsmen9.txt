@@ -1,0 +1,30 @@
+Mohammad Hafeez	c Mahmudullah b Shafiul Islam	21	40	29	5	0	72.41
+Ahmed Shehzad	c Suhrawadi Shuvo b Rubel Hossain	103	166	122	9	1	84.42
+Kamran Akmal	c Imrul Kayes b Shakib Al Hasan	1	11	10	0	0	10.00
+Younis Khan	 b Abdur Razzak	5	9	8	0	0	62.50
+Misbah-ul-Haq	c Naeem Islam b Shakib Al Hasan	100	118	100	8	4	100.00
+Shahid Afridi	c Nazmul Hossain b Shakib Al Hasan	14	19	11	1	0	127.27
+Abdul Razzaq	c Nazmul Hossain b Rubel Hossain	4	8	6	0	0	66.66
+Umar Akmal	not out	19	15	10	1	1	190.00
+Wahab Riaz	 b Rubel Hossain	0	1	1	0	0	0.00
+Abdur Rehman	run out (Mushfiqur Rahim)	8	7	3	0	1	266.66
+Umar Gul
+Saeed Ajmal
+Shoaib Akhtar
+Asad Shafiq
+Junaid Khan
+Tamim Iqbal	 b Abdul Razzaq	0	1	1	0	0	0.00
+Imrul Kayes	c Umar Gul b Abdur Rehman	39	106	61	5	0	63.93
+Junaid Siddique	c Asad Shafiq b Wahab Riaz	38	42	28	6	1	135.71
+Mushfiqur Rahim	c Mohammad Hafeez b Abdur Rehman	9	33	26	1	0	34.61
+Shakib Al Hasan	c Umar Gul b Abdul Razzaq	11	13	12	1	0	91.66
+Mohammad Ashraful	 b Abdul Razzaq	4	4	3	1	0	133.33
+Mahmudullah	c Ahmed Shehzad b Shahid Afridi	12	32	34	0	0	35.29
+Naeem Islam	c Abdur Rehman b Mohammad Hafeez	22	58	44	1	0	50.00
+Raqibul Hasan	run out (Wahab Riaz)	30	38	31	0	1	96.77
+Abdur Razzak	not out	1	6	7	0	0	14.28
+Rubel Hossain	c Misbah-ul-Haq b Mohammad Hafeez	0	3	7	0	0	0.00
+Shahriar Nafees
+Nazmul Hossain
+Shafiul Islam
+Suhrawadi Shuvo

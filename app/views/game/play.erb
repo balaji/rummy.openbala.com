@@ -1,7 +1,7 @@
 <div class="grid_3" align="center"><h3><%= @match.country_one.name %></h3></div>
 <div class="grid_1">&nbsp;</div>
 <div class="grid_3" align="center"><h3><%= @match.country_two.name %></h3></div>
-<div class="clear">&nbsp;</div>
+<div class="clear">&nbsp;<%= hidden_field_tag "match_id", @match.id %></div>
 
 <% @match.country_one.players.zip(@match.country_two.players).each do |player1, player2| %>
     <% if player1 %>
@@ -14,18 +14,26 @@
     <% end %>
 
 <% end %>
+<% if !@players_chosen.empty? %>
+    <% @players_chosen.each do |name| %>
+        <div class="grid_3"><%= name %></div>
+        <div class="clear">&nbsp;</div>
+    <% end %>
+<% end %>
 <div class="clear">&nbsp;</div>
 <div class="grid_1">&nbsp;</div>
-<div id="drop_five" class="droppable five" align="right">x 5</div>
+<div id="drop_1" class="droppable five" align="right">x 5</div>
 <div class="clear">&nbsp;</div>
 <div class="grid_1">&nbsp;</div>
-<div id="drop_four" class="droppable four" align="right">x 4</div>
+<div id="drop_2" class="droppable four" align="right">x 4</div>
 <div class="clear">&nbsp;</div>
 <div class="grid_1">&nbsp;</div>
-<div id="drop_three" class="droppable three" align="right">x 3</div>
+<div id="drop_3" class="droppable three" align="right">x 3</div>
 <div class="clear">&nbsp;</div>
 <div class="grid_1">&nbsp;</div>
-<div id="drop_two" class="droppable two" align="right">x 2</div>
+<div id="drop_4" class="droppable two" align="right">x 2</div>
 <div class="clear">&nbsp;</div>
 <div class="grid_1">&nbsp;</div>
-<div id="drop_one" class="droppable one" align="right">x 1</div>
+<div id="drop_5" class="droppable one" align="right">x 1</div>
+<div class="grid_1">&nbsp;</div>
+<div class="grid_3"><input type="button" value="Save" id="save_players"/></div>
