@@ -3,7 +3,8 @@ gem "rails", "~> 2.3.10"
 gem "pg"
 gem "omniauth"
 gem "koala", "~> 1.0.0.beta"
-gem "json"
+gem "json_pure"
+gem "ruby-json"
 
 # bundler requires these gems in all environments
 # gem "nokogiri", "1.4.2"
