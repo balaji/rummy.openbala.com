@@ -1,7 +1,12 @@
 <% @matches.each do |m| %>
-    <div class="grid_2"><%= m.country_one.name %></div>
-    <div class="grid_1">vs.</div>
-    <div class="grid_2"><%= m.country_two.name %></div>
-    <div class="grid_1"><%= link_to 'view', :action => 'view', :match => m.id %></div>
-    <div class='clear'>&nbsp;</div>
+    <div class="grid_1">&nbsp;</div>
+    <div class="grid_2 matches"><%= m.country_one.name %></div>
+    <div class="grid_1 matches">v.</div>
+    <div class="grid_2 matches"><%= m.country_two.name %></div>
+    <div class="grid_2 matches"><%= m.stadium.city %></div>
+    <div class="grid_2 matches"><%= m.date.strftime("%d-%b, %a") %></div>
+    <div class="grid_2 matches">
+        <div class="play"><%= link_to 'view', :action => 'view', :match => m.id %></div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
 <% end %>

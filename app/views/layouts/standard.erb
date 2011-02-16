@@ -14,10 +14,12 @@
 <div class="container container_12">
     <div class="grid_4">&nbsp;</div>
     <div class="grid_4 inner_shadow banner" align="center">Rummy</div>
-    <div align="center" class="grid_4" align="justify">
-        <%= image_tag(current_user.image) %> &nbsp;&nbsp;<%= link_to 'sign out', logout_path %><br/>
+    <div class="grid_1">&nbsp;</div>
+    <div id="profile_pic" class="grid_3" align="right">
+        <%= image_tag current_user.image, {:style => "position: absolute; bottom: 0; right: 0"} %>
     </div>
     <div class="clearfix">&nbsp;</div>
+    <div id="sign_out" class="grid_12" align="right">&nbsp;&nbsp;<%= link_to 'sign out', logout_path %></div>
     <div align="center" class="grid_8">
         <ul id="menu">
             <li><%= link_to 'Home', :controller => 'session' %></li>
@@ -27,9 +29,11 @@
             <li><%= link_to 'Feedback', :controller => 'feedback' %></li>
             <li><%= link_to 'Rules', :controller => 'rules' %></li>
             <li><%= link_to 'Mangaatha', :controller => 'rules' %></li>
+            <li><%= link_to 'Ace', :controller => 'rules' %></li>
         </ul>
     </div>
-
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
     <div class="clearfix">&nbsp;</div>
     <%= yield %>
     <div class="clearfix">&nbsp;</div>
