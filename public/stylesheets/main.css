@@ -1,7 +1,47 @@
+body {
+    font-family: 'Droid Sans', "lucida grande", tahoma, verdana, arial, sans-serif;
+    background-color: #f0f8ff;
+}
+
 .banner {
     font-family: 'Lobster', arial, serif;
     font-size: 84px;
-    color: #B4045F;
+    color: #6495ed;
+}
+
+ul#menu {
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+    width: 960px
+}
+
+ul#menu li {
+    display: inline
+}
+
+ul#menu li a {
+    text-decoration: none;
+    padding: 5px 0;
+    width: 100px;
+    background: #6495ed;
+    color: #eee;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #fff;
+}
+
+ul#menu li a:hover {
+    background: #a2b3a1;
+    color: #000
+}
+
+a {
+    text-decoration: none;
+}
+
+.scorecard {
+    font-size: small;
 }
 
 .inner_shadow {
@@ -64,15 +104,11 @@ div.droppable.hover {
     font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
     font-weight: bold;
     padding: 2px 6px 3px 6px;
-    margin: 1px 1px 0 21px;
+    margin: 1px 1px 0 0;
     text-shadow: none;
 }
 
 .fb_button_medium {
     font-size: 11px;
     line-height: 14px;
-}
-
-.fb_button {
-    text-decoration: none;
 }

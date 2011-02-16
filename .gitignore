@@ -3,7 +3,7 @@ log/*.log
 tmp/**/*
 doc/api
 doc/app
-rammi.iml
+rummy.iml
 .idea
 db/batsmen*.txt
 db/bowlers*.txt

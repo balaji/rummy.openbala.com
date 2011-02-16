@@ -1,7 +1,7 @@
 <% if @authorizations.empty? %>
     <div class="grid_5"><h4>Invite your friends to play! - Its much more fun that way!!</h4></div>
 <% else %>
-    <div class="grid_5"><h4>Your Friends are playing Rammi!</h4></div>
+    <div class="grid_5"><h4>Your Friends are playing Rummy!</h4></div>
     <div class="clearfix">&nbsp;</div>
     <% @authorizations.each do |auth| %>
         <div class="grid_2"><%= auth.user.name -%></div>
