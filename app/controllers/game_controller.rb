@@ -9,8 +9,8 @@ class GameController < ApplicationController
   def play
     @match = Match.find_by_id(params[:match])
     user_data = UserGameData.find_by_match_id_and_user_id(@match.id, self.current_user.id)
+    @players_chosen = Array.new
     if (user_data)
-      @players_chosen = Array.new
       user_data.player_order.split(",").each do |id|
         @players_chosen.push(Player.find(id).display_name)
       end
