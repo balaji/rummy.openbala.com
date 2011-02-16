@@ -74,7 +74,6 @@ GEM
     rake (0.8.7)
     rest-client (1.6.1)
       mime-types (>= 1.16)
-    ruby-json (1.1.2)
     ruby-openid (2.1.8)
     ruby-openid-apps-discovery (1.2.0)
       ruby-openid (>= 2.1.7)
@@ -84,8 +83,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  json
   koala (~> 1.0.0.beta)
   omniauth
   pg
   rails (~> 2.3.10)
-  ruby-json
