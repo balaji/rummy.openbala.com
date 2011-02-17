@@ -1,39 +1,59 @@
+<div class="grid_2">&nbsp;</div>
 <div class="grid_3" align="center"><h3><%= @match.country_one.name %></h3></div>
 <div class="grid_1">&nbsp;</div>
 <div class="grid_3" align="center"><h3><%= @match.country_two.name %></h3></div>
 <div class="clear">&nbsp;<%= hidden_field_tag "match_id", @match.id %></div>
 
 <% @match.country_one.players.zip(@match.country_two.players).each do |player1, player2| %>
+    <div class="grid_2">&nbsp;</div>
     <% if player1 %>
-        <div id="player_<%= player1.id %>" class="grid_3 draggable"><%= player1.display_name if player1 %></div>
+        <div id="player_<%= player1.id %>" class="grid_3 draggable scorecard"><%= player1.display_name if player1 %></div>
         <div class="grid_1">&nbsp;</div>
     <% end %>
     <% if player2 %>
-        <div id="player_<%= player2.id %>" class="grid_3 draggable"><%= player2.display_name if player2 %></div>
-        <div class="clear">&nbsp;</div>
+        <div id="player_<%= player2.id %>" class="grid_3 draggable scorecard"><%= player2.display_name if player2 %></div>
     <% end %>
+    <div class="grid_2">&nbsp;</div>
+    <div class="clear">&nbsp;</div>
+<% end %>
 
-<% end %>
+<div class="clearfix">&nbsp;</div>
+
 <% if !@players_chosen.empty? %>
-    <% @players_chosen.each do |name| %>
-        <div class="grid_3"><%= name %></div>
+    <% @players_chosen.length.times do |i| %>
+        <div class="grid_1">&nbsp;</div>
+        <div class="grid_3 scorecard" align="right"><%= @players_chosen[i] %></div>
+        <div id="drop_<%= i %>" class="droppable grid_3" align="right">&nbsp;</div>
+        <div class="grid_1 scorecard">x <%= 5 - i %></div>
         <div class="clear">&nbsp;</div>
     <% end %>
+<% else %>
+    <div class="grid_4">&nbsp;</div>
+    <div id="drop_1" class="droppable grid_3" align="right">&nbsp;</div>
+    <div class="grid_1 scorecard">x 5</div>
+    <div class="clear">&nbsp;</div>
+
+    <div class="grid_4">&nbsp;</div>
+    <div id="drop_2" class="droppable grid_3" align="right">&nbsp;</div>
+    <div class="grid_1 scorecard">x 4</div>
+    <div class="clear">&nbsp;</div>
+
+    <div class="grid_4">&nbsp;</div>
+    <div id="drop_3" class="droppable grid_3" align="right">&nbsp;</div>
+    <div class="grid_1 scorecard">x 3</div>
+    <div class="clear">&nbsp;</div>
+
+    <div class="grid_4">&nbsp;</div>
+    <div id="drop_4" class="droppable grid_3" align="right">&nbsp;</div>
+    <div class="grid_1 scorecard">x 2</div>
+    <div class="clear">&nbsp;</div>
+
+    <div class="grid_4">&nbsp;</div>
+    <div id="drop_5" class="droppable grid_3" align="right">&nbsp;</div>
+    <div class="grid_1 scorecard">x 1</div>
+    <div class="clear">&nbsp;</div>
 <% end %>
-<div class="clear">&nbsp;</div>
-<div class="grid_1">&nbsp;</div>
-<div id="drop_1" class="droppable five" align="right">x 5</div>
-<div class="clear">&nbsp;</div>
-<div class="grid_1">&nbsp;</div>
-<div id="drop_2" class="droppable four" align="right">x 4</div>
-<div class="clear">&nbsp;</div>
-<div class="grid_1">&nbsp;</div>
-<div id="drop_3" class="droppable three" align="right">x 3</div>
-<div class="clear">&nbsp;</div>
-<div class="grid_1">&nbsp;</div>
-<div id="drop_4" class="droppable two" align="right">x 2</div>
-<div class="clear">&nbsp;</div>
-<div class="grid_1">&nbsp;</div>
-<div id="drop_5" class="droppable one" align="right">x 1</div>
-<div class="grid_1">&nbsp;</div>
-<div class="grid_3"><input type="button" value="Save" id="save_players"/></div>
+
+<div class="clearfix">&nbsp;</div>
+<div class="grid_5">&nbsp;</div>
+<div class="grid_3"><input type="button" class="button" value="Save" id="save_players"/></div>

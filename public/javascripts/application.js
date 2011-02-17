@@ -65,7 +65,7 @@ document.observe("dom:loaded", function() {
                 mappedSlots.set(dropped.id, dragged.id);
                 messageToDrag = "just added";
                 var position = $(dropped).positionedOffset();
-                jQuery($(dragged.id)).offset({left: position[0] + 3, top: position[1] + 3});
+                jQuery($(dragged.id)).offset({left: position[0] + 1, top: position[1] + 3});
                 $(dropped.id).highlight();
             }
         });

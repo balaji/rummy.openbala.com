@@ -1,23 +1,19 @@
 source :gemcutter
 gem "rails", "~> 2.3.10"
-gem "pg"
 gem "omniauth"
 gem "koala", "~> 1.0.0.beta"
 gem "json_pure"
 gem "ruby-json"
-
-# bundler requires these gems in all environments
-# gem "nokogiri", "1.4.2"
-# gem "geokit"
+gem "will_paginate"
 
 group :development do
-  # bundler requires these gems in development
-  # gem "rails-footnotes"
+  gem "postgres-pr"
 end
 
 group :test do
-  # bundler requires these gems while running tests
-  # gem "rspec"
-  # gem "faker"
+end
+
+group :production do
+  gem "pg"
 end
 

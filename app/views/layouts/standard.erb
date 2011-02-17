@@ -12,10 +12,11 @@
 </head>
 <body>
 <div class="container container_12">
-    <div class="grid_4">&nbsp;</div>
+    <div class="grid_2">&nbsp;</div>
+    <div class="grid_2">&nbsp;<%= image_tag "icc-world-cup.png", {:style => "position: absolute; right: 0;"} %></div>
     <div class="grid_4 inner_shadow banner" align="center">Rummy</div>
-    <div class="grid_1">&nbsp;</div>
-    <div id="profile_pic" class="grid_3" align="right">
+    <div class="grid_2">&nbsp;<%= image_tag "rummy.png", {:style => "position: absolute; height: 120px;"} %></div>
+    <div id="profile_pic" class="grid_2" align="right">
         <%= image_tag current_user.image, {:style => "position: absolute; bottom: 0; right: 0"} %>
     </div>
     <div class="clearfix">&nbsp;</div>
@@ -24,12 +25,12 @@
         <ul id="menu">
             <li><%= link_to 'Home', :controller => 'session' %></li>
             <li><%= link_to 'Schedule', :controller => 'schedule' %></li>
-            <li><%= link_to 'Rummy', :controller => 'game' %></li>
-            <li><%= link_to 'Trends', :controller => 'trends' %></li>
-            <li><%= link_to 'Feedback', :controller => 'feedback' %></li>
             <li><%= link_to 'Rules', :controller => 'rules' %></li>
-            <li><%= link_to 'Mangaatha', :controller => 'rules' %></li>
-            <li><%= link_to 'Ace', :controller => 'rules' %></li>
+            <li><%= link_to 'Play!', :controller => 'game' %></li>
+            <li><%= link_to 'Ranking', :controller => 'results' %></li>
+            <li><%= link_to 'Trends', :controller => 'trends' %></li>
+            <li><%= link_to 'Statistics', :controller => 'statistics' %></li>
+            <li><%= link_to 'Feedback', :controller => 'feedback' %></li>
         </ul>
     </div>
     <div class="clearfix">&nbsp;</div>

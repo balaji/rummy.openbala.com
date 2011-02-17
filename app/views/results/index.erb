@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+    <div class="grid_3 highlight_p"><%= user.name %></div>
+    <div class="grid_1"><%= image_tag user.image %></div>
+    <div class="grid_1"><%= user.total_points %></div>
+    <div class="clearfix">&nbsp;</div>
+<% end %>
+<%= will_paginate @users %>

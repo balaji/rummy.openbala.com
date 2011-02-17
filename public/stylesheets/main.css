@@ -91,41 +91,55 @@ a {
 }
 
 .draggable {
-    border: blue solid 1px;
-    background-color: #add8e6;
-    margin: 2px 2px 2px 2px;
-    padding-left: 2px;
+    padding-left: 3px;
+    padding-top: 2px;
+    margin: 2px;
+    background: #6fb2e5;
+    box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    -o-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    -webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
     cursor: pointer;
+    height: 20px;
 }
 
 .droppable {
-    border: black solid 1px;
-    background-color: gray;
-    margin: 5px 5px 5px 5px;
+    box-shadow: inset 0 0px 10px #000000;
+    -o-box-shadow: inset 0 0px 10px #000000;
+    -webkit-box-shadow: 0 0px 10px #000000;
+    -moz-box-shadow: 0 0px 10px #000000;
+    height: 28px;
     padding-left: 5px;
-    padding-right: 5px;
-    height: 25px;
+    margin: 2px;
     z-index: -1;
 }
 
-.five {
-    width: 280px;
+.button {
+    color: #050;
+    font: bold 84% 'trebuchet ms', helvetica, sans-serif;
+    background-color: #fed;
 }
 
-.four {
-    width: 270px;
+.highlight_p {
+    border: none;
+    margin-top: 2px;
+    height: 20px;
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    font-size: 14px;
+    border-radius: 4px;
+    color:white;
+    background: #1e90ff;
 }
 
-.three {
-    width: 260px;
-}
-
-.two {
-    width: 250px;
-}
-
-.one {
-    width: 240px;
+.highlight_s {
+    border: none;
+    margin-top: 2px;
+    height: 20px;
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    font-size: 14px;
+    border-radius: 4px;
+    color:white;
+    background: #f08080;
 }
 
 div.droppable.hover {

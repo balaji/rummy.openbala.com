@@ -1,61 +1,88 @@
 <% country_one = @batting_country_one[0].player.country.name
    country_two = @batting_country_two[0].player.country.name %>
 
-<div class="grid_6"><b><%= country_one %></b></div>
-<div class="grid_6"><b><%= country_two %></b></div>
+<div class="grid_6" align="center"><b><%= country_one %></b></div>
+<div class="grid_6" align="center"><b><%= country_two %></b></div>
 
 <div class="clearfix">&nbsp;</div>
+
+<div class="grid_2 scorecard">&nbsp;<strong>Player</strong></div>
+<div class="grid_3 scorecard">&nbsp;</div>
+<div class="grid_1 scorecard">&nbsp;<strong>R (SR)</strong></div>
+<div class="grid_2 scorecard">&nbsp;<strong>Player</strong></div>
+<div class="grid_3 scorecard">&nbsp;</div>
+<div class="grid_1 scorecard">&nbsp;<strong>R (SR)</strong></div>
+<div class="clear">&nbsp;</div>
 
 <% @batting_country_one.zip(@batting_country_two).each do |sc1, sc2| %>
     <% if sc1 %>
         <div class="scorecard grid_2">&nbsp;<%= sc1.player.short_name %></div>
         <div class="scorecard grid_3">&nbsp;<%= sc1.wicket_desc %></div>
-        <div class="scorecard grid_1">&nbsp;<%= sc1.score %>(<%= sc1.strike_rate %>)</div>
+        <div class="scorecard grid_1">&nbsp;<%= sc1.score %>&nbsp;<%= "(#{sc1.strike_rate})" if sc1.strike_rate %></div>
     <% end %>
     <% if sc2 %>
         <div class="scorecard grid_2">&nbsp;<%= sc2.player.short_name %></div>
         <div class="scorecard grid_3">&nbsp;<%= sc2.wicket_desc %></div>
-        <div class="scorecard grid_1">&nbsp;<%= sc2.score %>(<%= sc2.strike_rate %>)</div>
+        <div class="scorecard grid_1">&nbsp;<%= sc2.score %>&nbsp;<%= "(#{sc2.strike_rate})" if sc2.strike_rate %></div>
     <% end %>
     <div class="clear">&nbsp;</div>
 <% end %>
-
-<div class="clearfix">&nbsp;</div>
-<div class="grid_6"><%= @mt1.score %>(<%= @mt1.balls %>)</div>
-<div class="grid_6"><%= @mt2.score %>(<%= @mt2.balls %>)</div>
-
-<div class="clearfix">&nbsp;</div>
+<div class="grid_5 scorecard" align="right">Total:</div>
+<div class="grid_1 scorecard"><%= @mt1.score %>&nbsp;<%= "(#{@mt1.balls})" %></div>
+<div class="grid_5 scorecard" align="right">Total:</div>
+<div class="grid_1 scorecard"><%= @mt2.score %>&nbsp;<%= "(#{@mt2.balls})" %></div>
 <div class="clearfix">&nbsp;</div>
 
+<div class="grid_2 scorecard"><strong>Player</strong></div>
+<div class="grid_1 scorecard"><strong>O</strong></div>
+<div class="grid_1 scorecard"><strong>M</strong></div>
+<div class="grid_1 scorecard"><strong>W</strong></div>
+<div class="grid_1 scorecard"><strong>R (ER)</strong></div>
+<div class="grid_2 scorecard"><strong>Player</strong></div>
+<div class="grid_1 scorecard"><strong>O</strong></div>
+<div class="grid_1 scorecard"><strong>M</strong></div>
+<div class="grid_1 scorecard"><strong>W</strong></div>
+<div class="grid_1 scorecard"><strong>R (ER)</strong></div>
 <% @bowling_country_one.zip(@bowling_country_two).each do |sc1, sc2| %>
     <% if sc1 %>
         <div class="scorecard grid_2"><%= sc1.player.short_name %></div>
         <div class="scorecard grid_1"><%= sc1.overs %></div>
         <div class="scorecard grid_1"><%= sc1.maidens %></div>
         <div class="scorecard grid_1"><%= sc1.wickets %></div>
-        <div class="scorecard grid_1"><%= sc1.runs %>(<%= sc1.economy_rate %>)</div>
+        <div class="scorecard grid_1"><%= sc1.runs %>&nbsp;<%= "(#{sc1.economy_rate})" %></div>
     <% end %>
     <% if sc2 %>
         <div class="scorecard grid_2"><%= sc2.player.short_name %></div>
         <div class="scorecard grid_1"><%= sc2.overs %></div>
         <div class="scorecard grid_1"><%= sc2.maidens %></div>
         <div class="scorecard grid_1"><%= sc2.wickets %></div>
-        <div class="scorecard grid_1"><%= sc2.runs %>(<%= sc2.economy_rate %>)</div>
+        <div class="scorecard grid_1"><%= sc2.runs %>&nbsp;<%= "(#{sc2.economy_rate})" %></div>
     <% end %>
     <div class="clear">&nbsp;</div>
 <% end %>
 
 <div class="clearfix">&nbsp;</div>
-<div class="clearfix">&nbsp;</div>
+
+<div class="grid_1">&nbsp;</div>
+<div class="grid_3 scorecard" align="center"><strong>Player</strong></div>
+<div class="grid_2 scorecard" align="center"><strong>Points</strong></div>
+<div class="grid_1">&nbsp;</div>
+<div class="grid_3 scorecard" align="center"><strong>Player</strong></div>
+<div class="grid_2 scorecard" align="center"><strong>Points</strong></div>
+<div class="clear">&nbsp;</div>
 
 <% @player_points_one.zip(@player_points_two).each do |p1, p2| %>
     <% if p1 %>
-        <div class="grid_2"><%= p1.player.short_name %></div>
-        <div class="grid_4"><%= p1.points %></div>
+        <div class="grid_1">&nbsp;</div>
+        <div class="grid_3 highlight_p" align="justify">&nbsp;<%= p1.player.short_name %></div>
+        <div class="grid_2 highlight_s" align="center"><%= p1.points %></div>
+    <% else %>
+        <div class="grid_6">&nbsp;</div>
     <% end %>
     <% if p2 %>
-        <div class="grid_2"><%= p2.player.short_name %></div>
-        <div class="grid_4"><%= p2.points %></div>
+        <div class="grid_1">&nbsp;</div>
+        <div class="grid_3 highlight_p" align="justify">&nbsp;<%= p2.player.short_name %></div>
+        <div class="grid_2 highlight_s" align="center"><%= p2.points %></div>
     <% end %>
     <div class="clear">&nbsp;</div>
 <% end %>
