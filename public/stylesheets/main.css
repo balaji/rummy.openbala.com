@@ -1,5 +1,5 @@
 body {
-    font-family: 'Droid Sans', "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-family: 'PT Sans', "lucida grande", tahoma, verdana, arial, sans-serif;
     background-color: #f0f8ff;
 }
 
@@ -7,6 +7,11 @@ body {
     font-family: 'Lobster', arial, serif;
     font-size: 84px;
     color: #6495ed;
+}
+
+.desc {
+    /*font-family: "lucida grande";*/
+    font-size: 18px;
 }
 
 .matches {
@@ -84,6 +89,10 @@ ul#menu li a {
     float: left;
     text-align: center;
     border-left: 1px solid #fff;
+}
+
+ul#menu li a.high_play {
+    background:red;
 }
 
 div .play a {

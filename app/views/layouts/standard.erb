@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Rummy</title>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag :all %>
     <%= javascript_include_tag "jquery-1.5.min" %>
@@ -27,7 +27,7 @@
             <li><%= link_to 'Home', :controller => 'session' %></li>
             <li><%= link_to 'Schedule', :controller => 'schedule' %></li>
             <li><%= link_to 'Rules', :controller => 'rules' %></li>
-            <li><%= link_to 'Play!', :controller => 'game' %></li>
+            <li><%= link_to 'Play!', {:controller => 'game'}, :class => "high_play" %></li>
             <li><%= link_to 'Ranking', :controller => 'results' %></li>
             <li><%= link_to 'Trends', :controller => 'trends' %></li>
             <li><%= link_to 'Statistics', :controller => 'statistics' %></li>

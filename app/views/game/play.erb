@@ -1,4 +1,7 @@
-<div id="fb-root" class="grid_2">&nbsp;</div>
+<div class="grid_12 desc" align="center">
+    <strong>Drag and Drop your top 5!</strong>
+</div>
+<div class="grid_2 clearfix">&nbsp;</div>
 <div class="grid_3" align="center"><h3><%= @match.country_one.name %></h3></div>
 <div class="grid_1">&nbsp;</div>
 <div class="grid_3" align="center"><h3><%= @match.country_two.name %></h3></div>
@@ -19,38 +22,45 @@
 
 <div class="clearfix">&nbsp;</div>
 
+<div class="grid_1">&nbsp;</div>
+<div class="grid_3" align="right">&nbsp;<strong><%= "Previous Choice" if !@players_chosen.empty?%></strong></div>
+<div class="grid_3" align="right">&nbsp;</div>
+<div class="grid_1"><strong>Amplify</strong></div>
+<div class="grid_4 scorecard" style="color:red;"><b>Note: Your choice might not play in the 11</b></div>
+<div class="clearfix">&nbsp;</div>
+
 <% if !@players_chosen.empty? %>
     <% @players_chosen.length.times do |i| %>
         <div class="grid_1">&nbsp;</div>
         <div class="grid_3 scorecard" align="right"><%= @players_chosen[i] %></div>
         <div id="drop_<%= i %>" class="droppable grid_3" align="right">&nbsp;</div>
-        <div class="grid_1 scorecard">x <%= 5 - i %></div>
+        <div class="grid_2 scorecard">x <strong><%= 5 - i %></strong> times his score!</div>
         <div class="clear">&nbsp;</div>
     <% end %>
 <% else %>
     <div class="grid_4">&nbsp;</div>
     <div id="drop_1" class="droppable grid_3" align="right">&nbsp;</div>
-    <div class="grid_1 scorecard">x 5</div>
+    <div class="grid_2 scorecard">x 5 times his score!</div>
     <div class="clear">&nbsp;</div>
 
     <div class="grid_4">&nbsp;</div>
     <div id="drop_2" class="droppable grid_3" align="right">&nbsp;</div>
-    <div class="grid_1 scorecard">x 4</div>
+    <div class="grid_2 scorecard">x 4 times his score!</div>
     <div class="clear">&nbsp;</div>
 
     <div class="grid_4">&nbsp;</div>
     <div id="drop_3" class="droppable grid_3" align="right">&nbsp;</div>
-    <div class="grid_1 scorecard">x 3</div>
+    <div class="grid_2 scorecard">x 3 times his score!</div>
     <div class="clear">&nbsp;</div>
 
     <div class="grid_4">&nbsp;</div>
     <div id="drop_4" class="droppable grid_3" align="right">&nbsp;</div>
-    <div class="grid_1 scorecard">x 2</div>
+    <div class="grid_2 scorecard">x 2 times his score!</div>
     <div class="clear">&nbsp;</div>
 
     <div class="grid_4">&nbsp;</div>
     <div id="drop_5" class="droppable grid_3" align="right">&nbsp;</div>
-    <div class="grid_1 scorecard">x 1</div>
+    <div class="grid_2 scorecard">x 1 times his score!</div>
     <div class="clear">&nbsp;</div>
 <% end %>
 

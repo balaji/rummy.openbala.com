@@ -1,13 +1,17 @@
 class GameController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticate, :init_me
   layout "standard"
 
+  def init_me
+    @latest_matches ||= Match.find(:all, :conditions => ['date >= ? and date <= ?', Time.now.in_time_zone('Chennai'), 3.days.from_now.in_time_zone('UTC')])
+  end
+
   def index
-    @latest_matches = Match.find(:all, :conditions => ['date >= ? and date <= ?', Time.now.in_time_zone('Chennai'), 3.days.from_now.in_time_zone('UTC')])
   end
 
   def play
     @match = Match.find_by_id(params[:match])
+    render :text => "<div class=\"grid_3\">nice try</div>", :layout => "standard" if !@latest_matches.include?(@match)
     user_data = UserGameData.find_by_match_id_and_user_id(@match.id, self.current_user.id)
     @players_chosen = Array.new
     if (user_data)
