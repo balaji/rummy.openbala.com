@@ -26,10 +26,10 @@ document.observe("dom:loaded", function() {
             method: 'get',
             parameters: {preferences: mappedSlots.toJSON(), match_id: $('match_id').value},
             onSuccess:function() {
-                alert('saved!');
+                alert('saved! Check back once the game is over for your points.');
             },
             onFailure:function() {
-                alert('boo ya!');
+                alert('Ugh. tough luck. call 9500069498 immediately.');
             }
         });
     }));

@@ -5,4 +5,5 @@ ActionController::Routing::Routes.draw do |map|
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
   map.session '/auth/:provider/callback', :controller => 'session', :action => 'create'
+  map.session '/auth/failure', :controller => 'home'
 end

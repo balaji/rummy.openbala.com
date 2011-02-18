@@ -1,0 +1,26 @@
+AJ Strauss	 b Shoaib Akhtar	5	11	12	1	0	41.66
+KP Pietersen	st Kamran Akmal b Abdur Rehman	66	118	78	3	1	84.61
+IJL Trott	 b Junaid Khan	9	33	18	0	0	50.00
+IR Bell	st Kamran Akmal b Saeed Ajmal	39	85	58	2	0	67.24
+PD Collingwood	lbw b Wahab Riaz	65	91	73	3	0	89.04
+RS Bopara	c Younis Khan b Saeed Ajmal	35	49	39	4	0	89.74
+MJ Prior	c Umar Akmal b Junaid Khan	24	27	15	3	0	160.00
+TT Bresnan	 b Junaid Khan	5	6	3	0	0	166.66
+MH Yardy	not out	1	7	2	0	0	50.00
+SCJ Broad	 b Wahab Riaz	0	2	1	0	0	0.00
+JM Anderson	 b Wahab Riaz	4	2	2	1	0	200.00
+A Shahzad
+LJ Wright
+Kamran Akmal	lbw b Broad	18	26	21	4	0	85.71
+Mohammad Hafeez	c Strauss b Broad	0	6	2	0	0	0.00
+Younis Khan	c Prior b Broad	80	168	101	8	1	79.20
+Umar Akmal	 b Broad	2	17	9	0	0	22.22
+Asad Shafiq	 b Collingwood	12	44	35	0	0	34.28
+Ahmed Shehzad	 b Anderson	26	31	29	2	0	89.65
+Misbah-ul-Haq	lbw b Collingwood	25	41	35	2	0	71.42
+Abdur Rehman	c & b Collingwood	5	10	10	0	0	50.00
+Wahab Riaz	c Anderson b Broad	11	32	19	1	0	57.89
+Shoaib Akhtar	c Prior b Bresnan	1	9	7	0	0	14.28
+Junaid Khan	not out	8	16	10	1	0	80.00
+Abdul Razzaq
+Saeed Ajmal
