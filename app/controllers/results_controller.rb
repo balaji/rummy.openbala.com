@@ -25,7 +25,7 @@ class ResultsController < ApplicationController
 
   private
   def init_me
-    @users = User.paginate(:page => page, :order => 'total_points, name DESC').reverse
+    @users = User.paginate(:page => 1, :order => 'total_points, name DESC').reverse
     @user_ranks = Array.new
     User.per_page.times { |i| @user_ranks.push(i + 1) }
 
