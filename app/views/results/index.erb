@@ -1,7 +1,37 @@
-<% @users.each do |user| %>
-    <div class="grid_3 highlight_p"><%= user.name %></div>
-    <div class="grid_1"><%= image_tag user.image %></div>
-    <div class="grid_1"><%= user.total_points %></div>
-    <div class="clearfix">&nbsp;</div>
+<div class="grid_1">&nbsp;</div>
+<div class="grid_1"><strong>Rank</strong></div>
+<div class="grid_3">&nbsp;</div>
+<div class="grid_1" align="center"><strong>Points</strong></div>
+
+<div class="grid_1">&nbsp;</div>
+<div class="grid_1"><strong>Rank</strong></div>
+<div class="grid_3">&nbsp;</div>
+<div class="grid_1"><strong>Points</strong></div>
+<div class="clear">&nbsp;</div>
+
+
+<% User.per_page.times do |i| %>
+    <% if @users[i] %>
+        <div class="grid_1">&nbsp;</div>
+        <div class="grid_1 highlight_rank"><%= @user_ranks[i] %></div>
+        <div class="grid_3 highlight_user">&nbsp;&nbsp;<%= @users[i].name %>&nbsp;<%= image_tag @users[i].image, {:style => "position: absolute; right: 2; bottom: 2;"} %></div>
+        <div class="grid_1 highlight_points"><%= @users[i].total_points %></div>
+    <% else %>
+        <div class="grid_6">&nbsp;</div>
+    <% end %>
+
+    <% if @user_friends[i] %>
+        <div class="grid_1">&nbsp;</div>
+        <div class="grid_1 highlight_rank"><%= @friend_ranks[i] %></div>
+        <div class="grid_3 highlight_user">&nbsp;&nbsp;<%= @user_friends[i].name %>&nbsp;<%= image_tag @user_friends[i].image, {:style => "position: absolute; right: 2; bottom: 2;"} %></div>
+        <div class="grid_1 highlight_points"><%= @user_friends[i].total_points %></div>
+    <% else %>
+        <div class="grid_6">&nbsp;</div>
+    <% end %>
+    <div class="clear">&nbsp;</div>
 <% end %>
-<%= will_paginate @users %>
+<div class="clearfix">&nbsp;</div>
+<div class="grid_4" align="center"><%= will_paginate @users, :params => {:action => "all"} %></div>
+<div class="grid_2">&nbsp;</div>
+<div class="grid_4" align="center"><%= will_paginate @user_friends, :params => {:action => "friend"} %></div>
+

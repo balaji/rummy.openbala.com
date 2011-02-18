@@ -15,13 +15,15 @@ class SessionController < ApplicationController
   def destroy
     session[:user_id] = nil
     session[:token] = nil
+    session[:friend_ids] = nil
     redirect_to root_path
   end
 
   def index
-    friends ||= self.fb_graph.get_connections("me", "friends")
+    my_friends ||= self.fb_graph.get_connections("me", "friends")
     ids = Array.new
-    friends.each { |friend| ids.push(friend["id"]) }
+    my_friends.each { |friend| ids.push(friend["id"]) }
     @authorizations = Authorization.find(:all, :conditions => ["uid in (?)", ids])
+    self.set_friends(@authorizations, ids)
   end
 end

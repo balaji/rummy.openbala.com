@@ -21,6 +21,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless signed_in?
   end
 
+  def friends
+    @authorizations ||= Authorization.find(:all, :conditions => ["uid in (?)", session[:friend_ids]])
+  end
+
   def signed_in?
     !!current_user
   end
@@ -30,6 +34,11 @@ class ApplicationController < ActionController::Base
   def current_user=(user)
     @current_user = user
     session[:user_id] = user.id
+  end
+
+  def set_friends(friends, ids)
+    @authorizations = friends
+    session[:friend_ids] = ids
   end
 
   def token=(token)

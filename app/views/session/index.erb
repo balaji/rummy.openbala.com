@@ -1,11 +1,32 @@
-<% if @authorizations.empty? %>
-    <div class="grid_6"><h4>Invite your friends to play! - Its much more fun that way!!</h4></div>
-<% else %>
-    <div class="grid_6"><h4>Your Friends are playing Rummy!</h4></div>
+<div class="clearfix">&nbsp;<div id="fb-root"></div></div>
+<script>
+    FB.init({
+        appId:'190939097590526', cookie:true,
+        status:true, xfbml:true
+    });
+
+    function postToWall() {
+        FB.ui({ method: 'feed', message: 'Facebook for Websites is super-cool'});
+    }
+
+    function inviteFriends() {
+        FB.ui({method: 'apprequests', message: 'You should learn more about this awesome game.', data: 'tracking information for the user'});
+    }
+</script>
+<div class="grid_8">&nbsp;
+    <!-- <input type="button" class="fbButtonblue" value="Post" onclick="postToWall()"/> -->
+</div>
+<div class="grid_4" align="right">
+    <fb:like href="http://www.facebook.com/apps/application.php?id=190939097590526" width="300"></fb:like>
+</div>
+<% if !@authorizations.empty? %>
+    <div class="grid_5" align="center">Your Friends&nbsp;<input type="button" class="fbButtonblue" value="Invite" onclick="inviteFriends()"/></div>
     <div class="clearfix">&nbsp;</div>
     <% @authorizations.each do |auth| %>
-        <div class="grid_3"><%= auth.user.name -%></div>
-        <div class="grid_1"><%= image_tag(auth.user.image) %></div>
+        <div class="grid_1">&nbsp;</div>
+        <div class="grid_4 highlight_user">&nbsp;&nbsp;<%= auth.user.name -%>&nbsp;<%= image_tag(auth.user.image, {:style => "position: absolute; right: 2; bottom: 2;"}) %></div>
         <div class="clearfix">&nbsp;</div>
     <% end %>
+<% else %>
+    <div class="grid_5" align="center">Invite your friends&nbsp;<input type="button" class="fbButtonblue" value="Invite" onclick="inviteFriends()"/></div>
 <% end %>

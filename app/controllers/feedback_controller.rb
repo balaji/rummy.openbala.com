@@ -3,7 +3,5 @@ class FeedbackController < ApplicationController
   layout "standard"
 
   def index
-
-    render :text => "feedback here..", :layout => 'standard'
   end
 end

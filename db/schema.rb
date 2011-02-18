@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110217180854) do
+ActiveRecord::Schema.define(:version => 20110218122237) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -46,13 +46,6 @@ ActiveRecord::Schema.define(:version => 20110217180854) do
 
   create_table "countries", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "feedbacks", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -115,7 +108,7 @@ ActiveRecord::Schema.define(:version => 20110217180854) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
-    t.integer  "total_points"
+    t.integer  "total_points", :default => 0
   end
 
 end

@@ -19,7 +19,7 @@ class TrendsController < ApplicationController
         @mt2 = mt
       end
     end
-    @player_points_one = PlayerMatchPoint.country_one(match_id).find_all { |p| p.points > 0 }.sort_by { |p| -p.points }
-    @player_points_two = PlayerMatchPoint.country_two(match_id).find_all { |p| p.points > 0 }.sort_by { |p| -p.points }
+    @player_points_one = PlayerMatchPoint.country_one(match_id).find_all.sort_by { |p| -p.points }
+    @player_points_two = PlayerMatchPoint.country_two(match_id).find_all.sort_by { |p| -p.points }
   end
 end

@@ -19,6 +19,39 @@ body {
     font-weight: bold;
 }
 
+.highlight_user {
+    height: 50px;
+    padding-top: 5px;
+    margin-top: 2px;
+    background-color: #ffe4c4;
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.highlight_points {
+    height: 50px;
+    margin-top: 2px;
+    padding-top: 5px;
+    background-color: #deb887;
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.highlight_rank {
+    height: 50px;
+    padding-top: 5px;
+    margin-top: 2px;
+    background-color: red;
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    font-size: 14px;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+}
+
 .weekend_game > div {
     background-color: #87ceeb;
 }
@@ -127,7 +160,7 @@ a {
     font-family: Tahoma, "lucida grande", arial, "sans serif";
     font-size: 14px;
     border-radius: 4px;
-    color:white;
+    color: white;
     background: #1e90ff;
 }
 
@@ -138,7 +171,7 @@ a {
     font-family: Tahoma, "lucida grande", arial, "sans serif";
     font-size: 14px;
     border-radius: 4px;
-    color:white;
+    color: white;
     background: #f08080;
 }
 
@@ -162,4 +195,91 @@ div.droppable.hover {
 .fb_button_medium {
     font-size: 11px;
     line-height: 14px;
+}
+
+.pagination {
+    font-size: 11px;
+    float: right;
+    margin: 0;
+    padding: 3px 0 4px;
+}
+
+.pagination a,
+.pagination span {
+    padding: 3px 3px 2px;
+}
+
+.pagination .disabled {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #999999;
+    cursor: default;
+}
+
+.pagination a {
+    color: #3B5998;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #3B5998;
+    border-bottom: 1px solid #3B5998;
+    border-color: #D8DFEA #D8DFEA #3B5998;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.pagination .current {
+}
+
+.pagination .current {
+    border-bottom: 2px solid #3B5998;
+    border-color: #3B5998;
+    color: #3B5998;
+    font-weight: bold;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.pagination .current a:hover {
+    background-color: #3B5998;
+    color: #FFFFFF;
+}
+
+.pagination .prev_page {
+
+}
+
+.pagination .next_page {
+
+}
+
+.fbButton {
+    background: top repeat-x #D9D9D9;
+    color: #777777;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 4px 2px 4px;
+    border: 1px solid #CCCCCC;
+    cursor: pointer;
+}
+
+.fbButton:hover:focus {
+    background-color: #C5C5C5;
+    background-image: none;
+}
+
+.fbButtonblue {
+    background: top repeat-x #5F78AB;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 4px 2px 4px;
+    border: 1px solid #29447E;
+}
+
+.fbButtonblue:hover:focus {
+    background-color: #4B649A;
+    background-image: none;
 }
