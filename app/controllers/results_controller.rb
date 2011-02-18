@@ -7,9 +7,9 @@ class ResultsController < ApplicationController
 
   def all
     page = params[:page]
-    @users = User.paginate(:page => page, :order => 'total_points DESC')
+    @users = User.paginate(:page => page, :order => 'total_points, name DESC').reverse
     @user_ranks = Array.new
-      5.times { |i| @user_ranks.push((User.per_page * (page.to_i - 1)) + i + 1) }
+    User.per_page.times { |i| @user_ranks.push((User.per_page * (page.to_i - 1)) + i + 1) }
 
     render :index
   end
@@ -18,18 +18,19 @@ class ResultsController < ApplicationController
     page = params[:page]
     @user_friends = @friends_list.paginate(:page => page, :per_page => User.per_page)
     @friend_ranks = Array.new
-    5.times { |i| @friend_ranks.push((User.per_page * (page.to_i - 1)) + i + 1) }
+    User.per_page.times { |i| @friend_ranks.push((User.per_page * (page.to_i - 1)) + i + 1) }
 
     render :index
   end
 
   private
   def init_me
-    @users = User.paginate(:page => 1, :order => 'total_points DESC')
+    @users = User.paginate(:page => page, :order => 'total_points, name DESC').reverse
     @user_ranks = Array.new
     User.per_page.times { |i| @user_ranks.push(i + 1) }
 
-    @friends_list ||= my_friends.sort_by { |friend| -friend.total_points.to_i if friend.total_points.to_i }
+    User.paginate(:page => 1).sort_by { |u| [u.total_points, u.name] }
+    @friends_list ||= my_friends.sort_by { |friend| [-friend.total_points.to_i, friend.name] }
     @user_friends = @friends_list.paginate(:page => 1, :per_page => User.per_page)
 
     @friend_ranks = Array.new
