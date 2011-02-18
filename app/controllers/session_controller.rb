@@ -24,6 +24,6 @@ class SessionController < ApplicationController
     ids = Array.new
     my_friends.each { |friend| ids.push(friend["id"]) }
     @authorizations = Authorization.find(:all, :conditions => ["uid in (?)", ids])
-    self.set_friends(@authorizations, ids)
+    self.set_friends(@authorizations)
   end
 end

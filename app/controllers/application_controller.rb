@@ -22,7 +22,14 @@ class ApplicationController < ActionController::Base
   end
 
   def friends
-    @authorizations ||= Authorization.find(:all, :conditions => ["uid in (?)", session[:friend_ids]])
+    if (!@authorizations)
+      my_friends = self.fb_graph.get_connections("me", "friends")
+      ids = Array.new
+      my_friends.each { |friend| ids.push(friend["id"]) }
+      @authorizations = Authorization.find(:all, :conditions => ["uid in (?)", ids])
+    else
+      @authorizations
+    end
   end
 
   def signed_in?
@@ -36,9 +43,9 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.id
   end
 
-  def set_friends(friends, ids)
+  def set_friends(friends)
     @authorizations = friends
-    session[:friend_ids] = ids
+#    session[:friend_ids] = ids
   end
 
   def token=(token)
