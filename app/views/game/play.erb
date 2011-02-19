@@ -1,10 +1,13 @@
+<% country_one = @match.country_one.name
+   country_two = @match.country_two.name %>
+<% content_for :title, "Play! - #{country_one} v. #{country_two}" %>
 <div class="grid_12 desc" align="center">
     <strong>Drag and Drop your top 5!</strong>
 </div>
 <div class="grid_2 clearfix">&nbsp;</div>
-<div class="grid_3" align="center"><h3><%= @match.country_one.name %></h3></div>
+<div class="grid_3" align="center"><h3><%= country_one %></h3></div>
 <div class="grid_1">&nbsp;</div>
-<div class="grid_3" align="center"><h3><%= @match.country_two.name %></h3></div>
+<div class="grid_3" align="center"><h3><%= country_two %></h3></div>
 <div class="clear">&nbsp;<%= hidden_field_tag "match_id", @match.id %></div>
 
 <% @match.country_one.players.zip(@match.country_two.players).each do |player1, player2| %>

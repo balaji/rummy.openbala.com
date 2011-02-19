@@ -1,0 +1,2 @@
+India	370	300
+Bangladesh	283	300

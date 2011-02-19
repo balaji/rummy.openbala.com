@@ -3,11 +3,10 @@ class TrendsController < ApplicationController
   layout "standard"
 
   def init_me
-    @matches ||= Match.find(:all, :conditions => ['date < ?', Time.now.in_time_zone('Chennai') - 1.day])
+    @matches ||= Match.find(:all, :conditions => ['date < ?', Time.now.in_time_zone('Chennai') - 8.hours]).sort_by { |m| m.date }
   end
 
   def index
-    @matches = Match.find(:all, :conditions => ['date < ?', Time.now.in_time_zone('Chennai') - 1.day])
   end
 
   def view
@@ -25,6 +24,6 @@ class TrendsController < ApplicationController
       end
     end
     @player_points_one = PlayerMatchPoint.country_one(match_id).find_all.sort_by { |p| -p.points }
-    @player_points_two = PlayerMatchPoint.country_two(match_id).find_all.sort_by { |p| -p.points }
+    @top_players = PlayerMatchPoint.country_two(match_id).find_all.sort_by { |p| -p.points }
   end
 end

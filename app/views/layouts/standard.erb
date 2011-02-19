@@ -1,19 +1,22 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Rummy</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Rummy - <%= h yield(:title) %></title>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <%= stylesheet_link_tag "grid" %>
-    <%= stylesheet_link_tag "main" %>
     <%= javascript_include_tag "jquery-1.5.min" %>
     <%= javascript_include_tag "prototype" %>
     <%= javascript_include_tag "effects" %>
     <%= javascript_include_tag "dragdrop" %>
     <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "new_twitter" %>
+    <%= stylesheet_link_tag "grid" %>
+    <%= stylesheet_link_tag "main" %>
     <script src="http://connect.facebook.net/en_US/all.js#appId=190939097590526&amp;xfbml=1"></script>
 </head>
 <body>
-<div class="container container_12">
+<div class="container_12">
     <div class="grid_2">&nbsp;</div>
     <div class="grid_2">&nbsp;<%= image_tag "icc-world-cup.png", {:style => "position: absolute; right: 0;"} %></div>
     <div class="grid_4 inner_shadow banner" align="center">Rummy</div>
@@ -29,9 +32,9 @@
             <li><%= link_to 'Schedule', :controller => 'schedule' %></li>
             <li><%= link_to 'Rules', :controller => 'rules' %></li>
             <li><%= link_to 'Play!', {:controller => 'game'}, :class => "high_play" %></li>
-            <li><%= link_to 'Ranking', :controller => 'results' %></li>
+            <li><%= link_to 'Ranking', :controller => 'summary' %></li>
             <li><%= link_to 'Trends', :controller => 'trends' %></li>
-            <li><%= link_to 'Statistics', :controller => 'statistics' %></li>
+            <li><%= link_to 'Stats', :controller => 'statistics' %></li>
             <li><%= link_to 'Feedback', :controller => 'feedback' %></li>
         </ul>
     </div>

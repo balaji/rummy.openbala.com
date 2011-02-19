@@ -1,0 +1,12 @@
+Shafiul Islam	7	0	69	1	9.85	(1nb, 2w)
+Rubel Hossain	10	0	60	0	6.00	(5w)
+Abdur Razzak	9	0	74	0	8.22	(1w)
+Shakib Al Hasan	10	0	61	1	6.10	(3w)
+Naeem Islam	7	0	54	0	7.71
+Mahmudullah	7	0	49	1	7.00	(3w)
+S Sreesanth	5	0	53	0	10.60	(1nb, 1w)
+Z Khan	10	0	40	2	4.00	(4w)
+MM Patel	10	0	48	4	4.80
+Harbhajan Singh	10	0	41	1	4.10	(1w)
+YK Pathan	8	0	49	1	6.12	(2w)
+Yuvraj Singh	7	0	42	0	6.00	(1w)

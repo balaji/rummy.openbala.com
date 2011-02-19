@@ -1,5 +1,6 @@
 <% country_one = @batting_country_one[0].player.country.name
    country_two = @batting_country_two[0].player.country.name %>
+<% content_for :title, "Score Card of #{country_one} v. #{country_two}" %>
 
 <div class="grid_6" align="center"><b><%= country_one %></b></div>
 <div class="grid_6" align="center"><b><%= country_two %></b></div>
@@ -71,7 +72,7 @@
 <div class="grid_2 scorecard" align="center"><strong>Points</strong></div>
 <div class="clear">&nbsp;</div>
 
-<% @player_points_one.zip(@player_points_two).each do |p1, p2| %>
+<% @player_points_one.zip(@top_players).each do |p1, p2| %>
     <% if p1 %>
         <div class="grid_1">&nbsp;</div>
         <div class="grid_3 highlight_p" align="justify">&nbsp;<%= p1.player.short_name %></div>

@@ -1,3 +1,4 @@
+<% content_for :title, "Ranking" %>
 <div class="grid_6 desc" align="center"><strong>Overall</strong></div>
 <div class="grid_6 desc" align="center"><strong>Your Friends Circle</strong></div>
 <div class="clearfix">&nbsp;</div>
@@ -18,7 +19,7 @@
     <% if @users[i] %>
         <div class="grid_1">&nbsp;</div>
         <div class="grid_1 highlight_rank"><%= @user_ranks[i] %></div>
-        <div class="grid_3 highlight_user">&nbsp;&nbsp;<%= @users[i].name %>&nbsp;<%= image_tag @users[i].image, {:style => "position: absolute; right: 2; bottom: 2;"} %></div>
+        <div class="grid_3 highlight_user">&nbsp;&nbsp;<%= @users[i].name %>&nbsp;<%= image_tag @users[i].image, {:class => "image_pos"} %></div>
         <div class="grid_1 highlight_points"><%= @users[i].total_points %></div>
     <% else %>
         <div class="grid_6">&nbsp;</div>
@@ -27,7 +28,7 @@
     <% if @user_friends[i] %>
         <div class="grid_1">&nbsp;</div>
         <div class="grid_1 highlight_rank"><%= @friend_ranks[i] %></div>
-        <div class="grid_3 highlight_user">&nbsp;&nbsp;<%= @user_friends[i].name %>&nbsp;<%= image_tag @user_friends[i].image, {:style => "position: absolute; right: 2; bottom: 2;"} %></div>
+        <div class="grid_3 highlight_user">&nbsp;&nbsp;<%= @user_friends[i].name %>&nbsp;<%= image_tag @user_friends[i].image, {:class => "image_pos"} %></div>
         <div class="grid_1 highlight_points"><%= @user_friends[i].total_points %></div>
     <% else %>
         <div class="grid_6">&nbsp;</div>

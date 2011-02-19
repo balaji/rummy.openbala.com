@@ -5,7 +5,6 @@ class SessionController < ApplicationController
   def create
     auth = request.env['rack.auth']
     self.token = auth["credentials"]["token"]
-    p auth["credentials"]["token"]
     unless @auth = Authorization.find_from_hash(auth)
       @auth = Authorization.create_from_hash(auth, self.fb_graph.get_picture("me"), current_user)
     end
