@@ -63,7 +63,6 @@ a:hover {
 #panel-frame {
     position: relative;
     max-width: 900px;
-    position: fixed;
 }
 
 .panel {
