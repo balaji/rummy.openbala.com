@@ -29,7 +29,6 @@ class ResultsController < ApplicationController
     @user_ranks = Array.new
     User.per_page.times { |i| @user_ranks.push(i + 1) }
 
-    User.paginate(:page => 1).sort_by { |u| [u.total_points, u.name] }
     @friends_list ||= my_friends.sort_by { |friend| [-friend.total_points.to_i, friend.name] }
     @user_friends = @friends_list.paginate(:page => 1, :per_page => User.per_page)
 
@@ -40,8 +39,8 @@ class ResultsController < ApplicationController
   private
   def my_friends
     fri = Array.new
-    self.friends.each do |auth|
-      fri.push(auth.user)
+    self.friends.each do |user|
+      fri.push(user)
     end
     fri.push(self.current_user)
     fri

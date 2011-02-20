@@ -22,13 +22,12 @@ class ApplicationController < ActionController::Base
   end
 
   def friends
-    if (!@authorizations)
-      my_friends = self.fb_graph.get_connections("me", "friends")
+    Rails.cache.fetch("#{session[:user_id]}_friends") do
       ids = Array.new
-      my_friends.each { |friend| ids.push(friend["id"]) }
-      @authorizations = Authorization.find(:all, :conditions => ["uid in (?)", ids])
-    else
-      @authorizations
+      self.fb_graph.get_connections("me", "friends").each { |friend| ids.push(friend["id"]) }
+      users = Array.new
+      Authorization.find(:all, :conditions => ["uid in (?)", ids]).each { |friend| users.push(friend.user) }
+      users
     end
   end
 
@@ -44,8 +43,9 @@ class ApplicationController < ActionController::Base
   end
 
   def set_friends(friends)
-    @authorizations = friends
-#    session[:friend_ids] = ids
+    users= Array.new
+    friends.each { |friend| users.push(friend.user) }
+    Rails.cache.fetch("#{session[:user_id]}_friends") { users }
   end
 
   def token=(token)

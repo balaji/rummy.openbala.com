@@ -35,6 +35,7 @@ Rails::Initializer.run do |config|
   config.time_zone = 'Chennai'
   config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.action_controller.session_store = :active_record_store
+  config.gem 'dalli'
 
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]

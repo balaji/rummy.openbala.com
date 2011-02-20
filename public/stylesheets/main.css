@@ -13,6 +13,10 @@ body {
     font-size: 18px;
 }
 
+.zoom {
+    font-size: 40px;
+}
+
 .matches {
     height: 16px;
     font-size: 14px;
@@ -63,7 +67,7 @@ body {
     border-radius: 4px;
     -moz-border-radius: 4px;
     text-align: center;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .weekend_game > div {

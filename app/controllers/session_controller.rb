@@ -1,6 +1,7 @@
 class SessionController < ApplicationController
   before_filter :authenticate, :except => :create
   layout "standard"
+  caches_action :index
 
   def create
     auth = request.env['rack.auth']
@@ -17,10 +18,6 @@ class SessionController < ApplicationController
     session[:token] = nil
     session[:friend_ids] = nil
     redirect_to root_path
-  end
-
-  def okay
-    render :text => "Okay, thanks."
   end
 
   def index

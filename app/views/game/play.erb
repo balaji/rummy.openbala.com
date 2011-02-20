@@ -28,10 +28,10 @@
             <div class="grid_1 droppable-fix">&nbsp;</div>
 
         <% elsif i == 9 %>
-            <div class="grid_3 droppable-fix scorecard" align="center">&nbsp;<strong><%= "Your Previous Save" if !@players_chosen.empty? %></strong></div>
+            <div class="grid_3 droppable-fix scorecard" align="center">&nbsp;<strong><%= "Your Current Save" %></strong></div>
             <div class="grid_1">&nbsp;</div>
         <% elsif i >=10 and i < 15 %>
-            <div class="grid_3 scorecard droppable-fix highlight_prev" align="center"><%= @players_chosen[i - 10]%></div>
+            <div id="prev_<%= i - 9 %>" class="grid_3 scorecard droppable-fix highlight_prev" align="center"><%= @players_chosen[i - 10]%></div>
             <div class="grid_1">&nbsp;</div>
         <% else %>
             <div class="grid_3 droppable-fix">&nbsp;</div>

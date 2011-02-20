@@ -78,7 +78,10 @@ document.observe("dom:loaded", function() {
             method: 'get',
             parameters: {preferences: mappedSlots.toJSON(), match_id: $('match_id').value},
             onSuccess:function() {
-                alert('saved! Check back once the game is over for your points.');
+                alert('Saved! Good Luck.');
+                for (var i = 1; i <= 5; i++) {
+                    $('prev_' + i).innerHTML = $(mappedSlots.get('drop_' + i)).innerHTML;
+                }
             },
             onFailure:function() {
                 alert('Ugh. tough luck. call 9500069498 immediately.');
@@ -145,18 +148,25 @@ function loadLevelTwo(order, element, match_id) {
                 if (response.length == 0) {
                     html = "<div class='scorecard'>No Data</div>";
                 } else {
+                    var hits = new Array();
+                    var count = 0;
                     jQuery.each(response, function(x) {
                         var j = jQuery.parseJSON(response[x]);
                         html += "<div class='grid_3 scorecard' align='left'>&nbsp;&nbsp;" + j.player + " - " + j.points + "</div>" +
-                                "<strong class='scorecard'>x "+ (5 - x) +"</strong><div class='clear'>&nbsp;</div>";
+                                "<strong class='scorecard'>x " + (5 - x) + "</strong><div class='clear'>&nbsp;</div>";
+                        hits.push(j.player);
                     });
                     html += "<br/><strong class='scorecard'>Best (theoretical) Choice</strong><br/><br/>";
 
                     jQuery.each(response, function(x) {
                         var j = jQuery.parseJSON(response[x]);
                         html += "<div class='grid_3 scorecard' align='left'>&nbsp;&nbsp;" + j.top_player + " - " + j.top_points + "</div>" +
-                                "<strong class='scorecard'>x "+ (5 - x) +"</strong><div class='clear'>&nbsp;</div>"
+                                "<strong class='scorecard'>x " + (5 - x) + "</strong><div class='clear'>&nbsp;</div>";
+                        if (jQuery.inArray(j.top_player, hits) > -1) count++;
                     });
+
+                    html += "<br/><br/><br/><br/><div class='zoom'>"+ count +" / 5</div>" +
+                            "<div class='scorecard'>correct top 5 choices</div>";
                 }
                 jQuery('.data2').html(html);
                 jQuery('.data2').attr("id", id);

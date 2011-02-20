@@ -5,6 +5,7 @@ gem "koala", "~> 1.0.0.beta"
 gem "json_pure"
 gem "ruby-json"
 gem "will_paginate"
+gem "dalli"
 
 group :development do
   gem "postgres-pr"
