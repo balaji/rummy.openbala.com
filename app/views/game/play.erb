@@ -26,7 +26,7 @@
 <div class="clearfix">&nbsp;</div>
 
 <div class="grid_1">&nbsp;</div>
-<div class="grid_3" align="right">&nbsp;<strong><%= "Previous Choice" if !@players_chosen.empty?%></strong></div>
+<div class="grid_3" align="center">&nbsp;<strong><%= "Previous Choice" if !@players_chosen.empty?%></strong></div>
 <div class="grid_3" align="right">&nbsp;</div>
 <div class="grid_1"><strong>Amplify</strong></div>
 <div class="grid_4 scorecard" style="color:red;"><b>Note: Your choice might not play in the 11</b></div>
@@ -35,7 +35,7 @@
 <% if !@players_chosen.empty? %>
     <% @players_chosen.length.times do |i| %>
         <div class="grid_1">&nbsp;</div>
-        <div class="grid_3 scorecard" align="right"><%= @players_chosen[i] %></div>
+        <div class="grid_3 highlight_p" align="center"><%= @players_chosen[i] %></div>
         <div id="drop_<%= i %>" class="droppable grid_3" align="right">&nbsp;</div>
         <div class="grid_2 scorecard">x <strong><%= 5 - i %></strong> times his score!</div>
         <div class="clear">&nbsp;</div>

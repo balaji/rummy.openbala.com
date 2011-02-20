@@ -40,6 +40,7 @@
         <div class="grid_4 highlight_user">&nbsp;&nbsp;<%= auth.user.name -%>&nbsp;<%= image_tag(auth.user.image, {:class => "image_pos"}) %></div>
         <div class="clearfix">&nbsp;</div>
     <% end %>
+    <div class="grid_4" align="center"><%= will_paginate @authorizations %></div>
 <% else %>
     <div class="grid_5" align="center">Invite your friends&nbsp;<input type="button" class="fbButtonblue" value="Invite" onclick="inviteFriends()"/></div>
 <% end %>

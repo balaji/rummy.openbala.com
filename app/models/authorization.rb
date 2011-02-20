@@ -3,6 +3,9 @@ class Authorization < ActiveRecord::Base
   validates_presence_of :user_id, :uid, :provider
   validates_uniqueness_of :uid, :scope => :provider
 
+  cattr_reader :per_page
+  @@per_page = 10
+
   def self.find_from_hash(hash)
     find_by_provider_and_uid(hash['provider'], hash['uid'])
   end

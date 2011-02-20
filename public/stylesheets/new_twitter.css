@@ -45,7 +45,7 @@ a:hover {
 }
 
 .block_t:hover {
-    background-color: #7fffd4;
+    background: url("/images/arrow.png") #7fffd4 99% 50% no-repeat;
     cursor: pointer;
 }
 
@@ -56,7 +56,7 @@ a:hover {
 }
 
 .block_t2:hover {
-    background-color: #7fffd4;
+    background: url("/images/arrow.png") #7fffd4 99% 50% no-repeat;
     cursor: pointer;
 }
 
@@ -81,7 +81,7 @@ a:hover {
 
 .panel2 {
     background-color: #f0e68c;
-    width: 300px;
+    width: 295px;
     min-height: 480px;
     margin-top: 8px;
     float: left;

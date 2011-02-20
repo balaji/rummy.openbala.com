@@ -5,6 +5,7 @@ class SessionController < ApplicationController
   def create
     auth = request.env['rack.auth']
     self.token = auth["credentials"]["token"]
+    p  auth["credentials"]["token"]
     unless @auth = Authorization.find_from_hash(auth)
       @auth = Authorization.create_from_hash(auth, self.fb_graph.get_picture("me"), current_user)
     end
@@ -27,7 +28,9 @@ class SessionController < ApplicationController
     my_friends ||= self.fb_graph.get_connections("me", "friends")
     ids = Array.new
     my_friends.each { |friend| ids.push(friend["id"]) }
-    @authorizations = Authorization.find(:all, :conditions => ["uid in (?)", ids])
-    self.set_friends(@authorizations)
+    authorizationz = Authorization.find(:all, :conditions => ["uid in (?)", ids])
+    self.set_friends(authorizationz)
+    page = params[:page]? params[:page] : 1;
+    @authorizations = authorizationz.paginate(:page => page, :per_page => Authorization.per_page)
   end
 end

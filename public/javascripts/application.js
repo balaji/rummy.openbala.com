@@ -23,7 +23,7 @@ document.observe("dom:loaded", function() {
             var panel2 = jQuery('.panel2');
             var panel_width = jQuery('.panel').css('left');
 
-            if (parseInt(panel.css('left'), 0) == 0 || prevMatchId != id) {
+            if (panel_width == "0px" || prevMatchId != id) {
                 prevMatchId = id;
                 jQuery('.data').html('<img src="images/ajax-loader.gif" alt="loading"/>');
                 jQuery.ajax({
@@ -38,7 +38,7 @@ document.observe("dom:loaded", function() {
                         } else {
                             jQuery.each(response, function(x) {
                                 var j = jQuery.parseJSON(response[x]);
-                                html += "<div id='user_" + x + "' class='block_t2 scorecard' align='left' onclick='loadLevelTwo(\"" + j.player_order + "\", this, " + id + ")'>&nbsp;"+ (x + 1) +".&nbsp;"
+                                html += "<div id='user_" + x + "' class='block_t2 scorecard' align='left' onclick='loadLevelTwo(\"" + j.player_order + "\", this, " + id + ")'>&nbsp;" + (x + 1) + ".&nbsp;"
                                         + j.name + " - &nbsp;&nbsp;" + j.points + "</div>"
                             });
                         }
@@ -56,7 +56,7 @@ document.observe("dom:loaded", function() {
                 panel2.animate({left: parseInt(panel2.css('left'), 0) == 0 ? + panel2.outerWidth() : 0});
             } else {
                 if (panel_width == '301px') {
-                    if (parseInt(panel2.css('left'), 0) > 301) panel2.animate({left: 301});
+                    if (parseInt(panel2.css('left'), 0) > 296) panel2.animate({left: 296});
                 } else {
                     panel.animate({left: parseInt(panel.css('left'), 0) == 0 ? + panel.outerWidth() : 0});
                     panel2.animate({left: parseInt(panel2.css('left'), 0) == 0 ? + panel2.outerWidth() : 0});
@@ -124,6 +124,7 @@ document.observe("dom:loaded", function() {
     });
 });
 
+var prePlayerId = "";
 
 function loadLevelTwo(order, element, match_id) {
     var id = element.id;
@@ -131,44 +132,47 @@ function loadLevelTwo(order, element, match_id) {
     var panel = jQuery('.panel2');
     var panel_width = jQuery('.panel2').css('left');
 
-    jQuery('.data2').html('<img src="images/ajax-loader.gif" alt="loading"/>');
-    jQuery.ajax({
-        url: "/profile/player_profile",
-        method: 'get',
-        data: {match_id: match_id, order: order},
-        dataType: "json",
-        success:function(response) {
-            var html = "<strong class='scorecard'>User Choice</strong><br/><br/>";
-            if (response.length == 0) {
-                html = "<div class='scorecard'>No Data</div>";
-            } else {
-                jQuery.each(response, function(x) {
-                    var j = jQuery.parseJSON(response[x]);
-                    html += "<div class='grid_3 scorecard' align='left'>&nbsp;&nbsp;" + j.player + " - " + j.points + "</div>" +
-                            "<div class='clear'>&nbsp;</div>";
-                });
-                html += "<br/><strong class='scorecard'>Best (theoretical) Choice</strong><br/><br/>";
+    if (panel_width == "296px" || prePlayerId != id) {
+        jQuery('.data2').html('<img src="images/ajax-loader.gif" alt="loading"/>');
+        prePlayerId = id;
+        jQuery.ajax({
+            url: "/profile/player_profile",
+            method: 'get',
+            data: {match_id: match_id, order: order},
+            dataType: "json",
+            success:function(response) {
+                var html = "<strong class='scorecard'>User Choice</strong><br/><br/>";
+                if (response.length == 0) {
+                    html = "<div class='scorecard'>No Data</div>";
+                } else {
+                    jQuery.each(response, function(x) {
+                        var j = jQuery.parseJSON(response[x]);
+                        html += "<div class='grid_3 scorecard' align='left'>&nbsp;&nbsp;" + j.player + " - " + j.points + "</div>" +
+                                "<strong class='scorecard'>x "+ (5 - x) +"</strong><div class='clear'>&nbsp;</div>";
+                    });
+                    html += "<br/><strong class='scorecard'>Best (theoretical) Choice</strong><br/><br/>";
 
-                jQuery.each(response, function(x) {
-                    var j = jQuery.parseJSON(response[x]);
-                    html += "<div class='grid_3 scorecard' align='left'>&nbsp;&nbsp;" + j.top_player + " - " + j.top_points + "</div>" +
-                            "<div class='clear'>&nbsp;</div>"
-                });
+                    jQuery.each(response, function(x) {
+                        var j = jQuery.parseJSON(response[x]);
+                        html += "<div class='grid_3 scorecard' align='left'>&nbsp;&nbsp;" + j.top_player + " - " + j.top_points + "</div>" +
+                                "<strong class='scorecard'>x "+ (5 - x) +"</strong><div class='clear'>&nbsp;</div>"
+                    });
+                }
+                jQuery('.data2').html(html);
+                jQuery('.data2').attr("id", id);
+            },
+            failure:function() {
+                alert('Ugh. tough luck. call 9500069498 immediately.');
             }
-            jQuery('.data2').html(html);
-            jQuery('.data2').attr("id", id);
-        },
-        failure:function() {
-            alert('Ugh. tough luck. call 9500069498 immediately.');
-        }
-    });
+        });
+    }
 
     if (data_id == id) {
-        panel.animate({left: parseInt(panel.css('left'), 0) == 301 ? + panel.outerWidth() + 300 : 301});
+        panel.animate({left: parseInt(panel.css('left'), 0) == 296 ? + panel.outerWidth() + 295 : 296});
     } else {
-        if (panel_width == '601px') {
+        if (panel_width == '591px') {
         } else {
-            panel.animate({left: parseInt(panel.css('left'), 0) == 301 ? + panel.outerWidth() + 300 : 301});
+            panel.animate({left: parseInt(panel.css('left'), 0) == 296 ? + panel.outerWidth() + 295 : 296});
         }
     }
     return false;
