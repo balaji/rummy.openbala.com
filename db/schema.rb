@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110219024443) do
+ActiveRecord::Schema.define(:version => 20110220065534) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -60,14 +60,15 @@ ActiveRecord::Schema.define(:version => 20110219024443) do
   end
 
   create_table "matches", :force => true do |t|
-    t.string   "match_type",     :null => false
+    t.string   "match_type",                           :null => false
     t.integer  "stadium_id"
-    t.datetime "date",           :null => false
-    t.boolean  "day_night",      :null => false
+    t.datetime "date",                                 :null => false
+    t.boolean  "day_night",                            :null => false
     t.integer  "country_one_id"
     t.integer  "country_two_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status",         :default => "active"
   end
 
   create_table "player_match_points", :force => true do |t|
