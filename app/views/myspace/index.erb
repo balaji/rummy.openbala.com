@@ -26,7 +26,7 @@
                     <strong class="scorecard"><%= game_data.match.status == "finished" ? game_data.points : "---" %>&nbsp;</strong>
                 </div>
                 <div align="center">
-                    <br/><span class="scorecard">Rank: </span>
+                    <span class="scorecard">Rank: </span>
                     <strong>
                         <% data = UserGameData.find_all_by_match_id(@matches[m].id) %>
                         <%= data.sort_by { |pm| -pm.points }.index(game_data) + 1 if @matches[m].status == 'finished' %>
