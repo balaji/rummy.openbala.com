@@ -3,7 +3,7 @@ class ProfileController < ApplicationController
   layout "standard"
 
   def index
-      @matches ||= Match.find(:all, :conditions => ['status = ? and match_type != ?', "finished", 'Warm-Up']).sort_by { |m| m.date }
+      @matches ||= Match.find(:all, :conditions => ['status = ? and match_type != ?', "finished", 'Warm-Up']).sort_by { |m| m.date }.reverse
   end
 
   def user_game_data

@@ -49,6 +49,8 @@ document.observe("dom:loaded", function() {
                         alert('Ugh. tough luck. call 9500069498 immediately.');
                     }
                 });
+            } else {
+              jQuery('.data').html("");
             }
 
             if (data_id == id) {

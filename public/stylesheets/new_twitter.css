@@ -11,10 +11,10 @@ a:hover {
 }
 
 #container {
-    width: 900px;
+    width: 910px;
     margin: 0 auto;
     background-color: #fff;
-    min-height: 500px;
+    min-height: 600px;
     overflow: auto;
     -moz-border-radius: 5px;
     -webkit-border-radius: 6px;
@@ -31,7 +31,7 @@ a:hover {
     float: left;
     background-color: #fff;
     width: 300px;
-    min-height: 500px;
+    min-height: 600px;
     position: relative;
     border: solid 1px #999999;
     z-index:10;
@@ -49,6 +49,7 @@ a:hover {
 
 .block_t2 {
     border-bottom: solid 1px #999999;
+    border-left: solid 1px #999999;
     padding: 5px;
 }
 
@@ -65,7 +66,7 @@ a:hover {
 .panel {
     background-color: #f2f2f2;
     width: 300px;
-    min-height: 490px;
+    min-height: 420px;
     margin-top: 5px;
     position: relative;
     position: absolute;
@@ -78,7 +79,7 @@ a:hover {
 .panel2 {
     background-color: #f0e68c;
     width: 295px;
-    min-height: 480px;
+    min-height: 400px;
     margin-top: 8px;
     float: left;
     position: relative;

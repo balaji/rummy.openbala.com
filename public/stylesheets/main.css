@@ -69,6 +69,13 @@ body {
     text-align: center;
     font-weight: bold;
 }
+.highlight_message {
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    color: red;
+    text-align: center;
+    font-size:14px;
+    font-weight:bold;
+}
 
 .weekend_game > div {
     background-color: #87ceeb;
@@ -158,7 +165,7 @@ ul#menu li a:hover {
 }
 
 a {
-    text-decoration: none;
+    /*text-decoration: none;*/
 }
 
 .scorecard {

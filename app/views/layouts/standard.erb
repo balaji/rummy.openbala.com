@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
     <title>Rummy - <%= h yield(:title) %></title>
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
@@ -32,7 +32,7 @@
             <li><%= link_to 'Schedule', :controller => 'schedule' %></li>
             <li><%= link_to 'Rules', :controller => 'rules' %></li>
             <li><%= link_to 'Play!', {:controller => 'game'}, :class => "high_play" %></li>
-            <li><%= link_to 'Ranking', :controller => 'summary' %></li>
+            <li><%= link_to 'Ranking', :controller => 'myspace' %></li>
             <li><%= link_to 'Trends', :controller => 'trends' %></li>
             <li><%= link_to 'Stats', :controller => 'statistics' %></li>
             <li><%= link_to 'Feedback', :controller => 'feedback' %></li>
@@ -40,6 +40,16 @@
     </div>
     <div class="clear clearfix">&nbsp;</div>
     <div class="clearfix">&nbsp;</div>
+    <% matches = Match.find(:all, :conditions => ['Date(date) = ?', Time.now])
+       if !matches.empty?
+           matches.each do |match|
+               if Time.now > match.date and match.status == 'active' %>
+                <div class="grid_12 highlight_message" align="center">
+                    <%= "#{match.country_one.name} v. #{match.country_two.name} is in progress. Check back once the game is over for updated rankings." %>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
     <%= yield %>
     <div class="clear clearfix">&nbsp;</div>
     <div class="clearfix">&nbsp;</div>

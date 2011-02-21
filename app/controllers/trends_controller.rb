@@ -3,7 +3,7 @@ class TrendsController < ApplicationController
   layout "standard"
 
   def init_me
-    @matches ||= Match.find(:all, :conditions => ['status = ?', "finished"]).sort_by { |m| m.date }
+    @matches ||= Match.find(:all, :conditions => ['status = ?', "finished"]).sort_by { |m| m.date }.reverse
   end
 
   def index
