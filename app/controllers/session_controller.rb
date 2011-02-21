@@ -1,7 +1,7 @@
 class SessionController < ApplicationController
   before_filter :authenticate, :except => :create
   layout "standard"
-  caches_action :index
+#  caches_action :index
 
   def create
     auth = request.env['rack.auth']
