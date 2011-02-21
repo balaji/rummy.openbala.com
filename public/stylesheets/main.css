@@ -1,6 +1,5 @@
 body {
     font-family: 'PT Sans', "lucida grande", tahoma, verdana, arial, sans-serif;
-    background-color: #f0f8ff;
 }
 
 .banner {
@@ -109,7 +108,12 @@ ul#menu li a {
     color: white;
     float: left;
     text-align: center;
-    border-left: 1px solid #fff;
+    margin-right: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 0 1px 1px #888;
+    -webkit-box-shadow: 0 0 1px 1px #888;
+    box-shadow: 0 0 1px 1px #888;
 }
 
 ul#menu li a.high_play {
@@ -132,17 +136,22 @@ ul#profile li a {
     padding: 5px 0;
     width: 200px;
     height: 22px;
-    background: #5f9ea0;
+    background: #4AA02C;
     color: white;
     float: left;
     text-align: center;
-    border-left: 1px solid #fff;
     font-size: 14px;
+    margin-right: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 0 1px 1px #888;
+    -webkit-box-shadow: 0 0 1px 1px #888;
+    box-shadow: 0 0 1px 1px #888;
 }
 
 ul#profile li a:hover {
-    background: #a2b3a1;
-    color: #000
+    background: orange;
+    color: #000;
 }
 
 div .play a {
@@ -162,7 +171,7 @@ div .play a {
 }
 
 ul#menu li a:hover {
-    background: #a2b3a1;
+    background: orange;
     color: #000
 }
 
@@ -176,6 +185,18 @@ a {
 
 .inner_shadow {
     text-shadow: 1px 1px white, -1px -1px #444;
+}
+
+.myspace {
+    float: left;
+    padding: 10px;
+    margin: 9px;
+    width: 220px;
+    height: 200px;
+    -moz-box-shadow: 0 0 5px 5px #888;
+    -webkit-box-shadow: 0 0 5px 5px #888;
+    box-shadow: 0 0 5px 5px #888;
+    background: #C9BE62;
 }
 
 .footer {

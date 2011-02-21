@@ -3,7 +3,7 @@
 <div class="grid_1">&nbsp;</div>
 <div class="grid_10">
     <% @matches.length.times do |m| %>
-        <div style="float:left; padding:10px; margin:3px;width:220px;height:200px;border:solid 1px #1A356E;">
+        <div class="myspace">
             <div class="scorecard" align="center"><strong><%= @matches[m].country_one.name %>
                 v. <%= @matches[m].country_two.name %></strong></div>
             <div align="center" class="scorecard" <%= 'style="color:red;font-weight:bold;"' if @matches[m].status == 'active' %>><%= @matches[m].date.strftime("%d-%m-%Y") %></div>
