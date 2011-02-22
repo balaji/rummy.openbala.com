@@ -27,7 +27,7 @@ a:hover {
 
 .right {
     float: right;
-    margin-top: 100px;
+    margin-top: 140px;
     width: 580px;
     font-size:20px;
     font-family:Tahoma, "trebuchet ms", arial;
@@ -88,8 +88,8 @@ a:hover {
 .panel2 {
     background-color: #AFDCEC;
     width: 295px;
-    min-height: 400px;
-    margin-top: 50px;
+    min-height: 470px;
+    margin-top: 20px;
     float: left;
     position: relative;
     position: absolute;
