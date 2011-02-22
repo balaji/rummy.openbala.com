@@ -2,6 +2,7 @@ document.observe("dom:loaded", function() {
     var messageToDrag = "";
     var mappedSlots = new Hash();
     var prevMatchId = "";
+    var prevFirstPanel = "";
     var unsetAny = function(index) {
         var key;
         mappedSlots.each(function(entry) {
@@ -43,17 +44,17 @@ document.observe("dom:loaded", function() {
                             });
                         }
                         jQuery('.data').html(html);
-                        jQuery('.data').attr("id", id);
+                        jQuery('.data').attr("id", "a_" + id);
                     },
                     failure:function() {
                         alert('Ugh. tough luck. call 9500069498 immediately.');
                     }
                 });
             } else {
-              jQuery('.data').html("");
+                jQuery('.data').html("");
             }
 
-            if (data_id == id) {
+            if (data_id == "a_" + id) {
                 panel.animate({left: parseInt(panel.css('left'), 0) == 0 ? + panel.outerWidth() : 0});
                 panel2.animate({left: parseInt(panel2.css('left'), 0) == 0 ? + panel2.outerWidth() : 0});
             } else {
@@ -64,6 +65,13 @@ document.observe("dom:loaded", function() {
                     panel2.animate({left: parseInt(panel2.css('left'), 0) == 0 ? + panel2.outerWidth() : 0});
                 }
             }
+
+            if (prevFirstPanel != "") {
+                $(prevFirstPanel).setStyle({backgroundColor: ''});
+            }
+            prevFirstPanel = $(this).id;
+            $(this).setStyle({backgroundColor: 'orange'});
+
             return false;
         });
     });
@@ -130,6 +138,7 @@ document.observe("dom:loaded", function() {
 });
 
 var prePlayerId = "";
+var prevSecondPanel = "";
 
 function loadLevelTwo(order, element, match_id) {
     var id = element.id;
@@ -167,11 +176,11 @@ function loadLevelTwo(order, element, match_id) {
                         if (jQuery.inArray(j.top_player, hits) > -1) count++;
                     });
 
-                    html += "<br/><br/><br/><br/><div class='zoom'>"+ count +" / 5</div>" +
+                    html += "<br/><br/><br/><br/><div class='zoom'>" + count + " / 5</div>" +
                             "<div class='scorecard'>correct top 5 choices</div>";
                 }
                 jQuery('.data2').html(html);
-                jQuery('.data2').attr("id", id);
+                jQuery('.data2').attr("id", "b_" + id);
             },
             failure:function() {
                 alert('Ugh. tough luck. call 9500069498 immediately.');
@@ -179,7 +188,7 @@ function loadLevelTwo(order, element, match_id) {
         });
     }
 
-    if (data_id == id) {
+    if (data_id == "b_" + id) {
         panel.animate({left: parseInt(panel.css('left'), 0) == 301 ? + panel.outerWidth() + 296 : 301});
     } else {
         if (panel_width == '597px') {
@@ -187,5 +196,12 @@ function loadLevelTwo(order, element, match_id) {
             panel.animate({left: parseInt(panel.css('left'), 0) == 301 ? + panel.outerWidth() + 296 : 301});
         }
     }
+
+    if (prevSecondPanel != "") {
+        $(prevSecondPanel).setStyle({backgroundColor: ''});
+    }
+    prevSecondPanel = id;
+    $(id).setStyle({backgroundColor: 'orange'});
+
     return false;
 }
