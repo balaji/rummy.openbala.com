@@ -58,7 +58,7 @@ document.observe("dom:loaded", function() {
                 panel2.animate({left: parseInt(panel2.css('left'), 0) == 0 ? + panel2.outerWidth() : 0});
             } else {
                 if (panel_width == '301px') {
-                    if (parseInt(panel2.css('left'), 0) > 296) panel2.animate({left: 296});
+                    if (parseInt(panel2.css('left'), 0) > 301) panel2.animate({left: 301});
                 } else {
                     panel.animate({left: parseInt(panel.css('left'), 0) == 0 ? + panel.outerWidth() : 0});
                     panel2.animate({left: parseInt(panel2.css('left'), 0) == 0 ? + panel2.outerWidth() : 0});
@@ -180,11 +180,11 @@ function loadLevelTwo(order, element, match_id) {
     }
 
     if (data_id == id) {
-        panel.animate({left: parseInt(panel.css('left'), 0) == 296 ? + panel.outerWidth() + 295 : 296});
+        panel.animate({left: parseInt(panel.css('left'), 0) == 301 ? + panel.outerWidth() + 296 : 301});
     } else {
-        if (panel_width == '591px') {
+        if (panel_width == '597px') {
         } else {
-            panel.animate({left: parseInt(panel.css('left'), 0) == 296 ? + panel.outerWidth() + 295 : 296});
+            panel.animate({left: parseInt(panel.css('left'), 0) == 301 ? + panel.outerWidth() + 296 : 301});
         }
     }
     return false;
