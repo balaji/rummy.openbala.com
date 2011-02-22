@@ -39,7 +39,7 @@
                 <% end %>
             <% else %>
                 <div align="center" class="scorecard">
-                    <% if (@matches[m].status == 'active') %>
+                    <% if (@matches[m].status == 'active' and Time.now < @matches[m].date) %>
                         <a href="/game/play?match=<%= @matches[m].id %>">Play Now!</a>
                     <% else %>
                         Didn't Play
