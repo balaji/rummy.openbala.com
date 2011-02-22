@@ -39,7 +39,7 @@ a:hover {
 }
 
 .block_t:hover {
-    background: url("/images/arrow.png") orange 99% 50% no-repeat;
+    background: url("/images/arrow.png") #ffe4c4 99% 50% no-repeat;
     cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ a:hover {
 }
 
 .block_t2:hover {
-    background: url("/images/arrow.png") orange 99% 50% no-repeat;
+    background: url("/images/arrow.png") #ffe4c4 99% 50% no-repeat;
     cursor: pointer;
 }
 

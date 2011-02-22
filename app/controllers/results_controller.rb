@@ -29,11 +29,13 @@ class ResultsController < ApplicationController
     @user_ranks = Array.new
     User.per_page.times { |i| @user_ranks.push(i + 1) }
 
-    @friends_list ||= my_friends.sort_by { |friend| [-friend.total_points.to_i, friend.name] }
-    @user_friends = @friends_list.paginate(:page => 1, :per_page => User.per_page)
+    if (self.current_auth.provider == 'facebook')
+      @friends_list ||= my_friends.sort_by { |friend| [-friend.total_points.to_i, friend.name] }
+      @user_friends = @friends_list.paginate(:page => 1, :per_page => User.per_page)
 
-    @friend_ranks = Array.new
-    User.per_page.times { |i| @friend_ranks.push(i + 1) }
+      @friend_ranks = Array.new
+      User.per_page.times { |i| @friend_ranks.push(i + 1) }
+    end
   end
 
   private

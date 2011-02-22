@@ -13,6 +13,11 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+  def current_auth
+    @current_auth ||= Authorization.find_by_uid(session[:uid])
+  end
+
+  protected
   def fb_graph
     @graph ||= Koala::Facebook::GraphAPI.new(session[:token])
   end
@@ -35,11 +40,16 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  helper_method :current_user, :signed_in?, :fb_graph
+  helper_method :current_user, :signed_in?, :fb_graph, :current_auth
 
   def current_user=(user)
     @current_user = user
     session[:user_id] = user.id
+  end
+
+  def current_auth=(auth)
+    @current_auth = auth
+    session[:uid] = auth.uid
   end
 
   def set_friends(friends)

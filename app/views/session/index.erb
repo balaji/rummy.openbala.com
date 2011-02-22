@@ -32,7 +32,7 @@
 <div class="clearfix">&nbsp;</div>
 <div class="clearfix">&nbsp;</div>
 
-<% if !@authorizations.empty? %>
+<% if @authorizations and !@authorizations.empty? %>
     <div class="grid_5" align="center">Your Friends&nbsp;<input type="button" class="fbButtonblue" value="Invite" onclick="inviteFriends()"/></div>
     <div class="clearfix">&nbsp;</div>
     <% @authorizations.each do |auth| %>
