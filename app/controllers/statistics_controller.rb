@@ -3,5 +3,6 @@ class StatisticsController < ApplicationController
   layout "standard"
 
   def index
+    @countries = Country.find(:all, :conditions => "name != 'TBC'")
   end
 end

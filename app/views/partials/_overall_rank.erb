@@ -9,9 +9,15 @@
 <% User.per_page.times do |i| %>
     <% if users[i] %>
         <div class="grid_1">&nbsp;</div>
-        <div class="grid_1 highlight_rank"><%= ranks[i] %></div>
-        <div class="grid_3 highlight_user">&nbsp;&nbsp;<%= users[i].name %>&nbsp;<%= image_tag users[i].image, {:class => "image_pos"} %></div>
-        <div class="grid_1 highlight_points"><%= users[i].total_points %></div>
+        <%if self.current_user.name == users[i].name %>
+        <div class="grid_1 highlight highlight_c_rank"><%= ranks[i] %></div>
+        <div class="grid_3 highlight highlight_c_user">&nbsp;&nbsp;<%= users[i].name %>&nbsp;<%= image_tag users[i].image, {:class => "image_pos"} %></div>
+        <div class="grid_1 highlight highlight_c_points"><%= users[i].total_points %></div>
+      <%else%>
+        <div class="grid_1 highlight highlight_rank"><%= ranks[i] %></div>
+        <div class="grid_3 highlight highlight_user">&nbsp;&nbsp;<%= users[i].name %>&nbsp;<%= image_tag users[i].image, {:class => "image_pos"} %></div>
+        <div class="grid_1 highlight highlight_points"><%= users[i].total_points %></div>
+      <%end%>
     <% else %>
         <div class="grid_6">&nbsp;</div>
     <% end %>

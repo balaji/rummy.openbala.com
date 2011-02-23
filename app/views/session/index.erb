@@ -31,13 +31,15 @@
 <div class="clearfix">&nbsp;</div>
 <div class="clearfix">&nbsp;</div>
 <div class="clearfix">&nbsp;</div>
+<div class="grid_2">Your Rank is: <%= @rank%></div>
+<div class="clearfix">&nbsp;</div>
 
 <% if @authorizations and !@authorizations.empty? %>
     <div class="grid_5" align="center">Your Friends&nbsp;<input type="button" class="fbButtonblue" value="Invite" onclick="inviteFriends()"/></div>
     <div class="clearfix">&nbsp;</div>
     <% @authorizations.each do |auth| %>
         <div class="grid_1">&nbsp;</div>
-        <div class="grid_4 highlight_user">&nbsp;&nbsp;<%= auth.user.name -%>&nbsp;<%= image_tag(auth.user.image, {:class => "image_pos"}) %></div>
+        <div class="grid_4 highlight highlight_user">&nbsp;&nbsp;<%= auth.user.name -%>&nbsp;<%= image_tag(auth.user.image, {:class => "image_pos"}) %></div>
         <div class="clearfix">&nbsp;</div>
     <% end %>
     <div class="grid_4" align="center"><%= will_paginate @authorizations %></div>

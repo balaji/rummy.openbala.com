@@ -16,16 +16,7 @@
     <div class="grid_1">&nbsp;</div>
     <% if country_one_players[i] %>
       <div id="player_<%= country_one_players[i].id %>" class="grid_3 draggable scorecard"><%= country_one_players[i].display_name %>
-
-      <% if country_one_players[i].role == 'BAT'%>
-        <%= image_tag "batsman.png", :class => "image_pos" %>
-      <% elsif country_one_players[i].role == 'AR'%>
-        <%= image_tag "allrounder.png", :class => "image_pos" %>
-      <% elsif country_one_players[i].role == 'BWL'%>
-        <%= image_tag "bowler.png", :class => "image_pos" %>
-      <% elsif country_one_players[i].role == 'WK'%>
-        <%= image_tag "wicket.png", :class => "image_pos" %>
-      <% end %>
+      <%=render :partial => "partials/image_for_player", :locals => {:player => country_one_players[i]} %>
       </div>
         <div class="grid_1">&nbsp;</div>
     <% end %>
@@ -42,7 +33,8 @@
             <div class="grid_3 droppable-fix scorecard" align="center">&nbsp;<strong><%= "Your Current Save" %></strong></div>
             <div class="grid_1">&nbsp;</div>
         <% elsif i >=10 and i < 15 %>
-            <div id="prev_<%= i - 9 %>" class="grid_3 scorecard droppable-fix highlight_prev" align="center"><%= @players_chosen[i - 10]%></div>
+          <div id="prev_<%= i - 9 %>" class="grid_3 scorecard droppable-fix highlight_prev" align="center">
+            <%= @players_chosen[i - 10]%> <%=render :partial => "partials/image_for_player", :locals => {:player => Player.find_by_display_name(@players_chosen[i - 10])} %></div>
             <div class="grid_1">&nbsp;</div>
         <% else %>
             <div class="grid_3 droppable-fix">&nbsp;</div>
@@ -52,15 +44,7 @@
 
     <% if country_two_players[i] %>
       <div id="player_<%= country_two_players[i].id %>" class="grid_3 draggable scorecard"><%= country_two_players[i].display_name %>
-      <% if country_two_players[i].role == 'BAT'%>
-        <%= image_tag "batsman.png", :class => "image_pos" %>
-      <% elsif country_two_players[i].role == 'AR'%>
-        <%= image_tag "allrounder.png",:class => "image_pos" %>
-      <% elsif country_two_players[i].role == 'BWL'%>
-        <%= image_tag "bowler.png", :class => "image_pos" %>
-      <% elsif country_two_players[i].role == 'WK'%>
-        <%= image_tag "wicket.png", :class => "image_pos" %>
-      <%end%>
+      <%=render :partial => "partials/image_for_player", :locals => {:player => country_two_players[i]} %>
     </div>
     <% end %>
     <div class="clear">&nbsp;</div>
