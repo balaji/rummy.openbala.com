@@ -20,11 +20,11 @@
     <div class="grid_2">&nbsp;</div>
     <div class="grid_2">&nbsp;<%= image_tag "icc-world-cup.png", {:style => "position: absolute; right: 0;"} %></div>
     <div class="grid_4 inner_shadow banner" align="center">Rummy</div>
-    <div class="grid_2">&nbsp;<%= image_tag "rummy.png", {:style => "position: absolute; height: 120px;"} %></div>
-    <div id="profile_pic" class="grid_2" align="right">
+    <div class="grid_2">&nbsp;<%= image_tag "rummy.png", {:style => "position: absolute; height: 120px;"} %></div> 
+    <div class="grid_1" style="float:left;top:60px;"><strong style="font-size:13px;">Rank: <%= session[:rank]%></strong></div>
+    <div id="profile_pic" class="grid_1" align="right">
         <%= image_tag current_user.image, {:style => "position: absolute; bottom: 0; right: 0"} %>
     </div>
-    <div class="clearfix">&nbsp;</div>
     <div id="sign_out" class="grid_12" align="right">&nbsp;&nbsp;<%= link_to 'sign out', logout_path %></div>
     <div align="center" class="grid_8">
         <ul id="menu">

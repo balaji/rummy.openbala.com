@@ -42,10 +42,14 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user, :signed_in?, :fb_graph, :current_auth
-
   def current_user=(user)
     @current_user = user
     session[:user_id] = user.id
+    session[:rank] = if self.current_user.total_points > 0
+      User.all.sort_by {|u| -u.total_points}.index(self.current_user) + 1 
+    else
+      'NA'
+    end
   end
 
   def current_auth=(auth)

@@ -32,39 +32,48 @@ body {
     font-weight: bold;
 }
 
-.highlight_user {
+.highlight {
     height: 50px;
     padding-top: 5px;
     margin-top: 2px;
-    background-color: #ffe4c4;
     font-family: Tahoma, "lucida grande", arial, "sans serif";
     font-size: 14px;
     border-radius: 4px;
     -moz-border-radius: 4px;
+}
+
+.highlight_user {
+    background-color: #ffe4c4;
+}
+
+.highlight_c_user {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.highlight_c_points {
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
 .highlight_points {
-    height: 50px;
-    margin-top: 2px;
-    padding-top: 5px;
     background-color: #deb887;
-    font-family: Tahoma, "lucida grande", arial, "sans serif";
-    font-size: 14px;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
     text-align: center;
 }
 
-.highlight_rank {
-    height: 50px;
-    padding-top: 5px;
-    margin-top: 2px;
-    background-color: red;
-    font-family: Tahoma, "lucida grande", arial, "sans serif";
-    font-size: 15px;
+.highlight_c_rank {
+    background-color: green;
+    text-align: center;
     color: white;
-    border-radius: 4px;
-    -moz-border-radius: 4px;
+    font-weight: bold;
+}
+
+.highlight_rank {
+    background-color: red;
+    color: white;
     text-align: center;
     font-weight: bold;
 }

@@ -1,0 +1,9 @@
+<% if player.role == 'BAT'%>
+  <%= image_tag "batsman.png", :class => "image_pos" %>
+<% elsif player.role == 'AR'%>
+  <%= image_tag "allrounder.png", :class => "image_pos" %>
+<% elsif player.role == 'BWL'%>
+  <%= image_tag "bowler.png", :class => "image_pos" %>
+<% elsif player.role == 'WK'%>
+  <%= image_tag "wicket.png", :class => "image_pos" %>
+<% end %>
