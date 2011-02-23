@@ -27,6 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def friends
+    Rails.cache.delete("#{session[:user_id]}_friends")
     Rails.cache.fetch("#{session[:user_id]}_friends", :expires_in => 1.hour) do
       ids = Array.new
       self.fb_graph.get_connections("me", "friends").each { |friend| ids.push(friend["id"]) }
