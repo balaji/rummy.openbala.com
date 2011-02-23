@@ -15,7 +15,18 @@
    15.times do |i| %>
     <div class="grid_1">&nbsp;</div>
     <% if country_one_players[i] %>
-        <div id="player_<%= country_one_players[i].id %>" class="grid_3 draggable scorecard"><%= country_one_players[i].display_name %></div>
+      <div id="player_<%= country_one_players[i].id %>" class="grid_3 draggable scorecard"><%= country_one_players[i].display_name %>
+
+      <% if country_one_players[i].role == 'BAT'%>
+        <%= image_tag "batsman.png", :height => "18", :class => "image_pos" %>
+      <% elsif country_one_players[i].role == 'AR'%>
+        <%= image_tag "allrounder.png", :height => "18", :class => "image_pos" %>
+      <% elsif country_one_players[i].role == 'BWL'%>
+        <%= image_tag "bowler.png", :height => "16", :class => "image_pos" %>
+      <% elsif country_one_players[i].role == 'WK'%>
+        <%= image_tag "wicket.png", :height => "18", :class => "image_pos" %>
+      <% end %>
+      </div>
         <div class="grid_1">&nbsp;</div>
     <% end %>
 
@@ -40,7 +51,17 @@
     <% end %>
 
     <% if country_two_players[i] %>
-        <div id="player_<%= country_two_players[i].id %>" class="grid_3 draggable scorecard"><%= country_two_players[i].display_name %></div>
+      <div id="player_<%= country_two_players[i].id %>" class="grid_3 draggable scorecard"><%= country_two_players[i].display_name %>
+      <% if country_two_players[i].role == 'BAT'%>
+        <%= image_tag "batsman.png", :height => "18", :class => "image_pos" %>
+      <% elsif country_two_players[i].role == 'AR'%>
+        <%= image_tag "allrounder.png", :height => "18", :class => "image_pos" %>
+      <% elsif country_two_players[i].role == 'BWL'%>
+        <%= image_tag "bowler.png", :height => "16", :class => "image_pos" %>
+      <% elsif country_two_players[i].role == 'WK'%>
+        <%= image_tag "wicket.png", :height => "18", :class => "image_pos" %>
+      <%end%>
+    </div>
     <% end %>
     <div class="clear">&nbsp;</div>
 <% end %>
