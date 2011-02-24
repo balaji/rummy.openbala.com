@@ -10,5 +10,6 @@ class Match < ActiveRecord::Base
   has_many :bowling_score_cards
   has_many :match_totals
   has_many :player_match_points
+  has_many :current_forms
   validates_presence_of :stadium, :country_one, :country_two, :date
 end

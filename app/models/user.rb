@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :authorizations
   has_many :user_game_datas
+  has_many :current_forms
 
   cattr_reader :per_page
   @@per_page = 10
