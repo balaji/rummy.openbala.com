@@ -34,7 +34,7 @@
             <div class="grid_1">&nbsp;</div>
         <% elsif i >=10 and i < 15 %>
           <div id="prev_<%= i - 9 %>" class="grid_3 scorecard droppable-fix highlight_prev" align="center">
-            <%= @players_chosen[i - 10]%> <%=render :partial => "partials/image_for_player", :locals => {:player => Player.find_by_display_name(@players_chosen[i - 10])} %></div>
+            <%= @players_chosen[i - 10]%> <% if @players_chosen[i - 10]%> <%=render :partial => "partials/image_for_player", :locals => {:player => Player.find_by_display_name(@players_chosen[i - 10])} %> <%end %></div>
             <div class="grid_1">&nbsp;</div>
         <% else %>
             <div class="grid_3 droppable-fix">&nbsp;</div>
