@@ -1,5 +1,5 @@
 <% content_for :title, "My History" %>
-<%= render :partial => "partials/ranking_sub_menu" %>
+<%= render :partial => "partials/ranking_sub_menu", :locals => {:src => 'myspace'}  %>
 <div class="grid_1">&nbsp;</div>
 <div class="grid_10">
     <% @matches.length.times do |m| %>

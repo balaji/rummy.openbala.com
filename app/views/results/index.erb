@@ -1,5 +1,5 @@
 <% content_for :title, "Ranking" %>
-<%= render :partial => "partials/ranking_sub_menu" %>
+<%= render :partial => "partials/ranking_sub_menu", :locals => {:src => 'results'}  %>
 <div style="float:left;">
     <%= render :partial => "partials/overall_rank", :locals => {:users => @users, :ranks => @user_ranks, :action => "all", :title => "Overall Rank"} %>
 </div>

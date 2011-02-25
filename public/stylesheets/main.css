@@ -129,6 +129,10 @@ ul#menu li a.high_play {
     background: red;
 }
 
+ul#profile li a.high_play {
+    background: orange;
+}
+
 ul#profile {
     list-style: none;
     margin: 5px;
@@ -159,7 +163,7 @@ ul#profile li a {
 }
 
 ul#profile li a:hover {
-    background: orange;
+    background: #ffe4c4;
     color: #000;
 }
 
