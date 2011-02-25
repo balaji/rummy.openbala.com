@@ -126,11 +126,15 @@ ul#menu li a {
 }
 
 ul#menu li a.high_play {
-    background: red;
+    background: orange;
+    color:black;
+    font-weight: bold;
 }
 
 ul#profile li a.high_play {
     background: orange;
+    color:black;
+    font-weight: bold;
 }
 
 ul#profile {
@@ -184,12 +188,8 @@ div .play a {
 }
 
 ul#menu li a:hover {
-    background: orange;
+    background: #ffe4c4;
     color: #000
-}
-
-a {
-/*text-decoration: none;*/
 }
 
 .scorecard {
