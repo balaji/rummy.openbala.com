@@ -3,15 +3,15 @@
     <strong>Scorecard and performance of previous matches</strong>
 </div>
 <div class="clearfix">&nbsp;</div>
-<% @matches.each do |m| %>
-    <div class="grid_1">&nbsp;</div>
-    <div class="grid_2 matches"><%= m.country_one.name %></div>
-    <div class="grid_1 matches">v.</div>
-    <div class="grid_2 matches"><%= m.country_two.name %></div>
-    <div class="grid_2 matches"><%= m.stadium.city %></div>
-    <div class="grid_2 matches"><%= m.date.strftime("%d-%b, %a") %></div>
-    <div class="grid_2 matches">
-        <div class="play"><%= link_to 'view', :action => 'view', :match => m.id %></div>
-    </div>
-    <div class="clearfix">&nbsp;</div>
-<% end %>
+<div class="grid_12" align="center">
+  <strong class='scorecard'>Country:</strong> <select id="country_trend_select">
+    <option id="all">All</option>
+    <%Country.find(:all, :conditions => ['name != ?', 'TBC']).each do |country|%>
+      <option value="<%=country.id%>" <%= (params[:country].to_i == country.id) ? 'selected="selected"' : '' %>><%=country.name%></option>
+    <%end%>
+  </select>
+</div>
+<div class="clearfix">&nbsp;</div>
+<div id="trend_view">
+  <%= render :partial => 'partials/trends', :locals => {:matches => @matches} %>
+</div>

@@ -76,6 +76,10 @@ document.observe("dom:loaded", function() {
         });
     });
 
+    $('country_trend_select').observe('change', function(event) {
+        document.location.href = '/trends?country=' + event.target.value;
+        });
+
     $('save_players').observe('click', (function(event) {
         if (mappedSlots.keys().size() < 5) {
             alert('choose all 5');
