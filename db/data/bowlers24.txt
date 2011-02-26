@@ -1,0 +1,12 @@
+Shoaib Akhtar	10	0	42	2	4.20		
+Abdul Razzaq	5	1	23	0	4.60	
+Umar Gul	8.5	0	60	1	6.79	(1nb, 2w)
+Mohammad Hafeez	6	0	33	1	5.50	(2w)
+Shahid Afridi	10	0	34	4	3.40	(1w)
+Abdur Rehman	10	1	63	1	6.30	(1nb, 3w)	
+KMDN Kulasekara	10	1	64	0	6.40	(1w)
+NLTC Perera	9	0	62	2	6.88	(2w)
+AD Mathews	10	0	56	1	5.60	
+M Muralitharan	10	0	35	1	3.50	(2w)
+HMRKB Herath	10	0	46	2	4.60		
+TM Dilshan	1	0	10	0	10.00
