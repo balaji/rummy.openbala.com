@@ -1,2 +1,24 @@
 <% content_for :title, "Stats" %>
-<h3 class="grid_12" align="center">Coming Soon!</h3>
+<%= javascript_include_tag "raphael_application" %>
+<div class="clearfix">&nbsp;</div>
+<div class="grid_12" align="center"><strong>Country-Wise Stats</strong></div>
+<div class="grid_12 scorecard" align="center">stats include warm-up matches</div>
+<div class="clearfix">&nbsp;</div>
+<div class="grid_12" align="center">
+<select id="country_stats_select" style="font-weight:bold;font-size:16px;">
+  <option id="all"></option>
+  <%Country.find(:all, :conditions => ['name != ?', 'TBC']).each do |country|%>
+    <option value="<%=country.id%>" <%= (params[:country].to_i == country.id) ? 'selected="selected"' : '' %>><%=country.name%></option>
+  <%end%>
+</select>
+</div>
+<br/>
+<div class="clearfix">&nbsp;</div>
+<div align="center" class="grid_4"><strong>Top Runs</strong></div>
+<div align="center" class="grid_4"><strong>Top Wickets</strong></div>
+<div align="center" class="grid_4"><strong>Top Points</strong></div>
+<br/>
+<div class="clearfix">&nbsp;</div>
+<div id="raphael_runs" align="center" class="grid_4" style="height:500px;"></div>
+<div id="raphael_wickets" align="center" class="grid_4" style="height:500px;"></div>
+<div id="raphael_points" align="center" class="grid_4" style="height:500px;"></div>
