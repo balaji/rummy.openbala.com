@@ -76,10 +76,6 @@ document.observe("dom:loaded", function() {
         });
     });
 
-    $('country_trend_select').observe('change', function(event) {
-        document.location.href = '/trends?country=' + event.target.value;
-        });
-
     $('save_players').observe('click', (function(event) {
         if (mappedSlots.keys().size() < 5) {
             alert('choose all 5');
@@ -143,6 +139,10 @@ document.observe("dom:loaded", function() {
 
 var prePlayerId = "";
 var prevSecondPanel = "";
+
+function selectCountry(element) {
+  document.location.href = '/trends?country=' + element.value;
+}
 
 function loadLevelTwo(order, element, match_id) {
     var id = element.id;
