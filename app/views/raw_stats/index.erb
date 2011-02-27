@@ -1,0 +1,26 @@
+<table>
+  <tr>
+  <th class="grid_3"><%= sortable "name" %></th>
+  <th class="grid_2"><%= sortable "country" %></th>
+  <th class="grid_1"><%= sortable "runs" %></th>
+  <th class="grid_1"><%= sortable "fours" %></th>
+  <th class="grid_1"><%= sortable "sixes" %></th>
+  <th class="grid_1"><%= sortable "wickets" %></th>
+  <th class="grid_1"><%= sortable "overs" %></th>
+  <th class="grid_1"><%= sortable "extras" %></th>
+  <th class="grid_1 clear"><%= sortable "maidens" %></th>
+</tr>
+<% @players.each do |player| %>
+  <tr>
+  <td class="grid_3"><%= player[:name] %></td>
+  <td class="grid_2"><%= player[:country] %></td>
+  <td class="grid_1"><%= player[:runs] %></td>
+  <td class="grid_1"><%= player[:fours] %></td>
+  <td class="grid_1"><%= player[:sixes] %></td>
+  <td class="grid_1"><%= player[:wickets] %></td>
+  <td class="grid_1"><%= player[:overs] %></td>
+  <td class="grid_1"><%= player[:extras] %></td>
+  <td class="grid_1 clear"><%= player[:maidens] %></td>
+  </tr>
+<% end %>
+</table>
