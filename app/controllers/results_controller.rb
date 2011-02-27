@@ -25,7 +25,7 @@ class ResultsController < ApplicationController
 
   private
   def init_me
-    page = (session[:rank] != 'NA')? (session[:rank] / 10) + 1 : 1
+    page = (session[:rank] != 'NA')? ((session[:rank] - 1) / 10) + 1 : 1
     @users = User.paginate(:page => page, :conditions => ['total_points > 0'], :order => 'total_points DESC')
     @user_ranks = Array.new
    User.per_page.times { |i| @user_ranks.push((User.per_page * (page.to_i - 1)) + i + 1) }
