@@ -144,6 +144,24 @@ function selectCountry(element) {
   document.location.href = '/trends?country=' + element.value;
 }
 
+function getURLParameter(name) {
+    return unescape(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+    );
+}
+
+function selectRawCountry(element) {
+  var query = "";
+  if(getURLParameter('sort') != 'null') {
+    query += "sort=" + getURLParameter('sort') + "&";
+  }
+  if(getURLParameter('direction') != 'null') {
+    query += "direction=" + getURLParameter('direction') + "&";
+  }
+  query += "country=" + element.value;
+  document.location.href = '/raw_stats?' + query;
+}
+
 function loadLevelTwo(order, element, match_id) {
     var id = element.id;
     var data_id = jQuery(".data2").attr("id");

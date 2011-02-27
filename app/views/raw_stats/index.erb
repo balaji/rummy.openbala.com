@@ -1,16 +1,27 @@
-<table id="rounded-corner">
+<div class="grid_12" align="center">
+  <select onchange="selectRawCountry(this)" id="raw_stats_select" style="font-weight:bold;font-size:16px;">
+    <option value="all">All</option>
+    <%Country.find(:all, :conditions => ['name != ?', 'TBC']).each do |country|%>
+      <option value="<%=country.name%>" <%= (params[:country] == country.name) ? 'selected="selected"' : '' %>><%=country.name%></option>
+    <%end%>
+  </select>
+</div>
+<br/>
+<table id="rounded-corner" align="center" width="90%">
   <thead>
     <tr>
       <th id = "sort_name" class="ascend" scope="col"><%= sortable "name" %></th>
       <th scope="col"><%= sortable "country" %></th>
-      <th scope="col"><%= sortable "runs" %></th>
-      <th scope="col"><%= sortable "fours" %></th>
-      <th scope="col"><%= sortable "sixes" %></th>
-      <th scope="col"><%= sortable "wickets" %></th>
-      <th scope="col"><%= sortable "overs" %></th>
-      <th scope="col"><%= sortable "extras" %></th>
-      <th scope="col"><%= sortable "maidens" %></th>
-      <th scope="col"><%= sortable "matches" %></th>
+      <th scope="col"><%= sortable "matches", "M" %></th>
+      <th scope="col"><%= sortable "runs", "R" %></th>
+      <th scope="col"><%= sortable "fours", "4s" %></th>
+      <th scope="col"><%= sortable "sixes", "6s" %></th>
+      <th scope="col"><%= sortable "wickets", "W" %></th>
+      <th scope="col"><%= sortable "overs", "O" %></th>
+      <th scope="col"><%= sortable "extras", "E" %></th>
+      <th scope="col"><%= sortable "maidens", "Ma" %></th>
+      <th scope="col"><%= sortable "conceded", "Ru" %></th>
+      <th scope="col"><%= sortable "economy_rate", "E.R." %></th>
     </tr>
   </thead>
   <tbody>
@@ -18,6 +29,7 @@
       <tr>
         <td><%= player[:name] %></td>
         <td><%= player[:country] %></td>
+        <td><%= player[:matches] %></td>
         <td><%= player[:runs] %></td>
         <td><%= player[:fours] %></td>
         <td><%= player[:sixes] %></td>
@@ -25,7 +37,8 @@
         <td><%= player[:overs] %></td>
         <td><%= player[:extras] %></td>
         <td><%= player[:maidens] %></td>
-        <td><%= player[:matches] %></td>
+        <td><%= player[:conceded] %></td>
+        <td><%= player[:economy_rate] %></td>
       </tr>
     <% end %>
   </tbody>

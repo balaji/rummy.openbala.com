@@ -42,15 +42,21 @@ class Player < ActiveRecord::Base
     end
 
     def overs
-      total_overs = 0
-      find(:all, :conditions => ['match_id > 14']).each {|match| total_overs += match.overs.to_i}
-      total_overs
+      total_overs = 0.0
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_overs += match.overs.to_f}
+      (total_overs.floor == total_overs) ? total_overs.floor : total_overs
     end
 
     def extras
       total_extras = 0
       find(:all, :conditions => ['match_id > 14']).each {|match| total_extras += match.extras.to_i}
       total_extras
+    end
+
+    def runs
+      total_runs = 0
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_runs += match.runs.to_i}
+      total_runs
     end
   end
 
