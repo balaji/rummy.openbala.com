@@ -382,3 +382,58 @@ div.droppable.hover {
     background-color: #4B649A;
     background-image: none;
 }
+
+#rounded-corner {
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+#rounded-corner th {
+  font-weight: normal;
+  font-size: 13px;
+  color: #039;
+  background: #B9C9FE;
+  border: 1px solid white;
+  line-height: 30px;
+}
+
+#rounded-corner th a {
+  display: block;
+  text-decoration: none;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#rounded-corner th a:hover {
+  background-color: orange;
+  text-decoration: none;
+  color: black;
+}
+
+#rounded-corner td {
+  background: #E8EDFF;
+  border: 1px solid white;
+  padding: 8px;
+}
+
+#rounded-corner tbody tr:hover td {
+  background: #D0DAFD;
+}
+
+td, th {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px 2px;
+}
+
+#rounded-corner th.ascend {
+background: #B9C9FE url("/images/sort_up.png") 30% 50% no-repeat;
+}

@@ -21,7 +21,7 @@
     <div class="grid_3 highlight highlight_user scorecard">&nbsp;<%= current_form.user.name %><%= image_tag current_form.user.image, :class => 'image_pos' %></div>
     <div class="grid_1 highlight highlight_points scorecard"><%= current_form.points %></div>
   <% end %>
-    <% prev = CurrentForm.find_by_user_id_and_match_id(current_form.user_id, current_form.match_id - 2) %>
+    <% prev = CurrentForm.find_by_user_id_and_match_id(current_form.user_id, current_form.match_id - 1) %>
     <% if prev  
         if prev.rank == current_form.rank %>
     <div class="grid_1">

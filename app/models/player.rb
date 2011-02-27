@@ -7,45 +7,49 @@ class Player < ActiveRecord::Base
   has_many :batting_score_cards do
     def score
       total_score = 0
-      find_all.each {|match| total_score += match.score.to_i}
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_score += match.score.to_i}
       total_score
     end
 
     def fours
       total_fours = 0
-      find_all.each {|match| total_fours += match.fours.to_i}
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_fours += match.fours.to_i}
       total_fours
     end
 
     def sixes
       total_sixes = 0
-      find_all.each {|match| total_sixes += match.sixes.to_i}
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_sixes += match.sixes.to_i}
       total_sixes
+    end
+
+    def matches
+      find(:all, :conditions => ['match_id > 14']).count
     end
   end
 
   has_many :bowling_score_cards do
     def wickets
       total_wickets = 0
-      find_all.each {|match| total_wickets += match.wickets.to_i}
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_wickets += match.wickets.to_i}
       total_wickets
     end
 
     def maidens
       total_maidens = 0
-      find_all.each {|match| total_maidens += match.maidens.to_i}
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_maidens += match.maidens.to_i}
       total_maidens
     end
 
     def overs
       total_overs = 0
-      find_all.each {|match| total_overs += match.overs.to_i}
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_overs += match.overs.to_i}
       total_overs
     end
 
     def extras
       total_extras = 0
-      find_all.each {|match| total_extras += match.extras.to_i}
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_extras += match.extras.to_i}
       total_extras
     end
   end
@@ -53,7 +57,7 @@ class Player < ActiveRecord::Base
   has_many :player_match_points do 
     def total
       total_points = 0
-      find_all.each {|match| total_points += match.points} 
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_points += match.points} 
       total_points
     end
   end

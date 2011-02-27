@@ -1,0 +1,12 @@
+JM Anderson	9.5	0	91	1	9.25	(1nb, 1w)	
+A Shahzad	8	0	53	0	6.62	(2w)
+TT Bresnan	10	1	48	5	4.80	
+GP Swann	9	1	59	1	6.55	(2w)	
+PD Collingwood	3	0	20	0	6.66	
+MH Yardy	10	0	64	1	6.40	(2w)	
+Z Khan	10	0	64	3	6.40	(1w)
+MM Patel	10	0	70	2	7.00	(1w)
+PP Chawla	10	0	71	2	7.10	(1w)
+Harbhajan Singh	10	0	58	1	5.80		
+Yuvraj Singh	7	0	46	0	6.57		
+YK Pathan	3	0	21	0	7.00

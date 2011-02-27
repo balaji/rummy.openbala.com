@@ -1,0 +1,23 @@
+V Sehwag	c Prior b Bresnan	35	x	26	6	0	134.61
+SR Tendulkar	c Yardy b Anderson	120	x	115	10	5	104.34
+G Gambhir	 b Swann	51	x	61	5	0	83.6
+Yuvraj Singh	c Bell b Yardy	58	x	50	9	0	116
+MS Dhoni	c sub (LJ Wright) b Bresnan	31	x	25	3	1	124
+YK Pathan	c Swann b Bresnan	14	x	8	1	1	175
+V Kohli	 b Bresnan	8	x	5	1	0	160
+Harbhajan Singh	lbw b Bresnan	0	x	1	0	0	0
+Z Khan	run out (Bresnan/Prior)	4	x	5	0	0	80
+PP Chawla	run out (Anderson)	2	x	4	0	0	50
+MM Patel	not out	0	x	0	0	0	-0
+SK Raina			x				
+AJ Strauss	lbw b Khan	158	x	145	18	1	108.96
+KP Pietersen	c & b Patel	31	x	22	5	0	140.9
+IJL Trott	lbw b Chawla	16	x	19	1	0	84.21
+IR Bell	c Kohli b Khan	69	x	71	4	1	97.18
+PD Collingwood	 b Khan	1	x	5	0	0	20
+MJ Prior	c sub (SK Raina) b Harbhajan Singh	4	x	8	0	0	50
+MH Yardy	c Sehwag b Patel	13	x	10	1	0	130
+TT Bresnan	 b Chawla	14	x	9	0	1	155.55
+GP Swann	not out	15	x	9	0	1	166.66
+A Shahzad	not out	6	x	2	0	1	300
+JM Anderson			x				
