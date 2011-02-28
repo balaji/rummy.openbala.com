@@ -1,0 +1,11 @@
+SJ Benn	8	1	28	3	3.50		
+KAJ Roach	8.3	0	27	6	3.17		
+NO Miller	7	0	23	0	3.28		
+DJG Sammy	7	0	33	1	4.71		
+KA Pollard	1	0	2	0	2.00	
+Mudassar Bukhari	10	1	65	2	6.50	(1w)	
+BA Westdijk	7	0	56	1	8.00	(4w)	
+RN ten Doeschate	10	0	77	1	7.70	(1nb, 4w)	
+BP Loots	7	0	44	1	6.28	(1w)	
+TLW Cooper	6	0	37	0	6.16	(1w)	
+PM Seelaar	10	1	45	3	4.50	
