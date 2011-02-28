@@ -1,27 +1,24 @@
 <% content_for :title, "World Cup Match Schedule" %>
 <div class="grid_12" align="center">
-    <strong class="desc">World Cup 2011</strong>
+  <strong class="desc">World Cup 2011</strong>
 </div>
 <div class="clearfix">&nbsp;</div>
-
 <% @schedule.each do |match| %>
-    <div class="grid_1">&nbsp;</div>
-    <% c1_name = match.country_one.name
-       c2_name = match.country_two.name
-       date_str = match.date.strftime("%d-%b, %a") %>
-    <div class="<%= "weekend_game" if match.status == 'finished' %>">
-        <div class="grid_2 matches <%= "india_playing" if c1_name == "India" %>"><%= c1_name %></div>
-        <div class="grid_1 matches" align="center">v.</div>
-        <div class="grid_2 matches <%= "india_playing" if c2_name == "India" %>"><%= c2_name %></div>
-        <div class="grid_2 matches"><%= match.stadium.city %></div>
-        <div class="grid_2 matches"><%= date_str %>&nbsp;
-            <% if match.day_night? and match.status != 'finished' %>
-                <%= image_tag "moon.png", {:style => "bottom: 0; position: absolute", :size => "16x16"} %>
-            <% else %>
-                &nbsp;
-            <% end %>
+  <div class="grid_1">&nbsp;</div>
+  <% c1_name, c2_name, date_str = match.country_one.name, match.country_two.name, match.date.strftime("%d-%b, %a") %>
+  <div class="<%= "weekend_game" if match.status == 'finished' %>">
+    <div class="grid_2 matches <%= "india_playing" if c1_name == "India" %>"><%= c1_name %></div>
+    <div class="grid_1 matches" align="center">v.</div>
+    <div class="grid_2 matches <%= "india_playing" if c2_name == "India" %>"><%= c2_name %></div>
+    <div class="grid_2 matches"><%= match.stadium.city %></div>
+    <div class="grid_2 matches"><%= date_str %>&nbsp;
+      <% if match.day_night? and match.status != 'finished' %>
+        <%= image_tag "moon.png", {:style => "bottom: 0; position: absolute", :size => "16x16"} %>
+      <% else %>
+        &nbsp;
+      <% end %>
     </div>
     <div class="grid_2 matches"><%= match.match_type %></div>
     <div class="clearfix">&nbsp;</div>
-        </div>
+  </div>
 <% end %>
