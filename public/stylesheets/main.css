@@ -87,7 +87,8 @@ body {
 }
 
 .weekend_game > div {
-    background-color: #87ceeb;
+  font-size: 10px;
+  color: gray;
 }
 
 #profile_pic {

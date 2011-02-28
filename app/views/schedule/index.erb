@@ -9,19 +9,19 @@
     <% c1_name = match.country_one.name
        c2_name = match.country_two.name
        date_str = match.date.strftime("%d-%b, %a") %>
-    <div class="<%= "weekend_game" if /(Sun$|Sat$)/.match(date_str) %>">
+    <div class="<%= "weekend_game" if match.status == 'finished' %>">
         <div class="grid_2 matches <%= "india_playing" if c1_name == "India" %>"><%= c1_name %></div>
         <div class="grid_1 matches" align="center">v.</div>
         <div class="grid_2 matches <%= "india_playing" if c2_name == "India" %>"><%= c2_name %></div>
         <div class="grid_2 matches"><%= match.stadium.city %></div>
         <div class="grid_2 matches"><%= date_str %>&nbsp;
-            <% if match.day_night? %>
+            <% if match.day_night? and match.status != 'finished' %>
                 <%= image_tag "moon.png", {:style => "bottom: 0; position: absolute", :size => "16x16"} %>
             <% else %>
                 &nbsp;
             <% end %>
-        </div>
     </div>
     <div class="grid_2 matches"><%= match.match_type %></div>
     <div class="clearfix">&nbsp;</div>
+        </div>
 <% end %>
