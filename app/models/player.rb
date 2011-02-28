@@ -23,6 +23,12 @@ class Player < ActiveRecord::Base
       total_sixes
     end
 
+    def balls
+      total_balls = 0
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_balls += match.balls.to_i}
+      total_balls
+    end
+
     def matches
       find(:all, :conditions => ['match_id > 14']).count
     end
