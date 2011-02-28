@@ -42,8 +42,8 @@ class ResultsController < ApplicationController
   private
   def my_friends
     fri = Array.new
-    self.friends.each do |user|
-      fri.push(user)
+    self.friends.each do |authorization|
+      fri.push(authorization.user)
     end
     fri.push(self.current_user)
     fri

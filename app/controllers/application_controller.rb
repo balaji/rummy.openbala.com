@@ -27,13 +27,14 @@ class ApplicationController < ActionController::Base
   end
 
   def friends
-    Rails.cache.delete("#{session[:user_id]}_friends")
-    Rails.cache.fetch("#{session[:user_id]}_friends", :expires_in => 1.hour) do
+    if Rails.env == "production"
+      Rails.cache.read("#{session[:user_id]}_friends")
+    else
       ids = Array.new
-      self.fb_graph.get_connections("me", "friends").each { |friend| ids.push(friend["id"]) }
-      users = Array.new
-      Authorization.find(:all, :conditions => ["uid in (?)", ids]).each { |friend| users.push(friend.user) }
-      users
+      fb_graph.get_connections("me", "friends").each do |friend| 
+        ids.push(friend["id"])
+      end
+      Authorization.find(:all, :conditions => ["uid in (?)", ids])
     end
   end
 
@@ -41,7 +42,7 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
-  helper_method :current_user, :signed_in?, :fb_graph, :current_auth
+  helper_method :current_user, :friends, :signed_in?, :fb_graph, :current_auth
   def current_user=(user)
     @current_user = user
     session[:user_id] = user.id
@@ -58,9 +59,8 @@ class ApplicationController < ActionController::Base
   end
 
   def set_friends(friends)
-    users= Array.new
-    friends.each { |friend| users.push(friend.user) }
-    Rails.cache.fetch("#{session[:user_id]}_friends", :expires_in => 1.hour) { users }
+    Rails.cache.delete("#{session[:user_id]}_friends")
+    Rails.cache.fetch("#{session[:user_id]}_friends") { friends }
   end
 
   def token=(token)

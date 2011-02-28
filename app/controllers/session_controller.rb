@@ -13,6 +13,13 @@ class SessionController < ApplicationController
     end
     self.current_user = @auth.user
     self.current_auth = @auth
+    if (@auth.provider == 'facebook')
+      ids = Array.new
+      self.fb_graph.get_connections("me", "friends").each do |friend| 
+        ids.push(friend["id"])
+      end
+      self.set_friends(Authorization.find(:all, :conditions => ["uid in (?)", ids]))
+    end
     redirect_to :action => 'index'
   end
 
@@ -27,13 +34,8 @@ class SessionController < ApplicationController
 
   def index
     if (self.current_auth.provider == 'facebook')
-      my_friends ||= self.fb_graph.get_connections("me", "friends")
-      ids = Array.new
-      my_friends.each { |friend| ids.push(friend["id"]) }
-      authorizationz = Authorization.find(:all, :conditions => ["uid in (?)", ids])
-      self.set_friends(authorizationz)
-      page = params[:page] ? params[:page] : 1;
-      @authorizations = authorizationz.paginate(:page => page, :per_page => Authorization.per_page)
+      page = params[:page]? params[:page] : 1
+      @authorizations = self.friends.paginate(:page => page, :per_page => Authorization.per_page)
     end
   end
 end
