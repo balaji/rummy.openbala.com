@@ -1,0 +1,22 @@
+BRM Taylor	lbw b Khurram Chohan	0	1	1	0	0	0.00
+CK Coventry	lbw b Baidwan	4	16	10	0	0	40.00
+T Taibu	c Davison b Balaji Rao	98	147	99	9	0	98.98
+CR Ervine	c Bagai b Balaji Rao	85	114	81	6	2	104.93
+E Chigumbura	c Bagai b Rizwan Cheema	5	6	8	1	0	62.50
+SC Williams	c Bagai b Balaji Rao	30	34	25	3	0	120.00
+GA Lamb	 b Balaji Rao	11	12	13	1	0	84.61
+P Utseya	c Hansra b Khurram Chohan	22	40	29	2	0	75.86
+AG Cremer	 b Baidwan	26	31	23	2	0	113.04
+RW Price	not out	10	14	6	2	0	166.66
+CB Mpofu	not out	3	9	5	0	0	60.00
+JM Davison	 b Price	0	x	8	0	0	0
+NR Kumar	c & b Price	1	x	10	0	0	10
+R Gunasekera	 b Lamb	24	x	64	2	0	37.5
+A Bagai	c Williams b Price	0	x	1	0	0	0
+AS Hansra	st Taibu b Utseya	20	x	41	1	1	48.78
+Rizwan Cheema	c Cremer b Utseya	14	x	10	2	1	140
+ZE Surkari	st Taibu b Lamb	26	x	48	2	0	54.16
+TG Gordon	lbw b Cremer	7	x	20	1	0	35
+Khurram Chohan	lbw b Cremer	8	x	22	1	0	36.36
+HS Baidwan	not out	13	x	23	1	0	56.52
+WD Balaji Rao	 b Cremer	1	x	6	0	0	16.66
