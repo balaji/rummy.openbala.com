@@ -1,24 +1,28 @@
 <% content_for :title, "World Cup Match Schedule" %>
 <div class="grid_12" align="center">
-  <strong class="desc">World Cup 2011</strong>
+<table style="margin-left:auto;margin-right: auto;width:90%;">
+  <thead>
+    <th colspan="7">World Cup 2011</th>
+  </thead>
+  <tbody>
+  <% @schedule.each do |match| %>
+    <tr>
+      <% c1_name, c2_name, date_str = match.country_one.name, match.country_two.name, match.date.strftime("%d-%b, %a") %>
+        <td class="matches <%= "india_playing" if c1_name == "India" %><%= " weekend_game" if match.status == 'finished' %>"><%= c1_name %></td>
+        <td class="matches<%= " weekend_game" if match.status == 'finished' %>" align="center">v.</td>
+        <td class="matches <%= "india_playing" if c2_name == "India" %><%= " weekend_game" if match.status == 'finished' %>"><%= c2_name %></td>
+        <td class="matches<%= " weekend_game" if match.status == 'finished' %>"><%= match.stadium.city %></td>
+        <td class="matches<%= " weekend_game" if match.status == 'finished' %>"><%= date_str %></td>
+        <td class="matches<%= " weekend_game" if match.status == 'finished' %>">
+          <% if match.day_night? %>
+            <sup>D/N</sup>
+          <% else %>
+            &nbsp;
+          <% end %>
+        </td>
+        <td class="matches<%= " weekend_game" if match.status == 'finished' %>"><%= match.match_type %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
 </div>
-<div class="clearfix">&nbsp;</div>
-<% @schedule.each do |match| %>
-  <div class="grid_1">&nbsp;</div>
-  <% c1_name, c2_name, date_str = match.country_one.name, match.country_two.name, match.date.strftime("%d-%b, %a") %>
-  <div class="<%= "weekend_game" if match.status == 'finished' %>">
-    <div class="grid_2 matches <%= "india_playing" if c1_name == "India" %>"><%= c1_name %></div>
-    <div class="grid_1 matches" align="center">v.</div>
-    <div class="grid_2 matches <%= "india_playing" if c2_name == "India" %>"><%= c2_name %></div>
-    <div class="grid_2 matches"><%= match.stadium.city %></div>
-    <div class="grid_2 matches"><%= date_str %>&nbsp;
-      <% if match.day_night? and match.status != 'finished' %>
-        <%= image_tag "moon.png", {:style => "bottom: 0; position: absolute", :size => "16x16"} %>
-      <% else %>
-        &nbsp;
-      <% end %>
-    </div>
-    <div class="grid_2 matches"><%= match.match_type %></div>
-    <div class="clearfix">&nbsp;</div>
-  </div>
-<% end %>

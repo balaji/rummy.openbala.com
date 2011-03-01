@@ -86,7 +86,7 @@ body {
     font-weight: bold;
 }
 
-.weekend_game > div {
+.weekend_game {
   font-size: 10px;
   color: gray;
 }
