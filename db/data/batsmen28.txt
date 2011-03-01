@@ -1,0 +1,22 @@
+MA Ouma	lbw b Kulasekara	1	x	7	0	0	14.28
+SR Waters	lbw b Malinga	3	x	4	0	0	75
+CO Obuya	 b Malinga	52	x	100	4	0	52
+DO Obuya	c Samaraweera b Muralitharan	51	x	106	3	0	48.11
+SO Tikolo	c Dilshan b Mathews	7	x	17	1	0	41.17
+T Mishra	lbw b Malinga	0	x	13	0	0	0
+JK Kamande	run out (Silva)	1	x	3	0	0	33.33
+NN Odhiambo	not out	8	x	10	2	0	80
+PJ Ongondo	 b Malinga	0	x	1	0	0	0
+SO Ngoche	 b Malinga	0	x	1	0	0	0
+E Otieno	 b Malinga	0	x	2	0	0	0
+WU Tharanga	not out	67	x	59	12	0	113.55
+TM Dilshan	c Ouma b Otieno	44	x	30	8	0	146.66
+KC Sangakkara	not out	27	x	24	3	0	112.5
+DPMD Jayawardene			x				
+TT Samaraweera			x				
+LPC Silva			x				
+AD Mathews			x				
+KMDN Kulasekara			x				
+M Muralitharan			x				
+SL Malinga			x				
+BAW Mendis			x				
