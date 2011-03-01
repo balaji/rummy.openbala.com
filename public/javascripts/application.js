@@ -58,8 +58,8 @@ document.observe("dom:loaded", function() {
                 panel.animate({left: parseInt(panel.css('left'), 0) == 0 ? + panel.outerWidth() : 0});
                 panel2.animate({left: parseInt(panel2.css('left'), 0) == 0 ? + panel2.outerWidth() : 0});
             } else {
-                if (panel_width == '301px') {
-                    if (parseInt(panel2.css('left'), 0) > 301) panel2.animate({left: 301});
+                if (panel_width == '300px') {
+                    if (parseInt(panel2.css('left'), 0) > 300) panel2.animate({left: 300});
                 } else {
                     panel.animate({left: parseInt(panel.css('left'), 0) == 0 ? + panel.outerWidth() : 0});
                     panel2.animate({left: parseInt(panel2.css('left'), 0) == 0 ? + panel2.outerWidth() : 0});
@@ -87,11 +87,17 @@ document.observe("dom:loaded", function() {
         new Ajax.Request("/game/save", {
             method: 'get',
             parameters: {preferences: mappedSlots.toJSON(), match_id: $('match_id').value},
-            onSuccess:function() {
+            onSuccess:function(response) {
+              if(response.responseText == "success") {
                 alert('Saved! Good Luck.');
                 for (var i = 1; i <= 5; i++) {
-                    $('prev_' + i).innerHTML = $(mappedSlots.get('drop_' + i)).innerHTML;
+                  $('prev_' + i).innerHTML = $(mappedSlots.get('drop_' + i)).innerHTML;
                 }
+              } else if(response.responseText == "started") {
+                alert('Can\'t save while match is in progress :(');
+              } else {
+                alert('Ugh. tough luck. call 9500069498 immediately.');
+              }
             },
             onFailure:function() {
                 alert('Ugh. tough luck. call 9500069498 immediately.');
@@ -211,11 +217,11 @@ function loadLevelTwo(order, element, match_id) {
     }
 
     if (data_id == "b_" + id) {
-        panel.animate({left: parseInt(panel.css('left'), 0) == 301 ? + panel.outerWidth() + 296 : 301});
+        panel.animate({left: parseInt(panel.css('left'), 0) == 300 ? + panel.outerWidth() + 297 : 300});
     } else {
         if (panel_width == '597px') {
         } else {
-            panel.animate({left: parseInt(panel.css('left'), 0) == 301 ? + panel.outerWidth() + 296 : 301});
+            panel.animate({left: parseInt(panel.css('left'), 0) == 300 ? + panel.outerWidth() + 297 : 300});
         }
     }
 

@@ -22,21 +22,26 @@ class GameController < ApplicationController
   end
 
   def save
-    json_data = JSON.parse(params[:preferences])
+    @match = Match.find_by_id(params[:match_id])
+    @latest_matches ||= Match.find(:all, :conditions => ['date >= ? and date <= ?', Time.now.in_time_zone('Chennai'), 3.days.from_now.in_time_zone('UTC')]).sort_by {|m| m.date}
+    if !@latest_matches.include?(@match)
+      render :text => "started"
+    else
+      json_data = JSON.parse(params[:preferences])
+      preference_map = Hash.new
+      json_data.each do |key, value|
+        order = /drop_(.*)/.match(key)[1]
+        player_id = /player_(.*)/.match(value)[1]
+        preference_map[order] = player_id
+      end
 
-    preference_map = Hash.new
-    json_data.each do |key, value|
-      order = /drop_(.*)/.match(key)[1]
-      player_id = /player_(.*)/.match(value)[1]
-      preference_map[order] = player_id
+      preferences = Array.new
+      preference_map.sort.each { |x| preferences.push(x[1]) }
+      user_data = UserGameData.find_by_match_id_and_user_id(params[:match_id], self.current_user.id)
+      user_data = UserGameData.create(:match_id => params[:match_id], :user_id => self.current_user.id) unless user_data
+      user_data.player_order = preferences.join(",")
+      user_data.save!
+      render :text => "success"
     end
-
-    preferences = Array.new
-    preference_map.sort.each { |x| preferences.push(x[1]) }
-    user_data = UserGameData.find_by_match_id_and_user_id(params[:match_id], self.current_user.id)
-    user_data = UserGameData.create(:match_id => params[:match_id], :user_id => self.current_user.id) unless user_data
-    user_data.player_order = preferences.join(",")
-    user_data.save!
-    render :text => "success"
   end
 end
