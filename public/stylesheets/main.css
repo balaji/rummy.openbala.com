@@ -48,11 +48,23 @@ div#mainMenu {
 .highlight {
     height: 50px;
     padding-top: 5px;
-    margin-top: 2px;
+    margin: 2px;
     font-family: Tahoma, "lucida grande", arial, "sans serif";
-    font-size: 14px;
+    font-size: 13px;
     border-radius: 4px;
+    position: relative;
+    display:inline;
     -moz-border-radius: 4px;
+    float: left;
+}
+
+.highlight_u_width {
+  width: 250px;
+}
+
+.highlight_p_width {
+  text-align: center;
+  width: 60px;
 }
 
 .highlight_user {
@@ -67,19 +79,16 @@ div#mainMenu {
 
 .highlight_c_points {
     background-color: green;
-    text-align: center;
     color: white;
     font-weight: bold;
 }
 
 .highlight_points {
     background-color: #deb887;
-    text-align: center;
 }
 
 .highlight_c_rank {
     background-color: green;
-    text-align: center;
     color: white;
     font-weight: bold;
 }
@@ -87,7 +96,6 @@ div#mainMenu {
 .highlight_rank {
     background-color: red;
     color: white;
-    text-align: center;
     font-weight: bold;
 }
 
@@ -322,9 +330,10 @@ div.droppable.hover {
 
 .pagination {
     font-size: 11px;
-    float: right;
+    /*float: right;*/
     margin: 0;
     padding: 3px 0 4px;
+    text-align:center;
 }
 
 .pagination a,

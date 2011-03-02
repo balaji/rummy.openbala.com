@@ -1,27 +1,18 @@
 <div class="grid_6 desc" align="center"><strong><%= title%></strong></div>
-<div class="clearfix">&nbsp;</div>
-<div class="grid_1">&nbsp;</div>
-<div class="grid_1"><strong>Rank</strong></div>
-<div class="grid_3">&nbsp;</div>
-<div class="grid_1" align="center"><strong>Points</strong></div>
 <div class="clear">&nbsp;</div>
 
+  <div class="grid_6">
 <% User.per_page.times do |i| %>
     <% if users[i] %>
-        <div class="grid_1">&nbsp;</div>
-        <%if self.current_user.name == users[i].name %>
-        <div class="grid_1 highlight highlight_c_rank"><%= ranks[i] %></div>
-        <div class="grid_3 highlight highlight_c_user">&nbsp;&nbsp;<%= users[i].name %>&nbsp;<%= image_tag users[i].image, {:class => "image_pos"} %></div>
-        <div class="grid_1 highlight highlight_c_points"><%= users[i].total_points %></div>
-      <%else%>
-        <div class="grid_1 highlight highlight_rank"><%= ranks[i] %></div>
-        <div class="grid_3 highlight highlight_user">&nbsp;&nbsp;<%= users[i].name %>&nbsp;<%= image_tag users[i].image, {:class => "image_pos"} %></div>
-        <div class="grid_1 highlight highlight_points"><%= users[i].total_points %></div>
-      <%end%>
+      <div style="width:30px;float:left;">&nbsp;</div>
+        <div class="highlight highlight_p_width <%= (self.current_user.name == users[i].name)? "highlight_c_rank" : "highlight_rank" %>"><%= ranks[i] %></div>
+        <div class="highlight highlight_u_width <%= (self.current_user.name == users[i].name)? "highlight_c_user" : "highlight_user" %>">&nbsp;&nbsp;<%= users[i].name %>&nbsp;<%= image_tag users[i].image, {:class => "image_pos"} %></div>
+        <div class="highlight highlight_p_width <%= (self.current_user.name == users[i].name)? "highlight_c_points" : "highlight_points" %>"><%= users[i].total_points %></div>
     <% else %>
-        <div class="grid_6">&nbsp;</div>
+        <div>&nbsp;</div>
     <% end %>
     <div class="clear">&nbsp;</div>
-<% end %>
-<div class="clearfix">&nbsp;</div>
-<div class="grid_4" align="center"><%= will_paginate users, :params => {:action => action} %></div>
+  <% end %>
+</div>
+<div class="clear">&nbsp;</div>
+<div class="grid_6" align="center"><%= will_paginate users, :params => {:action => action} %></div>
