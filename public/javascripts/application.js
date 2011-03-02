@@ -20,10 +20,8 @@ document.observe("dom:loaded", function() {
       item.removeClassName('ascend');
       if(item.id == "sort_" + getURLParameter('sort')) {
       if("asc" == getURLParameter('direction')) {
-        console.log('ascending');
           item.addClassName('ascend');
         } else {
-          console.log('descending');
           item.addClassName('descend');
         }
       }
