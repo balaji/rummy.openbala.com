@@ -5,9 +5,9 @@
 <% User.per_page.times do |i| %>
     <% if users[i] %>
       <div style="width:30px;float:left;">&nbsp;</div>
-        <div class="highlight highlight_p_width <%= (self.current_user.name == users[i].name)? "highlight_c_rank" : "highlight_rank" %>"><%= ranks[i] %></div>
-        <div class="highlight highlight_u_width <%= (self.current_user.name == users[i].name)? "highlight_c_user" : "highlight_user" %>">&nbsp;&nbsp;<%= users[i].name %>&nbsp;<%= image_tag users[i].image, {:class => "image_pos"} %></div>
-        <div class="highlight highlight_p_width <%= (self.current_user.name == users[i].name)? "highlight_c_points" : "highlight_points" %>"><%= users[i].total_points %></div>
+        <div class="highlight highlight_p_width <%= (self.current_user.id == users[i].id)? "highlight_c_rank" : "highlight_rank" %>"><%= ranks[i] %></div>
+        <div class="highlight highlight_u_width <%= (self.current_user.id == users[i].id)? "highlight_c_user" : "highlight_user" %>">&nbsp;&nbsp;<%= users[i].name %>&nbsp;<%= image_tag users[i].image, {:class => "image_pos"} %></div>
+        <div class="highlight highlight_p_width <%= (self.current_user.id == users[i].id)? "highlight_c_points" : "highlight_points" %>"><%= users[i].total_points %></div>
     <% else %>
         <div>&nbsp;</div>
     <% end %>
