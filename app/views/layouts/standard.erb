@@ -46,7 +46,7 @@
           <li><%= link_to 'Schedule', {:controller => 'schedule'}, :class => ("high_play" if yield(:title) == 'World Cup Match Schedule')  %></li>
           <li><%= link_to 'Rules', {:controller => 'rules'}, :class => ("high_play" if yield(:title) == 'Game Rules')  %></li>
           <li><%= link_to 'Play!', {:controller => 'game'}, :class => ("high_play" if yield(:title) == 'Available Matches to Play' or /^Play!/.match(yield(:title)))  %></li>
-          <li><%= link_to 'Ranking', {:controller => 'current_form'}, :class => ("high_play" if yield(:title) == 'Current Form' or 
+          <li><%= link_to 'Ranking', {:controller => 'profile'}, :class => ("high_play" if yield(:title) == 'Current Form' or 
                                                                                                 yield(:title) == 'Analysis' or
                                                                                                 yield(:title) == 'My History' or
                                                                                                 yield(:title) == 'Ranking')  %></li>
