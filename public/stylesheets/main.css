@@ -1,5 +1,18 @@
 body {
     font-family: 'PT Sans', "lucida grande", tahoma, verdana, arial, sans-serif;
+    background-image:url("/images/bg-content.png")
+}
+
+div.container_12 {
+  background-color: white;
+  -moz-box-shadow: 2px 2px 0 rgba(170, 160, 130, 0.5), 4px 4px 0 rgba(200, 190, 165, 0.5);
+  -o-box-shadow: 2px 2px 0 rgba(170, 160, 130, 0.5), 4px 4px 0 rgba(200, 190, 165, 0.5); 
+  -webkit-box-shadow: 2px 2px 0 rgba(170, 160, 130, 0.5), 4px 4px 0 rgba(200, 190, 165, 0.5);
+  box-shadow: 2px 2px 0 rgba(170, 160, 130, 0.5), 4px 4px 0 rgba(200, 190, 165, 0.5);
+}
+
+div#mainMenu {
+  border-bottom: 4px solid orange;
 }
 
 .banner {
@@ -117,12 +130,9 @@ ul#menu li a {
     float: left;
     text-align: center;
     margin-right: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-border-radius: 6px;
-    -moz-box-shadow: 0 0 1px 1px #888;
-    -webkit-box-shadow: 0 0 1px 1px #888;
-    box-shadow: 0 0 1px 1px #888;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
 }
 
 ul#menu li a.high_play {
@@ -139,7 +149,7 @@ ul#profile li a.high_play {
 
 ul#profile {
     list-style: none;
-    margin: 5px;
+    margin-top: 0;
     padding: 0;
     width: 710px;
 }
@@ -151,20 +161,17 @@ ul#profile li {
 ul#profile li a {
     text-decoration: none;
     padding: 5px 0;
-    width: 170px;
-    height: 22px;
+    width: 130px;
+    height: 16px;
     background: #4AA02C;
     color: white;
     float: left;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     margin-right: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 6px;
-    border-radius: 5px;
-    -moz-box-shadow: 0 0 1px 1px #888;
-    -webkit-box-shadow: 0 0 1px 1px #888;
-    box-shadow: 0 0 1px 1px #888;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 5px 5px;
 }
 
 ul#profile li a:hover {
@@ -229,6 +236,7 @@ ul#menu li a:hover {
     -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
     cursor: pointer;
     height: 20px;
+    z-index: 2;
 }
 
 .droppable {
@@ -239,7 +247,7 @@ ul#menu li a:hover {
     height: 28px;
     padding-left: 5px;
     margin: 2px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .droppable-fix {

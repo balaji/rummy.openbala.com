@@ -29,7 +29,18 @@
         <%= image_tag current_user.image, {:style => "position: absolute; bottom: 0; right: 0"} %>
     </div>
     <div id="sign_out" class="grid_12" align="right">&nbsp;&nbsp;<%= link_to 'sign out', logout_path %></div>
-    <div class="grid_12">
+<% matches = Match.find(:all, :conditions => ['Date(date) = ?', Time.now])
+       if !matches.empty?
+           matches.each do |match|
+               if Time.now > match.date and match.status == 'active' %>
+                <div class="scorecard grid_12 highlight_message" align="center">
+                    <%= "#{match.country_one.name} v. #{match.country_two.name} is in progress. Check back once the game is over for updated rankings." %>
+                </div>
+            <% end %>
+        <% end %>
+    <% end %>
+
+    <div id="mainMenu" class="grid_12">
         <ul id="menu">
           <li><%= link_to 'Home', {:controller => 'session'}, :class => ("high_play" if yield(:title) == 'Home') %></li>
           <li><%= link_to 'Schedule', {:controller => 'schedule'}, :class => ("high_play" if yield(:title) == 'World Cup Match Schedule')  %></li>
@@ -45,18 +56,7 @@
         </ul>
     </div>
     <div class="clear clearfix">&nbsp;</div>
-    <div class="clearfix">&nbsp;</div>
-    <% matches = Match.find(:all, :conditions => ['Date(date) = ?', Time.now])
-       if !matches.empty?
-           matches.each do |match|
-               if Time.now > match.date and match.status == 'active' %>
-                <div class="grid_12 highlight_message" align="center">
-                    <%= "#{match.country_one.name} v. #{match.country_two.name} is in progress. Check back once the game is over for updated rankings." %>
-                </div>
-            <% end %>
-        <% end %>
-    <% end %>
-    <%= yield %>
+        <%= yield %>
     <div class="clear clearfix">&nbsp;</div>
     <div class="clearfix">&nbsp;</div>
 
