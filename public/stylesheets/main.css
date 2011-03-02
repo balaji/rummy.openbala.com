@@ -397,7 +397,6 @@ div.droppable.hover {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-  margin: 20px;
 }
 
 #rounded-corner th {
@@ -415,6 +414,7 @@ div.droppable.hover {
   height: 30px;
   text-align: center;
   font-weight: bold;
+  font-size: 12px;
 }
 
 #rounded-corner th a:hover {
@@ -444,5 +444,9 @@ table {
 }
 
 #rounded-corner th.ascend {
-background: #B9C9FE url("/images/sort_up.png") 30% 50% no-repeat;
+background: #B9C9FE url("/images/sort_up.png") 99% 50% no-repeat;
+}
+
+#rounded-corner th.descend {
+background: #B9C9FE url("/images/sort_down.png") 99% 50% no-repeat;
 }

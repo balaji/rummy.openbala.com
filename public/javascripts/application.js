@@ -16,6 +16,19 @@ document.observe("dom:loaded", function() {
         }
     }
 
+    $$('.observe_sort').each(function(item, index) {
+      item.removeClassName('ascend');
+      if(item.id == "sort_" + getURLParameter('sort')) {
+      if("asc" == getURLParameter('direction')) {
+        console.log('ascending');
+          item.addClassName('ascend');
+        } else {
+          console.log('descending');
+          item.addClassName('descend');
+        }
+      }
+    });
+
     $$('.block_t').each(function(item) {
         item.observe('click', function(ev) {
             var id = ev.target.id;

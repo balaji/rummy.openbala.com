@@ -1,4 +1,5 @@
 <% content_for :title, "Stats" %>
+<%= render :partial => "partials/stats_sub_menu", :locals => {:src => 'statistics'}  %>
 <%= javascript_include_tag "raphael_application" %>
 <div class="clearfix">&nbsp;</div>
 <div class="grid_12" align="center"><strong>Country-Wise Stats</strong></div>

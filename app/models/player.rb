@@ -32,12 +32,30 @@ class Player < ActiveRecord::Base
     def matches
       find(:all, :conditions => ['match_id > 14']).count
     end
+
+    def fifties
+      total_fifties = 0
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_fifties+= 1 if match.score and match.score >= 50 and match.score < 100}
+      total_fifties
+    end
+
+    def hundreds
+      total_hundreds = 0
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_hundreds += 1 if match.score and match.score >= 100}
+      total_hundreds
+    end
   end
 
   has_many :bowling_score_cards do
     def wickets
       total_wickets = 0
       find(:all, :conditions => ['match_id > 14']).each {|match| total_wickets += match.wickets.to_i}
+      total_wickets
+    end
+
+    def fives
+      total_wickets = 0
+      find(:all, :conditions => ['match_id > 14']).each {|match| total_wickets += 1 if match.wickets and match.wickets >= 5}
       total_wickets
     end
 

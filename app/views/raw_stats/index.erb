@@ -1,5 +1,7 @@
+<% content_for :title, "World Cup Statistics" %>
+<%= render :partial => "partials/stats_sub_menu", :locals => {:src => 'raw_stats'}  %>
 <div class="grid_12" align="center">
-  <select onchange="selectRawCountry(this)" id="raw_stats_select" style="font-weight:bold;font-size:16px;">
+  <select onchange="selectRawCountry(this)" id="raw_stats_select">
     <option value="all">All</option>
     <%Country.find(:all, :conditions => ['name != ?', 'TBC']).each do |country|%>
       <option value="<%=country.name%>" <%= (params[:country] == country.name) ? 'selected="selected"' : '' %>><%=country.name%></option>
@@ -10,20 +12,23 @@
 <table id="rounded-corner" align="center" width="90%">
   <thead>
     <tr>
-      <th id = "sort_name" class="ascend" scope="col"><%= sortable "name" %></th>
-      <th scope="col"><%= sortable "country" %></th>
-      <th scope="col"><%= sortable "matches", "M" %></th>
-      <th scope="col"><%= sortable "runs", "R" %></th>
-      <th scope="col"><%= sortable "balls", "B" %></th>
-      <th scope="col"><%= sortable "strike_rate", "S.R." %></th>
-      <th scope="col"><%= sortable "fours", "4s" %></th>
-      <th scope="col"><%= sortable "sixes", "6s" %></th>
-      <th scope="col"><%= sortable "wickets", "W" %></th>
-      <th scope="col"><%= sortable "overs", "O" %></th>
-      <th scope="col"><%= sortable "extras", "E" %></th>
-      <th scope="col"><%= sortable "maidens", "Ma" %></th>
-      <th scope="col"><%= sortable "conceded", "Ru" %></th>
-      <th scope="col"><%= sortable "economy_rate", "E.R." %></th>
+      <th id="sort_name" class="observe_sort" scope="col"><%= sortable "name" %></th>
+      <th id="sort_country" class="observe_sort ascend" scope="col"><%= sortable "country" %></th>
+      <th id="sort_matches" class="observe_sort" scope="col"><%= sortable "matches", "M" %></th>
+      <th id="sort_runs" class="observe_sort" scope="col"><%= sortable "runs", "R" %></th>
+      <th id="sort_fifties" class="observe_sort" scope="col"><%= sortable "fifties", "50s" %></th>
+      <th id="sort_hundreds" class="observe_sort" scope="col"><%= sortable "hundreds", "100s" %></th>
+      <th id="sort_balls" class="observe_sort" scope="col"><%= sortable "balls", "B" %></th>
+      <th id="sort_strike_rate" class="observe_sort" scope="col"><%= sortable "strike_rate", "S.R." %></th>
+      <th id="sort_fours" class="observe_sort" scope="col"><%= sortable "fours", "4s" %></th>
+      <th id="sort_sixes" class="observe_sort" scope="col"><%= sortable "sixes", "6s" %></th>
+      <th id="sort_wickets" class="observe_sort" scope="col"><%= sortable "wickets", "W" %></th>
+      <th id="sort_fives" class="observe_sort" scope="col"><%= sortable "fives", "5w" %></th>
+      <th id="sort_overs" class="observe_sort" scope="col"><%= sortable "overs", "O" %></th>
+      <th id="sort_extras" class="observe_sort" scope="col"><%= sortable "extras", "E" %></th>
+      <th id="sort_maidens" class="observe_sort" scope="col"><%= sortable "maidens", "Ma" %></th>
+      <th id="sort_conceded" class="observe_sort" scope="col"><%= sortable "conceded", "Ru" %></th>
+      <th id="sort_economy_rate" class="observe_sort" scope="col"><%= sortable "economy_rate", "E.R." %></th>
     </tr>
   </thead>
   <tbody>
@@ -33,11 +38,14 @@
         <td><%= player[:country] %></td>
         <td><%= player[:matches] %></td>
         <td><%= player[:runs] %></td>
+        <td><%= player[:fifties] %></td>
+        <td><%= player[:hundreds] %></td>
         <td><%= player[:balls] %></td>
         <td><%= player[:strike_rate] %></td>
         <td><%= player[:fours] %></td>
         <td><%= player[:sixes] %></td>
         <td><%= player[:wickets] %></td>
+        <td><%= player[:fives] %></td>
         <td><%= player[:overs] %></td>
         <td><%= player[:extras] %></td>
         <td><%= player[:maidens] %></td>
