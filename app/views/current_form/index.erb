@@ -1,6 +1,6 @@
 <% content_for :title, "Current Form" %>
 <%= render :partial => "partials/ranking_sub_menu", :locals => {:src => 'current_form'}  %>
-<div class="grid_12" align="center"><strong>User Perfromance in the last 3 matches</strong></div>
+<div class="grid_12" align="center"><strong>Last 3 matches' performance</strong></div>
 <div class="clear"></div>
 <br/>
 <div class="grid_3">&nbsp;</div>
@@ -12,15 +12,9 @@
 <div class="grid_3">&nbsp;</div>
 <div class="grid_8">
   <% @current_form.each do |current_form| %>
-        <%if self.current_user.name == current_form.user.name %>
-    <div class="highlight highlight_c_rank grid_1"><%= current_form.rank %></div> 
-    <div class="grid_3 highlight highlight_c_user scorecard">&nbsp;<%= current_form.user.name %><%= image_tag current_form.user.image, :class => 'image_pos' %></div>
-    <div class="grid_1 highlight highlight_c_points scorecard"><%= current_form.points %></div>
-    <% else %>
-    <div class="highlight highlight_rank grid_1"><%= current_form.rank %></div> 
-    <div class="grid_3 highlight highlight_user scorecard">&nbsp;<%= current_form.user.name %><%= image_tag current_form.user.image, :class => 'image_pos' %></div>
-    <div class="grid_1 highlight highlight_points scorecard"><%= current_form.points %></div>
-  <% end %>
+    <div class="highlight highlight_p_width <%= (self.current_user.id == current_form.user.id)? "highlight_c_rank" : "highlight_rank" %>"><%= current_form.rank %></div> 
+    <div class="highlight highlight_u_width <%= (self.current_user.id == current_form.user.id)? "highlight_c_user" : "highlight_user" %>">&nbsp;<%= current_form.user.name %><%= image_tag current_form.user.image, :class => 'image_pos' %></div>
+    <div class="highlight highlight_p_width <%= (self.current_user.id == current_form.user.id)? "highlight_c_points" : "highlight_points" %>"><%= current_form.points %></div>
     <% prev = CurrentForm.find_by_user_id_and_match_id(current_form.user_id, current_form.match_id - 1) %>
     <% if prev  
         if prev.rank == current_form.rank %>

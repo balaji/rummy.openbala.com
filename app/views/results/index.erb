@@ -1,11 +1,11 @@
 <% content_for :title, "Ranking" %>
 <%= render :partial => "partials/ranking_sub_menu", :locals => {:src => 'results'}  %>
 <div style="float:left;">
-    <%= render :partial => "partials/overall_rank", :locals => {:users => @users, :ranks => @user_ranks, :action => "all", :title => "Overall Rank"} %>
+    <%= render :partial => "partials/overall_rank", :locals => {:users => @users, :ranks => @user_ranks, :action => "all", :title => "Overall"} %>
 </div>
 <% if current_auth.provider == 'facebook' %>
     <div style="float:left;">
-        <%= render :partial => "partials/overall_rank", :locals => {:users => @user_friends, :ranks => @friend_ranks, :action => "friend", :title => "Your Friends Circle"} %>
+        <%= render :partial => "partials/overall_rank", :locals => {:users => @user_friends, :ranks => @friend_ranks, :action => "friend", :title => "My Friends"} %>
     </div>
 <% end %>
 <div class="clear"></div>
