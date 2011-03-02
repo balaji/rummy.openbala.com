@@ -89,6 +89,7 @@ DEPENDENCIES
   dalli (= 1.0.2)
   json (= 1.5.1)
   koala (= 1.0.0.beta)
+  nokogiri
   omniauth (= 0.1.6)
   pg (= 0.10.1)
   postgres-pr (= 0.6.3)
