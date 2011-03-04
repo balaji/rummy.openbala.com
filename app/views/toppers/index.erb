@@ -1,0 +1,7 @@
+<% content_for :title, "World Cup Statistics" %>
+<%= render :partial => "partials/stats_sub_menu", :locals => {:src => 'toppers'}  %>
+<%= javascript_include_tag "raphael_bar" %>
+<%= javascript_include_tag "g.bar-min" %>
+<br/>
+<div class="grid_12" align="center"><strong>Top Run Scorers</strong></div>
+<div id="raphael_top_runs" style="height:700px;"></div>
