@@ -64,7 +64,7 @@ a:hover {
     float: left;
     background-color: #82CAFF;
     width: 300px;
-    min-height: 500px;
+    height: 500px;
     position: relative;
     border: solid 1px #999999;
     z-index: 10;
