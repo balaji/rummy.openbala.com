@@ -6,18 +6,29 @@ class ToppersController < ApplicationController
   def index
   end
 
-  def runs
+  def toppers
     if Rails.env == "production"
       players = Rails.cache.read('players_raw_data')
     else
       players = stats
     end
+    
     runs = players.sort_by do |player|
       -player[:runs]
     end
-    render :json => runs.first(10)
-  end
+    
+    wickets = players.sort_by do |player|
+      -player[:wickets]
+    end
 
-  def wickets
+    points = players.sort_by do |player|
+      -player[:points]
+    end
+    jumbo = Hash.new
+    jumbo[:top_runs] = runs.first(10)
+    jumbo[:top_wickets] = wickets.first(10)
+    jumbo[:top_points] = points.first(10)
+
+    render :json => jumbo
   end
 end

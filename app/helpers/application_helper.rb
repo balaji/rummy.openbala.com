@@ -34,6 +34,7 @@ module ApplicationHelper
       individual[:fifties] = player.batting_score_cards.fifties
       individual[:hundreds] = player.batting_score_cards.hundreds
       individual[:conceded] = player.bowling_score_cards.runs
+      individual[:points] = player.player_match_points.total
       overs = overs.floor + ((overs.modulo(1) * 100).round.to_f / 10) / 6.0
       individual[:economy_rate] = (overs > 0) ? ((player.bowling_score_cards.runs.to_f / overs.to_f) * 100).round.to_f / 100 : 0
       players.push(individual)
