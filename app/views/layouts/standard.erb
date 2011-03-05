@@ -53,7 +53,7 @@
           <li><%= link_to 'Trends', {:controller => 'trends'}, :class => ("high_play" if yield(:title) == 'World Cup - Completed Matches' or /^Score Card of/.match(yield(:title)))  %></li>
           <li><%= link_to 'Stats', {:controller => 'statistics'}, :class => ("high_play" if yield(:title) == 'Stats' or 
                                                                              yield(:title) == 'World Cup Statistics' or
-                                                                             yield(:title == 'Toppers'))  %></li>
+                                                                             yield(:title)== 'Toppers')  %></li>
           <li><%= link_to 'Feedback', {:controller => 'feedback'}, :class => ("high_play" if yield(:title) == 'Feedback')  %></li>
         </ul>
     </div>
