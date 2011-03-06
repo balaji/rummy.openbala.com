@@ -28,7 +28,6 @@ class SessionController < ApplicationController
     session[:token] = nil
     session[:friend_ids] = nil
     session[:uid] = nil
-    session[:rank] = nil
     redirect_to root_path
   end
 
