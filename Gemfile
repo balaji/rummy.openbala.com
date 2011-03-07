@@ -5,7 +5,7 @@ gem "koala", "1.0.0.beta"
 gem "json", "1.5.1"
 gem "will_paginate", "2.3.15"
 gem "dalli", "1.0.2"
-gem "nokogiri", "1.4.4.1"
+gem "nokogiri"
 
 group :development do
   gem "postgres-pr", "0.6.3"
