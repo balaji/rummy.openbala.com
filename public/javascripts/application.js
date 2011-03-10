@@ -92,12 +92,9 @@ document.observe("dom:loaded", function() {
             alert('choose all 5');
             return;
         }
-
-        mappedSlots.toJSON();
-
         new Ajax.Request("/game/save", {
             method: 'get',
-            parameters: {preferences: mappedSlots.toJSON(), match_id: $('match_id').value},
+            parameters: {preferences: JSON.stringify(mappedSlots), match_id: $('match_id').value},
             onSuccess:function(response) {
               if(response.responseText == "success") {
                 alert('Saved! Good Luck.');
@@ -147,7 +144,7 @@ document.observe("dom:loaded", function() {
                 mappedSlots.set(dropped.id, dragged.id);
                 messageToDrag = "just added";
                 var position = $(dropped).positionedOffset();
-                jQuery($(dragged.id)).offset({left: position[0] + 1, top: position[1] + 3});
+                jQuery($(dragged.id)).offset({left: position[0] + 3, top: position[1] + 5});
                 $(dropped.id).highlight();
             }
         });
