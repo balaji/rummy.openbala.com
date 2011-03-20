@@ -33,9 +33,9 @@
 <br/>
 <div class="grid_12 inner_shadow" style="color:gray;font-family:Tahoma, 'trebuchet ms';font-weight:bold;font-size:26px" align="center">Your Attention Please!</div>
 <div class="grid_12" align="center">
-  <% ipl_time = Time.now
+  <% ipl_time = Time.now.in_time_zone('Chennai')
     ipl_time = ipl_time.change({:month => 4, :day => 8})
-    time_left = ((ipl_time - Time.now) / 60 / 60 / 24).round %>
+    time_left = ((ipl_time - Time.now.in_time_zone('Chennai')) / 60 / 60 / 24).round %>
   The ICC CWC 2011 is not over yet, but only <strong style="color:red;"><%= time_left%></strong> days left for IPL 4. What will you want in the new Rummy?</div> 
 <div class="grid_3">&nbsp;</div>
 <%= image_tag "ipl4.jpg", {:class => "grid_6"} %>
