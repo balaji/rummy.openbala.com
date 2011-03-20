@@ -3,7 +3,7 @@ class GameController < ApplicationController
   layout "standard"
 
   def init_me
-    @latest_matches ||= Match.find(:all, :conditions => ['date >= ? and date <= ?', Time.now.in_time_zone('Chennai'), 3.days.from_now.in_time_zone('UTC')]).sort_by {|m| m.date}
+    @latest_matches ||= Match.find(:all, :conditions => ['date >= ? and date <= ? and country_one_id != ?', Time.now.in_time_zone('Chennai'), 3.days.from_now.in_time_zone('UTC'), 15]).sort_by {|m| m.date}
   end
 
   def index

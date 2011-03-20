@@ -6,7 +6,7 @@ class IplController < ApplicationController
   end
 
   def save
-    IplMailer.deliver_send
+    IplMailer.deliver_send(request, self.current_user.name)
     redirect_to :action => 'index'
   end
 end
