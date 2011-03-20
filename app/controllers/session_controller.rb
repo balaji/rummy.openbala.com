@@ -32,9 +32,10 @@ class SessionController < ApplicationController
   end
 
   def index
-    if (self.current_auth.provider == 'facebook')
-      page = params[:page]? params[:page] : 1
-      @authorizations = self.friends.paginate(:page => page, :per_page => Authorization.per_page)
-    end
+  end
+
+  def save
+    IplMailer.deliver_send(request, self.current_user.name)
+    render :text => "<div class='grid_12' align='center'>Thanks for your feedback, much appreciated :)</div><div class='grid_3'>&nbsp;</div><img alt='Ipl4' class='grid_6' src='/images/ipl4.jpg' />", :layout => "standard"
   end
 end
