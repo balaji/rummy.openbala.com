@@ -16,6 +16,24 @@ document.observe("dom:loaded", function() {
         }
     }
 
+    $$('.jsCheck').each(function(item, index) {
+      item.observe('click', function(ev) {
+        if(ev.target.checked) {
+          if(!$('txt' + item.id)) {
+          item.parentNode.insertBefore(new Element('textarea', {class : 'grid_8', id: 'txt' + item.id, rows: '8', name: 'txt' + item.id }), item.nextSibling.nextSibling);
+          item.parentNode.insertBefore(new Element('div', {class : 'grid_3 scorecard', id: 'comment' + item.id, align: 'right'}).update('Comments:'), item.nextSibling.nextSibling);
+          } else {
+            jQuery('#txt' + item.id).show();
+            jQuery('#comment' + item.id).show();
+          }
+        }
+        else {
+          jQuery('#txt' + item.id).hide();
+          jQuery('#comment' + item.id).hide();
+        }
+      });
+    });
+
     $$('.observe_sort').each(function(item, index) {
       item.removeClassName('ascend');
       if(item.id == "sort_" + getURLParameter('sort')) {
