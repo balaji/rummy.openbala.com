@@ -4,6 +4,6 @@ class ScheduleController < ApplicationController
 #  caches_action :index
 
   def index
-    @schedule = Match.all.sort_by { |s| s.date }
+    @schedule = Match.all.sort_by { |s| s.date }.reverse
   end
 end
