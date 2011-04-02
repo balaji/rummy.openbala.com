@@ -7,12 +7,8 @@ class ToppersController < ApplicationController
   end
 
   def toppers
-    if Rails.env == "production"
-      players = Rails.cache.read('players_raw_data')
-    else
       players = stats
-    end
-    
+
     runs = players.sort_by do |player|
       -player[:runs]
     end

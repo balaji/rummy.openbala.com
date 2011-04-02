@@ -4,11 +4,7 @@ class RawStatsController < ApplicationController
   layout "standard"
 
   def index
-    if Rails.env == "production"
-      @players = Rails.cache.read('players_raw_data')
-    else
       @players = stats
-    end
 
     if(params[:country] and params[:country] != 'all')
       country_players = Array.new

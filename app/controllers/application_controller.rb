@@ -21,15 +21,11 @@ class ApplicationController < ActionController::Base
   end
 
   def friends
-    if Rails.env == "production"
-      Rails.cache.read("#{session[:user_id]}_friends")
-    else
-      ids = Array.new
-      fb_graph.get_connections("me", "friends").each do |friend| 
-        ids.push(friend["id"])
-      end
-      Authorization.find(:all, :conditions => ["uid in (?)", ids])
+    ids = Array.new
+    fb_graph.get_connections("me", "friends").each do |friend| 
+      ids.push(friend["id"])
     end
+    Authorization.find(:all, :conditions => ["uid in (?)", ids])
   end
 
   def signed_in?
@@ -47,10 +43,10 @@ class ApplicationController < ActionController::Base
     session[:uid] = auth.uid
   end
 
-  def set_friends(friends)
-    Rails.cache.delete("#{session[:user_id]}_friends")
-    Rails.cache.fetch("#{session[:user_id]}_friends") { friends }
-  end
+#  def set_friends(friends)
+#    Rails.cache.delete("#{session[:user_id]}_friends")
+#    Rails.cache.fetch("#{session[:user_id]}_friends") { friends }
+#  end
 
   def token=(token)
     @graph = Koala::Facebook::GraphAPI.new(token)

@@ -17,7 +17,7 @@ class SessionController < ApplicationController
       self.fb_graph.get_connections("me", "friends").each do |friend| 
         ids.push(friend["id"])
       end
-      self.set_friends(Authorization.find(:all, :conditions => ["uid in (?)", ids]))
+#      self.set_friends(Authorization.find(:all, :conditions => ["uid in (?)", ids]))
     end
     redirect_to :action => 'promo'
   end
