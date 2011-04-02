@@ -1,40 +1,24 @@
 <script type="text/javascript">
-  var i = 0;
-  imageObj = new Image();
-  images = new Array();
-  images.push("/images/csk-over.jpg");
-  images.push("/images/dc-over.png");
-  images.push("/images/dd-over.png");
-  images.push("/images/kkr-over.png");
-  images.push("/images/ktk-over.png");
-  images.push("/images/kx-over.png");
-  images.push("/images/mi-over.png");
-  images.push("/images/rcb-over.png");
-  images.push("/images/rr-over.png");
-  images.push("/images/spw-over.png");
-
-  for (i = 0; i < images.length; i++) {
-    imageObj.src = images[i];
-  }
+  loadTeamImages();
 </script>
 <table class="grid_12">
   <tbody>
     <tr width="100%">
-      <td class="space_5" align="center"><%=image_tag "csk.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
-      <td class="space_5" align="center"><%=image_tag "dc.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
-      <td class="space_5" align="center"><%=image_tag "dd.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
-      <td class="space_5" align="center"><%=image_tag "kkr.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
-      <td class="space_5" align="center"><%=image_tag "ktk.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "csk.png", {:class => "jsTeam hoverswap", :name => "0",  :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "dc.png",  {:class => "jsTeam hoverswap", :name => "1", :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "dd.png",  {:class => "jsTeam hoverswap", :name => "2", :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "kkr.png", {:class => "jsTeam hoverswap", :name => "3",  :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "ktk.png", {:class => "jsTeam hoverswap", :name => "4",  :alt => "/ipl/soon", :style => "border:0;"} %></td>
     </tr>
     <tr>
       <td><br/><td>
     </tr>
     <tr width="100%">
-      <td class="space_5" align="center"><%=image_tag "kx.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
-      <td class="space_5" align="center"><%=image_tag "mi.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
-      <td class="space_5" align="center"><%=image_tag "rcb.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
-      <td class="space_5" align="center"><%=image_tag "rr.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
-      <td class="space_5" align="center"><%=image_tag "spw.png", {:class => "hoverswap", :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "kx.png",  {:class => "jsTeam hoverswap", :name => "5", :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "mi.png",  {:class => "jsTeam hoverswap", :name => "6", :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "rcb.png", {:class => "jsTeam hoverswap", :name => "7",  :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "rr.png",  {:class => "jsTeam hoverswap", :name => "8", :alt => "/ipl/soon", :style => "border:0;"} %></td>
+      <td class="space_5" align="center"><%=image_tag "spw.png", {:class => "jsTeam hoverswap", :name => "9",  :alt => "/ipl/soon", :style => "border:0;"} %></td>
     </tr>
   </tbody>
 </table>
