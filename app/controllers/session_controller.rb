@@ -1,6 +1,6 @@
 class SessionController < ApplicationController
  # before_filter :authenticate, :except => :create
-  layout "standard", :except => :promo
+  layout "standard", :except => :index
 
   def create
     auth = request.env['rack.auth']
@@ -19,7 +19,7 @@ class SessionController < ApplicationController
       end
 #      self.set_friends(Authorization.find(:all, :conditions => ["uid in (?)", ids]))
     end
-    redirect_to :action => 'promo'
+    redirect_to :action => 'index'
   end
 
   def destroy
@@ -30,11 +30,11 @@ class SessionController < ApplicationController
     redirect_to root_path
   end
 
-  def promo
+  def index
     render :layout => "no-menu"
   end
 
-  def index
+  def wc
   end
 
   def save

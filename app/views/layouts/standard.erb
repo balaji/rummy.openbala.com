@@ -50,7 +50,7 @@
 
            <div id="mainMenu" class="grid_12">
              <ul id="menu">
-               <li><%= link_to 'Home', {:controller => 'session'}, :class => ("high_play" if yield(:title) == 'Home') %></li>
+               <li><%= link_to 'Home', {:controller => 'session', :action => "wc"}, :class => ("high_play" if yield(:title) == 'Home') %></li>
                <li><%= link_to 'Schedule', {:controller => 'schedule'}, :class => ("high_play" if yield(:title) == 'World Cup Match Schedule')  %></li>
                <li><%= link_to 'Rules', {:controller => 'rules'}, :class => ("high_play" if yield(:title) == 'Game Rules')  %></li>
                <li><%= link_to 'Play!', {:controller => 'game'}, :class => ("high_play" if yield(:title) == 'Available Matches to Play' or /^Play!/.match(yield(:title)))  %></li>
