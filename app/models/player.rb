@@ -1,6 +1,8 @@
 class Player < ActiveRecord::Base
   belongs_to :country
   validates_associated :country
+  belongs_to :ipl_country, :class_name => "Country"
+  validates_associated :ipl_country
   validates_presence_of :display_name
   validates_presence_of :short_name
   validates_presence_of :role

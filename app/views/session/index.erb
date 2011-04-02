@@ -14,13 +14,8 @@
         FB.ui({method: 'apprequests', message: 'You should learn more about this game.', data: 'tracking information for the user'});
     }
 </script>
-<div class="grid_7 desc">
-    <a href="/game">Select</a> top 5 players whom you think will perform best in each match.
-    <br/>Based on their <a href="/rules">performance</a>, you'll score points in each match.
-    <br/>
-</div>
-<div align="center" class="grid_7 desc">
-    <br/><br/>Test your instincts!
+<div class="grid_7 desc" align="center">
+  <div class="graublau">IPL Preview</div> <a href="/ipl"><%=image_tag "ipl.png", {:style => "border:0;"} %></a>
 </div>
 
 <div class="grid_1">&nbsp;</div>
@@ -36,11 +31,9 @@
   <% ipl_time = Time.now.in_time_zone('Chennai')
     ipl_time = ipl_time.change({:month => 4, :day => 8})
     time_left = ((ipl_time - Time.now.in_time_zone('Chennai')) / 60 / 60 / 24).round %>
-  The ICC CWC 2011 is not over yet, but only <strong style="color:red;"><%= time_left%></strong> days left for IPL 4. What will you want in the new Rummy?</div> 
+  <strong style="color:red;"><%= time_left%></strong> days left for IPL 4. What will you want in the new Rummy?</div> 
 <div class="grid_3">&nbsp;</div>
-<%= image_tag "ipl4.jpg", {:class => "grid_6"} %>
 <div class="clearfix">&nbsp;</div>
-<br/>
 <div class="grid_2">&nbsp;</div>
 <form method="post" action="/session/save">
   <input type="hidden" name="authenticity_token" id="authenticity_token" value="<%= form_authenticity_token %>" />

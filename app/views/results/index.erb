@@ -3,7 +3,7 @@
 <div style="float:left;">
     <%= render :partial => "partials/overall_rank", :locals => {:users => @users, :ranks => @user_ranks, :action => "all", :title => "Overall"} %>
 </div>
-<% if current_auth.provider == 'facebook' %>
+<% if signed_in? and current_auth.provider == 'facebook' %>
     <div style="float:left;">
         <%= render :partial => "partials/overall_rank", :locals => {:users => @user_friends, :ranks => @friend_ranks, :action => "friend", :title => "My Friends"} %>
     </div>

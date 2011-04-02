@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rummy - IPL</title>
+    <meta http-equiv="Content-Type" content="text/html; utf-8"/>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
+    <%= javascript_include_tag "jquery-1.5.min" %>
+    <%= javascript_include_tag "ipl" %>
+    <%= stylesheet_link_tag "grid" %>
+    <%= stylesheet_link_tag "main" %>
+</head>
+<body>
+  <div id="iplDiv" class="container container_12">
+    <div align="center" class="grid_12 inner_shadow banner" align="center">Rummy <span class="graublau"> - IPL 4</span></div>
+    <div class="grid_12 graublau" align="right"><a href="/session">Home</a></div>
+  <div class="clearfix">&nbsp;</div>
+  <div class="clearfix">&nbsp;</div>
+  <%= yield %>
+  <div class="clear">&nbsp;</div>
+  <br/><br/>
+<div style="background-color:#6495ed;padding:3px;">
+  <div class="footer grid_12" align="center">&#169;&nbsp;<a href="http://openbala.com">openbala</a> 2011</div>
+  <div class="clear">&nbsp;</div>
+</div>
+</div>
+</body>
+</html>

@@ -20,13 +20,13 @@
     <script src="http://connect.facebook.net/en_US/all.js#appId=190939097590526&amp;xfbml=1"></script>
   </head>
   <body>
-    <div class="container_12">
+    <div id="wcDiv" class="container_12">
         <div class="grid_2">&nbsp;</div>
         <div class="grid_2">&nbsp;<%= image_tag "icc-world-cup.png", {:style => "position: absolute; right: 0;"} %></div>
-        <div class="grid_4 inner_shadow banner" align="center">Rummy</div>
+        <div class="grid_4 inner_shadow banner wcColor" align="center">Rummy</div>
         <div class="grid_2">&nbsp;<%= image_tag "rummy.png", {:style => "position: absolute; height: 120px;"} %></div> 
         <%
-            rank = if self.current_user.total_points > 0
+            rank = if self.signed_in? and self.current_user.total_points > 0
                      User.all.sort_by {|u| -u.total_points}.index(self.current_user) + 1 
                    else
                      'NA'
@@ -34,7 +34,7 @@
                  %>
                <div class="grid_1" style="float:left;top:60px;"><strong style="font-size:13px;">Rank: <%= rank%></strong></div>
                <div id="profile_pic" class="grid_1" align="right">
-                 <%= image_tag current_user.image, {:style => "position: absolute; bottom: 0; right: 0"} %>
+                 <%= image_tag (self.signed_in? ? current_user.image : "incognito.png"), {:style => "position: absolute; bottom: 0; right: 0"} %>
                </div>
                <div id="sign_out" class="grid_12" align="right">&nbsp;&nbsp;<%= link_to 'sign out', logout_path %></div>
                <% matches = Match.find(:all, :conditions => ['Date(date) = ?', Time.now])

@@ -12,9 +12,9 @@
 <div class="grid_3">&nbsp;</div>
 <div class="grid_8">
   <% @current_form.each do |current_form| %>
-    <div class="highlight highlight_p_width <%= (self.current_user.id == current_form.user.id)? "highlight_c_rank" : "highlight_rank" %>"><%= current_form.rank %></div> 
-    <div class="highlight highlight_u_width <%= (self.current_user.id == current_form.user.id)? "highlight_c_user" : "highlight_user" %>">&nbsp;<%= current_form.user.name %><%= image_tag current_form.user.image, :class => 'image_pos' %></div>
-    <div class="highlight highlight_p_width <%= (self.current_user.id == current_form.user.id)? "highlight_c_points" : "highlight_points" %>"><%= current_form.points %></div>
+    <div class="highlight highlight_p_width <%= (self.current_user.id == current_form.user.id if signed_in?)? "highlight_c_rank" : "highlight_rank" %>"><%= current_form.rank %></div> 
+    <div class="highlight highlight_u_width <%= (self.current_user.id == current_form.user.id if signed_in?)? "highlight_c_user" : "highlight_user" %>">&nbsp;<%= current_form.user.name %><%= image_tag current_form.user.image, :class => 'image_pos' %></div>
+    <div class="highlight highlight_p_width <%= (self.current_user.id == current_form.user.id if signed_in?)? "highlight_c_points" : "highlight_points" %>"><%= current_form.points %></div>
     <% prev = CurrentForm.find_by_user_id_and_match_id(current_form.user_id, current_form.match_id - 1) %>
     <% if prev  
         if prev.rank == current_form.rank %>

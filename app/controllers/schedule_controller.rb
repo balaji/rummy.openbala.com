@@ -1,9 +1,9 @@
 class ScheduleController < ApplicationController
-  before_filter :authenticate
+#  before_filter :authenticate
   layout "standard"
 #  caches_action :index
 
   def index
-    @schedule = Match.all.sort_by { |s| s.date }.reverse
+    @schedule = Match.find_all_by_series('cwc2011').sort_by { |s| s.date }
   end
 end

@@ -6,4 +6,8 @@ class Country < ActiveRecord::Base
   def players
     Player.find(:all, :conditions => ['country_id = ? and player_status = ?', id, 'active'])
   end
+
+  def self.ipl_teams
+    Country.find(:all, :conditions => ['id > 15'])
+  end
 end

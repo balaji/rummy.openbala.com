@@ -1,5 +1,6 @@
 class TrendsController < ApplicationController
-  before_filter :authenticate, :init_me
+ # before_filter :authenticate, :init_me
+  before_filter :init_me
   layout "standard"
 
   def init_me

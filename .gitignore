@@ -9,3 +9,4 @@ rummy.iml
 db/batsmen*.txt
 db/bowlers*.txt
 db/totals*.txt
+Gemfile.lock
