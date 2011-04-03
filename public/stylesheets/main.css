@@ -15,6 +15,14 @@
   background: url("/images/rummy-logo.png") 0 0 no-repeat;
 }
 
+.cricket_logo {
+  position: relative;
+  display: block;
+  height: 363px;
+  width: 300px;
+  background: url("/images/cricket-logo.png") 0 0 no-repeat;
+}
+
 .woodFooter {
   height:28px;
   background: url("/images/wood-bg.jpg") 0 0 repeat-x scroll;
@@ -47,6 +55,10 @@ div.container {
 
 .white {
   color:white;
+}
+
+.brown {
+  color:#a52a2a;
 }
 
 img.jsShadow {
