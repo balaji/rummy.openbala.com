@@ -65,10 +65,6 @@ img.jsShadow {
   box-shadow: 3px 3px 7px #777;
 }
 
-.textShadow {
-  text-shadow: 0 1px 1px #000000;
-}
-
 div#mainMenu {
   border-bottom: 4px solid orange;
 }
