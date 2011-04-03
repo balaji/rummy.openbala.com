@@ -10,3 +10,4 @@ db/batsmen*.txt
 db/bowlers*.txt
 db/totals*.txt
 Gemfile.lock
+config/initializers/constants.rb
