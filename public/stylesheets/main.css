@@ -21,7 +21,11 @@ div#wcDiv {
 }
 
 div#iplDiv {
-  background-color: gray;
+  background-color: #990033;
+}
+
+img.jsShadow {
+  box-shadow: 3px 3px 7px #777;
 }
 
 div#mainMenu {
@@ -65,7 +69,7 @@ td.space_5 {
 }
 
 .ipl_select{
-    color: blue;
+    color: #ffffff;
     font-weight: bold;
 }
 

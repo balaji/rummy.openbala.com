@@ -6,6 +6,7 @@ $(document).ready(function() {
   };
 
   var matches = function(id, googleInfo) {
+    googleInfo.setContent('<img src="images/ajax-loader.gif" alt="loading"/>');
     $.ajax({
       url: "/ipl/stadium",
       method: "get",
@@ -38,9 +39,9 @@ $(document).ready(function() {
                     ['Navi-Mumbai', 19.03, 73.01],
                     ['Jaipur', 27, 75.83],
                     ['Kolkata', 22.5697, 88.3697 ]];
- 
+
+  var info = new google.maps.InfoWindow();
   for(var i = 0; i < iplPlaces.length; i ++) {
-    var info = new google.maps.InfoWindow({content: iplPlaces[i][0]});
     var marker = new google.maps.Marker({position: new google.maps.LatLng(iplPlaces[i][1], iplPlaces[i][2]), map: map, title: iplPlaces[i][0]});
     google.maps.event.addListener(marker, 'click', function() {matches(this.getTitle(), info); info.open(map, this);});
   }

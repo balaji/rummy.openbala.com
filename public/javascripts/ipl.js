@@ -27,12 +27,12 @@ var loadTeamImages = function() {
 var loadIndexImages = function() {
   if (indexImages.length == 0) {
     var images = new Array();
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/stadia-over.png");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/teams-over.png");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/schedule-over.png");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/gilli-over.png");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/rummyg-over.png");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/mangatha-over.png");
+    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/stadia-over.jpg");
+    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/teams-over.jpg");
+    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/schedule-over.jpg");
+    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/gilli-over.jpg");
+    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/rummyg-over.jpg");
+    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/mangatha-over.jpg");
 
     for (i = 0; i < images.length; i++) {
       var img = new Image();
