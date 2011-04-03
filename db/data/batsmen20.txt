@@ -1,0 +1,22 @@
+Mohammad Hafeez	c Waters b Otieno	9	x	20	1	0	45
+Ahmed Shehzad	c Kamande b Odoyo	1	x	18	0	0	5.55
+Kamran Akmal	st Ouma b Ngoche	55	x	67	5	0	82.08
+Younis Khan	lbw b Tikolo	50	x	67	2	0	74.62
+Misbah-ul-Haq	c Otieno b Kamande	65	x	69	1	2	94.2
+Umar Akmal	c Obuya b Odoyo	71	x	52	8	1	136.53
+Shahid Afridi	lbw b Odoyo	7	x	4	1	0	175
+Abdul Razzaq	not out	8	x	6	1	0	133.33
+Abdur Rehman	not out	5	x	3	0	0	166.66
+Umar Gul			x
+Shoaib Akhtar			x
+MA Ouma	c Kamran Akmal b Umar Gul	16	x	37	1	0	43.24
+SR Waters	run out (Umar Akmal)	17	x	31	2	0	54.83
+CO Obuya	c Ahmed Shehzad b Shahid Afridi	47	x	58	3	3	81.03
+SO Tikolo	 b Shahid Afridi	13	x	33	1	0	39.39
+T Mishra	lbw b Shahid Afridi	6	x	16	1	0	37.5
+RR Patel	c Umar Akmal b Mohammad Hafeez	0	x	6	0	0	0
+JK Kamande	lbw b Shahid Afridi	2	x	3	0	0	66.66
+TM Odoyo	lbw b Shahid Afridi	0	x	8	0	0	0
+NN Odhiambo	run out (Younis Khan)	0	x	6	0	0	0
+SO Ngoche	 b Umar Gul	0	x	1	0	0	0
+E Otieno	not out	0	x	1	0	0	0

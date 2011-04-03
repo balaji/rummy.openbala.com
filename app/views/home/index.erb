@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Rummy</title>
+  <meta http-equiv="Content-Type" content="text/html; utf-8"/>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'/>
+  <%= stylesheet_link_tag "main" %>
+  <%= stylesheet_link_tag "grid" %>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15904486-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+<div class="container container_12" style="height: 700px;">
+  <div align="center">
+    <div class="grid_4">&nbsp;</div>
+    <div class="grid_5" align="center"><span class="inner_shadow banner wcColor">Rummy</span>
+      &nbsp;<span class="inner_shadow" style="color:gray;font-size:23px;">beta</span>
+    </div>
+    <div class="clear clearfix">&nbsp;</div>
+    <div class="cricket_logo" align="center"></div>
+    <div class=" grid_12 desc inner_shadow graublau brown">
+      <br/><i>Definition: </i>An outdoor game played with bats, a ball, and wickets by two teams of 11 players each.
+    </div>
+    <div class="clear clearfix">&nbsp;</div>
+    <div class="clear clearfix">&nbsp;</div>
+    <div class="clear clearfix">&nbsp;</div>
+    <br/>
+
+    <div class="grid_4 graublau zoom inner_shadow brown" align="right">Login:</div>
+    <div class="grid_1">
+      <a href="/auth/facebook">
+        <%= image_tag "facebook.png", {:style => "border:0;"} %>
+      </a>
+    </div>
+    <div class="grid_1">
+      <a href="/auth/twitter">
+        <%= image_tag "twitter.png", {:style => "border:0;"} %>
+      </a>
+    </div>
+    <div class="grid_3 graublau zoom inner_shadow brown" align="right">Incognito:</div>
+    <div class="grid_1">
+      <a href="/session">
+        <%= image_tag "incognito.png", {:style => "border:0;"} %>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

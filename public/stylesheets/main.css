@@ -1,0 +1,541 @@
+@font-face {
+  font-family: Graublau;
+  src: url('GraublauWebBold.otf');
+}
+@font-face {
+  font-family: Lobster;
+  src: url('Lobster.otf');
+}
+
+.logo {
+  position: relative;
+  display: block;
+  height: 70px;
+  width: 196px;
+  background: url("/images/rummy-logo.png") 0 0 no-repeat;
+}
+
+.cricket_logo {
+  position: relative;
+  display: block;
+  height: 363px;
+  width: 300px;
+  background: url("/images/cricket-logo.png") 0 0 no-repeat;
+}
+
+.woodFooter {
+  height:28px;
+  background: url("/images/wood-bg.jpg") 0 0 repeat-x scroll;
+}
+
+body {
+    font-family: 'PT Sans', "lucida grande", tahoma, verdana, arial, sans-serif;
+    background-image:url("/images/bg-content.png");
+}
+
+.container_12 {
+  border: 1px solid #C0C0C0;
+  -moz-box-shadow: 2px 2px 0 rgba(170, 160, 130, 0.5), 4px 4px 0 rgba(200, 190, 165, 0.5);
+  -o-box-shadow: 2px 2px 0 rgba(170, 160, 130, 0.5), 4px 4px 0 rgba(200, 190, 165, 0.5); 
+  -webkit-box-shadow: 2px 2px 0 rgba(170, 160, 130, 0.5), 4px 4px 0 rgba(200, 190, 165, 0.5);
+  box-shadow: 2px 2px 0 rgba(170, 160, 130, 0.5), 4px 4px 0 rgba(200, 190, 165, 0.5);
+}
+
+div#wcDiv {
+  background-color: white;
+}
+
+div#iplDiv {
+  background: url("/images/wood-bg.jpg") 0 0 repeat-x scroll;
+}
+
+div.container {
+  background-image:url("/images/laminat.jpg");
+}
+
+.white {
+  color:white;
+}
+
+.brown {
+  color:#a52a2a;
+}
+
+img.jsShadow {
+  box-shadow: 3px 3px 7px #777;
+}
+
+div#mainMenu {
+  border-bottom: 4px solid orange;
+}
+
+.banner {
+    font-family: Lobster, arial, serif;
+    font-size: 84px;
+}
+
+.wcColor {
+    color: #6495ed;
+}
+
+.desc {
+    font-size: 18px;
+}
+
+.graublau {
+  font-family: Graublau;
+}
+
+td.space_5 {
+  width: 188px;
+}
+
+.zoom {
+    font-size: 40px;
+}
+
+.matches {
+    height: 16px;
+    font-size: 14px;
+}
+
+.image_pos {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+}
+
+.ipl_select{
+    color: red;
+    font-weight: bold;
+}
+
+.india_playing {
+    color: red;
+    font-weight: bold;
+}
+
+.highlight {
+    height: 50px;
+    padding-top: 5px;
+    margin: 2px;
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    font-size: 13px;
+    border-radius: 4px;
+    position: relative;
+    display:inline;
+    -moz-border-radius: 4px;
+    float: left;
+}
+
+.highlight_u_width {
+  width: 250px;
+}
+
+.highlight_p_width {
+  text-align: center;
+  width: 60px;
+}
+
+.highlight_user {
+    background-color: #ffe4c4;
+}
+
+.highlight_c_user {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.highlight_c_points {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.highlight_points {
+    background-color: #deb887;
+}
+
+.highlight_c_rank {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+.highlight_rank {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.highlight_message {
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.weekend_game {
+  font-size: 10px;
+  color: gray;
+}
+
+#profile_pic {
+    height: 90px;
+}
+
+#sign_out {
+    font-size: small;
+}
+
+ul#menu {
+    list-style: none;
+    text-align: center;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    text-decoration: none;
+    padding: 5px 0;
+    width: 100px;
+    background: #6495ed;
+    color: white;
+    float: left;
+    text-align: center;
+    margin-right: 5px;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+}
+
+ul#menu li a.high_play {
+    background: orange;
+    color:black;
+    font-weight: bold;
+}
+
+ul#profile li a.high_play {
+    background: orange;
+    color:black;
+    font-weight: bold;
+}
+
+ul#profile {
+    list-style: none;
+    margin-top: 0;
+    padding: 0;
+    width: 710px;
+}
+
+ul#profile li {
+    display: inline;
+}
+
+ul#profile li a {
+    text-decoration: none;
+    padding: 5px 0;
+    width: 130px;
+    height: 16px;
+    background: #4AA02C;
+    color: white;
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 5px 5px;
+}
+
+ul#profile li a:hover {
+    background: #ffe4c4;
+    color: #000;
+}
+
+div .play a {
+    background: #5F78AB;
+    border-top: solid 1px #879AC0;
+    border-bottom: solid 1px #1A356E;
+    color: white;
+    display: block;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
+    text-shadow: none;
+    width: 80px;
+    height: 14px;
+    text-decoration: none;
+}
+
+ul#menu li a:hover {
+    background: #ffe4c4;
+    color: #000
+}
+
+.scorecard {
+    font-size: small;
+}
+
+.map_disp {
+    font-size: 10px;
+}
+
+
+.inner_shadow {
+    text-shadow: 1px 1px white, -1px -1px #444;
+}
+
+.myspace {
+    float: left;
+    padding: 10px;
+    margin: 9px;
+    width: 220px;
+    height: 200px;
+    -moz-box-shadow: 0 0 5px 5px #888;
+    -webkit-box-shadow: 0 0 5px 5px #888;
+    box-shadow: 0 0 5px 5px #888;
+    background: #C9BE62;
+}
+
+.footer {
+    color: white;
+    font-size: small;
+}
+
+.footer > a {
+  text-decoration:none;
+  color:white;
+}
+
+.draggable {
+    padding-left: 3px;
+    padding-top: 2px;
+    margin: 2px;
+    background: #6fb2e5;
+    box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    -o-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    -webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
+    cursor: pointer;
+    height: 20px;
+    z-index: 2;
+}
+
+.droppable {
+    box-shadow: inset 0 0px 10px #000000;
+    -o-box-shadow: inset 0 0px 10px #000000;
+    -webkit-box-shadow: 0 0px 10px #000000;
+    -moz-box-shadow: 0 0px 10px #000000;
+    height: 28px;
+    padding-left: 5px;
+    margin: 2px;
+    z-index: 1;
+}
+
+.droppable-fix {
+    height: 28px;
+    padding-left: 5px;
+    margin: 2px;
+}
+
+.highlight_prev {
+    border: none;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    color: white;
+    background: #1e90ff;
+}
+
+.button {
+    color: #050;
+    font: bold 84% 'trebuchet ms', helvetica, sans-serif;
+    background-color: #fed;
+}
+
+.highlight_p {
+    border: none;
+    margin-top: 2px;
+    height: 20px;
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    font-size: 14px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    color: white;
+    background: #1e90ff;
+}
+
+.highlight_s {
+    border: none;
+    margin-top: 2px;
+    height: 20px;
+    font-family: Tahoma, "lucida grande", arial, "sans serif";
+    font-size: 14px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    color: white;
+    background: #f08080;
+}
+
+div.droppable.hover {
+    background-color: #efefef;
+}
+
+.fb_button_text {
+    background: #5F78AB;
+    border-top: solid 1px #879AC0;
+    border-bottom: solid 1px #1A356E;
+    color: white;
+    display: block;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-weight: bold;
+    padding: 2px 6px 3px 6px;
+    margin: 1px 1px 0 0;
+    text-shadow: none;
+}
+
+.fb_button_medium {
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.fb_button_medium a {
+    text-decoration: none;
+}
+
+.pagination {
+    font-size: 11px;
+    /*float: right;*/
+    margin: 0;
+    padding: 3px 0 4px;
+    text-align:center;
+}
+
+.pagination a,
+.pagination span {
+    padding: 3px 3px 2px;
+}
+
+.pagination .disabled {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #999999;
+    cursor: default;
+}
+
+.pagination a {
+    color: #3B5998;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #3B5998;
+    border-bottom: 1px solid #3B5998;
+    border-color: #D8DFEA #D8DFEA #3B5998;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.pagination .current {
+}
+
+.pagination .current {
+    border-bottom: 2px solid #3B5998;
+    border-color: #3B5998;
+    color: #3B5998;
+    font-weight: bold;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.pagination .current a:hover {
+    background-color: #3B5998;
+    color: #FFFFFF;
+}
+
+.pagination .prev_page {
+
+}
+
+.pagination .next_page {
+
+}
+
+.fbButtonblue {
+    background: top repeat-x #5F78AB;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 4px 2px 4px;
+    border: 1px solid #29447E;
+}
+
+.fbButtonblue:hover:focus {
+    background-color: #4B649A;
+    background-image: none;
+}
+
+#rounded-corner {
+  font-size: 12px;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+#rounded-corner th {
+  font-weight: normal;
+  font-size: 13px;
+  color: #039;
+  background: #B9C9FE;
+  border: 1px solid white;
+  line-height: 30px;
+}
+
+#rounded-corner th a {
+  display: block;
+  text-decoration: none;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#rounded-corner th a:hover {
+  background-color: orange;
+  text-decoration: none;
+  color: black;
+}
+
+#rounded-corner td {
+  background: #E8EDFF;
+  border: 1px solid white;
+  padding: 8px;
+}
+
+#rounded-corner tbody tr:hover td {
+  background: #D0DAFD;
+}
+
+td, th {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px 2px;
+}
+
+#rounded-corner th.ascend {
+background: #B9C9FE url("/images/sort_up.png") 99% 50% no-repeat;
+}
+
+#rounded-corner th.descend {
+background: #B9C9FE url("/images/sort_down.png") 99% 50% no-repeat;
+}

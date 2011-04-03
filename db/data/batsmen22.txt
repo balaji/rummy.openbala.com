@@ -1,0 +1,21 @@
+Tamim Iqbal	c Porterfield b Botha	44	52	43	7	0	102.32
+Imrul Kayes	st NJ O'Brien b Mooney	12	29	12	2	0	100.00
+Junaid Siddique	run out (Joyce)	3	9	8	0	0	37.50
+Mushfiqur Rahim	c White b Dockrell	36	95	66	2	0	54.54
+Shakib Al Hasan	c & b Botha	16	17	20	3	0	80.00
+Raqibul Hasan	run out (White)	38	87	69	1	0	55.07
+Mohammad Ashraful	c White b Dockrell	1	9	6	0	0	16.66
+Naeem Islam	c Dockrell b Johnston	29	64	38	3	0	76.31
+Shafiul Islam	lbw b Botha	2	14	17	0	0	11.76
+Abdur Razzak	 b Johnston	11	28	16	0	0	68.75
+WTS Porterfield	c Raqibul Hasan b Shakib Al Hasan	20	x	30	2	0	66.66
+PR Stirling	st Mushfiqur Rahim b Abdur Razzak	9	x	10	1	0	90
+EC Joyce	c & b Mohammad Ashraful	16	x	35	0	0	45.71
+NJ O'Brien	c Tamim Iqbal b Shakib Al Hasan	38	x	52	3	0	73.07
+AR White	 b Mohammad Ashraful	10	x	27	1	0	37.03
+KJ O'Brien	c sub (Suhrawadi Shuvo) b Shafiul Islam	37	x	40	3	1	92.5
+AC Botha	 b Shafiul Islam	22	x	36	2	0	61.11
+JF Mooney	 b Naeem Islam	0	x	9	0	0	0
+DT Johnston	lbw b Shafiul Islam	6	x	6	1	0	100
+GH Dockrell	not out	4	x	12	0	0	33.33
+WB Rankin	c Junaid Siddique b Shafiul Islam	3	x	13	0	0	23.07

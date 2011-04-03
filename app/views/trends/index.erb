@@ -1,0 +1,17 @@
+<% content_for :title, "World Cup - Completed Matches" %>
+<div class="grid_12 desc" align="center">
+    <strong>Scorecard and performance of previous matches</strong>
+</div>
+<div class="clearfix">&nbsp;</div>
+<div class="grid_12" align="center">
+  <strong class='scorecard'>Country:</strong> <select id="country_trend_select" onchange='selectCountry(this)'>
+    <option id="all">All</option>
+    <%Country.find(:all, :conditions => ['name != ?', 'TBC']).each do |country|%>
+      <option value="<%=country.id%>" <%= (params[:country].to_i == country.id) ? 'selected="selected"' : '' %>><%=country.name%></option>
+    <%end%>
+  </select>
+</div>
+<div class="clearfix">&nbsp;</div>
+<div id="trend_view">
+  <%= render :partial => 'partials/trends', :locals => {:matches => @matches} %>
+</div>

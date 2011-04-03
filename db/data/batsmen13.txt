@@ -1,0 +1,28 @@
+V Sehwag	 b Oram	23	40	30	4	0	76.66
+SR Tendulkar	 b Southee	17	31	23	3	0	73.91
+G Gambhir	c How b Southee	89	141	85	11	0	104.70
+V Kohli	c BB McCullum b Oram	59	79	68	7	0	86.76
+MS Dhoni	not out	108	105	64	11	3	168.75
+SK Raina	c Taylor b Mills	50	42	26	4	3	192.30
+YK Pathan	not out	3	9	4	0	0	75.00
+Yuvraj Singh
+Harbhajan Singh
+PP Chawla
+R Ashwin
+A Nehra
+MM Patel
+S Sreesanth
+MJ Guptill	c Dhoni b Ashwin	38	61	45	4	1	84.44
+BB McCullum	run out (Raina)	58	81	54	7	0	107.40
+JD Ryder	c Yuvraj Singh b Harbhajan Singh	32	44	36	3	0	88.88
+LRPL Taylor	c Kohli b Harbhajan Singh	5	17	14	0	0	35.71
+JEC Franklin	lbw b Chawla	0	4	3	0	0	0.00
+SB Styris	 b Chawla	20	58	33	1	0	60.60
+JM How	c Patel b Yuvraj Singh	15	19	22	1	0	68.18
+JDP Oram	st Dhoni b Yuvraj Singh	12	23	19	1	0	63.15
+NL McCullum	not out	29	26	18	3	2	161.11
+LJ Woodcock	 b Nehra	9	6	9	1	0	100.00
+KD Mills	 b Nehra	2	14	6	0	0	33.33
+HK Bennett
+TG Southee
+KS Williamson

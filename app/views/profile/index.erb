@@ -1,0 +1,26 @@
+<% content_for :title, "Analysis" %>
+<%= render :partial => "partials/ranking_sub_menu", :locals => {:src => 'profile'} %>
+<div class="grid_12" align="center">
+    <div id='container'>
+      <div class='right graublau'>
+        Take it easy :)<br/>
+          <a href="/ipl"><%= image_tag "ipl.png" %></a>
+        </div>
+        <div id="panel-frame">
+            <div class="panel">
+                <div class="data"></div>
+            </div>
+            <div class="panel2">
+                <div class="data2"></div>
+            </div>
+        </div>
+
+        <div class="left">
+            <% @matches.each do |m| %>
+                <div class="block_t scorecard" id="<%= m.id %>">
+                    <%= m.country_one.name %> v. <%= m.country_two.name %>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+DW Steyn	6	1	29	0	4.83
+LL Tsotsobe	2	0	10	0	5.00
+M Morkel	6	0	16	3	2.66	(1nb, 1w)
+WD Parnell	5	0	11	0	2.20	(1w)
+Imran Tahir	8.5	0	35	3	3.96	(1nb)
+RJ Peterson	6	1	21	2	3.50	(1w)
+J Botha	6	0	18	1	3.00
+JP Duminy	2	0	6	0	3.00
+CB Mpofu	3	0	22	0	7.33
+P Utseya	3	0	14	0	4.66
+SW Masakadza	5	0	27	0	5.40
+RW Price	4	0	19	1	4.75
+AG Cremer	4.3	0	26	0	5.77
+GA Lamb	4	0	45	1	11.25	(2w)

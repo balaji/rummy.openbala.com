@@ -1,0 +1,65 @@
+<% country_one = @match.country_one.name
+   country_two = @match.country_two.name %>
+<% content_for :title, "Play! - #{country_one} v. #{country_two}" %>
+<div class="grid_12 desc" align="center">
+    <strong>Drag and Drop your top 5!</strong>
+</div>
+<div class="grid_1 clearfix">&nbsp;</div>
+<div class="grid_3" align="center"><h3><%= country_one %></h3></div>
+<div class="grid_5">&nbsp;</div>
+<div class="grid_3"><h3><%= country_two %></h3></div>
+<div class="clear">&nbsp;<%= hidden_field_tag "match_id", @match.id %></div>
+
+<% country_one_players = @match.country_one.players
+   country_two_players = @match.country_two.players
+   16.times do |i| %>
+    <div class="grid_1">&nbsp;</div>
+    <% if country_one_players[i] %>
+      <div id="player_<%= country_one_players[i].id %>" class="grid_3 draggable scorecard"><%= country_one_players[i].display_name %>
+      <%=render :partial => "partials/image_for_player", :locals => {:player => country_one_players[i]} %>
+      </div>
+        <div class="grid_1">&nbsp;</div>
+    <% else %>
+        <div class="grid_4 droppable-fix">&nbsp;</div>
+    <% end %>
+
+    <% if i > 1 and i <= 6 %>
+        <div id="drop_<%= (i - 1) %>" class="droppable grid_3" align="right">&nbsp;</div>
+        <div class="grid_1 scorecard">x <%= 7 - i %></div>
+    <% else %>
+        <% if i == 8 %>
+             <div class="grid_3" align="center"><input type="button" class="button" value="Save" id="save_players"/></div>
+            <div class="grid_1 droppable-fix">&nbsp;</div>
+
+        <% elsif i == 9 %>
+            <div class="grid_3 droppable-fix scorecard" align="center">&nbsp;<strong><%= "Your Current Save" %></strong></div>
+            <div class="grid_1">&nbsp;</div>
+        <% elsif i >=10 and i < 15 %>
+          <div id="prev_<%= i - 9 %>" class="grid_3 scorecard droppable-fix highlight_prev" align="center">
+            <%= @players_chosen[i - 10]%> <% if @players_chosen[i - 10]%> <%=render :partial => "partials/image_for_player", :locals => {:player => Player.find_by_display_name(@players_chosen[i - 10])} %> <%end %></div>
+            <div class="grid_1">&nbsp;</div>
+        <% else %>
+            <div class="grid_3 droppable-fix">&nbsp;</div>
+            <div class="grid_1">&nbsp;</div>
+    <% end %>
+    <% end %>
+
+    <% if country_two_players[i] %>
+      <div id="player_<%= country_two_players[i].id %>" class="grid_3 draggable scorecard"><%= country_two_players[i].display_name %>
+      <%=render :partial => "partials/image_for_player", :locals => {:player => country_two_players[i]} %>
+    </div>
+    <% end %>
+    <div class="clear">&nbsp;</div>
+<% end %>
+
+<div class="clearfix">&nbsp;</div>
+
+<div class="grid_4">&nbsp;</div>
+<div class="grid_4 scorecard" style="color:red;" align="center"><b>Note: Your choice might not play in the 11</b></div>
+<div class="clearfix">&nbsp;</div>
+
+
+
+<div class="clearfix">&nbsp;</div>
+<div class="grid_6">&nbsp;</div>
+

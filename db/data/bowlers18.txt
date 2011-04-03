@@ -1,0 +1,14 @@
+CB Mpofu	9	0	58	2	6.44	(2w)
+RW Price	10	0	43	1	4.30	(1w)
+P Utseya	10	2	43	1	4.30	(2w)
+AG Cremer	10	0	41	1	4.10	(1w)	
+BRM Taylor	3	0	23	0	7.66		
+E Chigumbura	2	0	18	0	9.00	(1w)	
+SC Williams	6	0	29	0	4.83		
+SW Tait	9	1	34	2	3.77	(1nb, 2w)
+B Lee	8	1	34	1	4.25	(1nb, 1w)
+MG Johnson	9.2	2	19	4	2.03	
+JJ Krejza	8	0	28	2	3.50		
+SR Watson	3	0	7	0	2.33		
+SPD Smith	5	0	24	0	4.80	
+DJ Hussey	4	1	12	1	3.00	

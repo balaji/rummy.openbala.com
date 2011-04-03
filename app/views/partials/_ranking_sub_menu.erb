@@ -1,0 +1,11 @@
+<div class="grid_4">&nbsp;</div>
+<div align="center" class="grid_7">
+    <ul id="profile">
+      <li><%= link_to 'Matchwise Ranking', {:controller => 'profile'}, :class => ('high_play' if src == 'profile') %></li>
+      <li><%= link_to 'Current Form', {:controller => 'current_form'}, :class => ('high_play' if src == 'current_form') %></li>
+      <li><%= link_to 'My History', {:controller => 'myspace'}, :class => ('high_play' if src == 'myspace')  %></li>
+      <li><%= link_to 'Overall Ranking', {:controller => 'results'}, :class => ('high_play' if src == 'results')  %></li>
+    </ul>
+</div>
+<div class="clear clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>

@@ -1,0 +1,13 @@
+Khurram Chohan	8	0	62	0	7.75
+H Osinde	2.1	0	10	0	4.61	(1nb, 2w)
+HS Baidwan	8.5	0	59	2	6.67	(2w)
+AS Hansra	9	0	47	0	5.22	(1w)
+Rizwan Cheema	7	0	47	1	6.71
+WD Balaji Rao	7	0	48	0	6.85
+JM Davison	8	0	56	2	7.00	(2w)
+KMDN Kulasekara	6	2	16	3	2.66
+NLTC Perera	7	0	24	3	3.42
+BAW Mendis	7.5	3	18	1	2.29	(1w)
+M Muralitharan	9	0	38	2	4.22	(1nb, 3w)
+TM Dilshan	5	0	14	0	2.80
+TT Samaraweera	2	0	4	1	2.00

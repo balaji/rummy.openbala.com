@@ -1,0 +1,13 @@
+Ahmedabad|Sardar Patel Gujarat Stadium
+Bangalore|M. Chinnaswamy Stadium
+Chennai|M.A. Chidambaram Stadium
+Chittagong|Zohur Ahmed Chowdhury Stadium
+Colombo|R. Premadasa Stadium
+Delhi|Feroz Shah Kotla
+Dhaka|Shere Bangla National Stadium
+Hambantota|Mahinda Rajapaksa International Cricket Stadium
+Kandy|Pallekele International Cricket Stadium
+Kolkata|Eden Gardens
+Mohali|Punjab Cricket Association Stadium
+Mumbai|Wankhede Stadium
+Nagpur|Vidarbha Cricket Association Ground

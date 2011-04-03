@@ -1,0 +1,118 @@
+h4 {
+    padding: 5px;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    color: #cc0000;
+}
+
+#container {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #ffe4c4;
+    min-height: 500px;
+    overflow: auto;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: solid 1px #999999;
+    box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px black;
+    -o-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px black;
+    -webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px black;
+    -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px black;
+}
+
+.right {
+    float: right;
+    margin-top: 140px;
+    width: 580px;
+    font-size:20px;
+    font-family:Tahoma, "trebuchet ms", arial;
+}
+
+.block_t {
+    border-bottom: solid 1px #999999;
+    padding: 5px;
+}
+
+.block_t:hover {
+    background: url("/images/arrow.png") #ffe4c4 99% 50% no-repeat;
+    cursor: pointer;
+}
+
+.block_t2 {
+    border-bottom: solid 1px #999999;
+    border-left: solid 1px #999999;
+    padding: 5px;
+}
+
+.block_t2:hover {
+    background: url("/images/arrow.png") #ffe4c4 99% 50% no-repeat;
+    cursor: pointer;
+}
+
+#panel-frame {
+    position: relative;
+    max-width: 900px;
+}
+
+.left {
+    float: left;
+    background-color: #82CAFF;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    border: solid 1px #999999;
+    z-index: 10;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.panel {
+    background-color: #A0CFEC;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    position: absolute;
+    /*border: solid 1px #999999;*/
+    border-left: 0px;
+    left: 0;
+    z-index: 8;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.panel2 {
+    background-color: #AFDCEC;
+    width: 300px;
+    height: 500px;
+    float: left;
+    position: relative;
+    position: absolute;
+    /*border: solid 1px #999999;*/
+    border-left: 0px;
+    left: 0;
+    z-index: 6;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -moz-box-shadow: 0 0 1px 1px #888;
+    -webkit-box-shadow: 0 0 1px 1px #888;
+    box-shadow: 0 0 1px 1px #888;
+}
+
+.head {
+    background-color: #ffc72e;
+    padding: 10px;
+    text-align: right;
+}
+
+#logo {
+    width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}

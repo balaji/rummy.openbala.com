@@ -1,0 +1,12 @@
+Shoaib Akhtar	10	0	62	1	6.20	(1nb, 1w)
+Junaid Khan	8	0	44	3	5.50
+Wahab Riaz	9.4	1	52	3	5.37	(2nb, 3w)
+Saeed Ajmal	10	0	50	2	5.00	(2w)
+Abdur Rehman	10	0	52	1	5.20
+Mohammad Hafeez	2	0	7	0	3.50
+JM Anderson	8	0	34	1	4.25	(3w)
+SCJ Broad	8.1	1	25	5	3.06
+TT Bresnan	8	1	29	1	3.62	(2w)
+PD Collingwood	10	0	48	3	4.80	(1nb, 1w)
+MH Yardy	9	0	44	0	4.88	(1w)
+RS Bopara	3	0	20	0	6.66

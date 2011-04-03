@@ -1,0 +1,36 @@
+<div class="clearfix">&nbsp;</div>
+<div class="grid_12" align="center">
+  <input class="jsChoose" type="checkbox" value="Chennai Super Kings" id="csk"><label for="csk"> - CSK&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value = "Deccan Chargers" id="dc"><label for="dc"> - DC&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value="Delhi Daredevils" id="dd"><label for="dd"> - DD&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value="Kolkata Knight Riders" id="kkr"><label for="kkr"> - KKR&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value="Kochi Tuskers Kerala" id="ktk"><label for="ktk"> - KTK&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value="Kings XI Punjab" id="kx"><label for="kx"> - KXP&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value="Mumbai Indians" id="mi"><label for="mi"> - MI&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value="Royal Challengers Bangalore" id="rcb"><label for="rcb"> - RCB&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value="Rajasthan Royals" id="rr"><label for="rr"> - RR&nbsp;</label>
+  <input class="jsChoose" type="checkbox" value="Pune Warriors" id="spw"><label for="spw"> - SPW&nbsp;</label>
+</div>
+<div class="clearfix">&nbsp;</div>
+<table style="margin-left:auto;margin-right: auto;width:90%;">
+  <tbody>
+    <% @schedule.each do |match| %>
+      <tr>
+        <% c1_name, c2_name, date_str = match.country_one.name, match.country_two.name, match.date.strftime("%d-%b, %a") %>
+        <td class="matches iplTeam"><%= c1_name %></td>
+        <td class="matches" align="center">v.</td>
+        <td class="matches iplTeam"><%= c2_name %></td>
+        <td class="matches"><%= match.stadium.city %></td>
+        <td class="matches"><%= date_str %></td>
+        <td class="matches">
+          <% if match.day_night? %>
+            <sup>D/N</sup>
+          <% else %>
+            &nbsp;
+          <% end %>
+        </td>
+        <td class="matches"><%= match.match_type %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

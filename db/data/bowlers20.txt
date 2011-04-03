@@ -1,0 +1,13 @@
+Shoaib Akhtar	5	1	10	0	2.00	(1w)
+Abdul Razzaq	5	1	23	0	4.60
+Umar Gul	4.1	0	12	2	2.88	(1nb, 1w)
+Abdur Rehman	7	1	18	0	2.57
+Shahid Afridi	8	3	16	5	2.00
+Mohammad Hafeez	4	1	26	1	6.50	(1w)
+TM Odoyo	7	2	41	3	5.85	(5w)
+E Otieno	9	1	49	1	5.44	(2nb)
+NN Odhiambo	7	0	65	0	9.28	(3nb, 3w)
+SO Ngoche	10	0	46	1	4.60	(1w)
+JK Kamande	7	0	64	1	9.14	(4w)
+SO Tikolo	9	0	44	1	4.88	(1nb)
+CO Obuya	1	0	5	0	5.00

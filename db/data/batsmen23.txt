@@ -1,0 +1,22 @@
+MJ Guptill	 b Watson	10	45	25	2	0	40.00
+BB McCullum	c Krejza b Tait	16	19	12	3	0	133.33
+JD Ryder	c Haddin b Johnson	25	49	31	6	0	80.64
+LRPL Taylor	 b Tait	7	45	22	1	0	31.81
+JEC Franklin	c Haddin b Johnson	0	2	3	0	0	0.00
+SB Styris	c Haddin b Tait	0	4	4	0	0	0.00
+JM How	lbw b Smith	22	60	47	1	0	46.80
+NL McCullum	lbw b Johnson	52	94	76	3	0	68.42
+DL Vettori	c Haddin b Lee	44	62	43	5	0	102.32
+TG Southee	c Ponting b Johnson	6	20	10	0	0	60.00
+HK Bennett	not out	0	1	0	0	0	-
+SR Watson	 b Bennett	62	x	61	6	1	101.63
+BJ Haddin	c Franklin b Bennett	55	x	50	8	0	110
+RT Ponting	st BB McCullum b Southee	12	x	28	1	0	42.85
+MJ Clarke	not out	24	x	37	4	0	64.86
+CL White	not out	22	x	28	3	0	78.57
+DJ Hussey							
+SPD Smith							
+MG Johnson							
+JJ Krejza							
+B Lee									
+SW Tait

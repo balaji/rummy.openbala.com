@@ -1,0 +1,22 @@
+DS Smith	c Barresi b Loots	53	67	51	9	0	103.92
+CH Gayle	c Kervezee b ten Doeschate	80	136	110	7	2	72.72
+DM Bravo	c Kervezee b Seelaar	30	42	38	1	2	78.94
+RR Sarwan	lbw b Westdijk	49	55	42	7	1	116.66
+KA Pollard	c ten Doeschate b Mudassar Bukhari	60	59	27	5	4	222.22
+DJG Sammy	c Kervezee b Seelaar	6	6	6	1	0	100.00
+S Chanderpaul	 b Seelaar	4	9	6	0	0	66.66
+DC Thomas	lbw b Mudassar Bukhari	13	24	13	1	0	100.00
+NO Miller	not out	11	13	7	2	0	157.14
+SJ Benn	not out	3	1	1	0	0	300.00
+KAJ Roach
+AN Kervezee	st Thomas b Benn	14	20	20	2	0	70.00
+W Barresi	c Gayle b Roach	0	4	5	0	0	0.00
+TLW Cooper	not out	55	114	72	9	0	76.38
+RN ten Doeschate	lbw b Benn	7	7	6	1	0	116.66
+B Zuiderent	 b Roach	1	5	4	0	0	25.00
+TN de Grooth	lbw b Benn	1	6	5	0	0	20.00
+PW Borren	c Pollard b Sammy	10	25	28	1	0	35.71
+Mudassar Bukhari	 b Roach	24	35	42	2	0	57.14
+PM Seelaar	lbw b Roach	1	8	5	0	0	20.00
+BP Loots	lbw b Roach	0	1	1	0	0	0.00
+BA Westdijk	 b Roach	0	1	1	0	0	0.00

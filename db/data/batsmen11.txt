@@ -1,0 +1,30 @@
+AJ Strauss	c Bagai b Khurram Chohan	1	10	5	0	0	20.00
+KP Pietersen	 b Khurram Chohan	24	49	28	3	1	85.71
+IJL Trott	c Desai b Davison	57	128	81	4	0	70.37
+IR Bell	c Bagai b Khurram Chohan	8	18	19	1	0	42.10
+PD Collingwood	st Bagai b Balaji Rao	9	25	21	0	0	42.85
+MJ Prior	 b Baidwan	78	118	80	4	1	97.50
+MH Yardy	c Surkari b Osinde	6	20	13	0	0	46.15
+LJ Wright	lbw b Osinde	0	4	5	0	0	0.00
+SCJ Broad	 b Baidwan	22	37	27	2	0	81.48
+JC Tredwell	not out	11	20	11	1	0	100.00
+A Shahzad	c Rizwan Cheema b Baidwan	10	11	8	0	1	125.00
+JM Anderson
+GP Swann
+TT Bresnan
+RS Bopara
+JM Davison	 b Shahzad	1	2	2	0	0	50.00
+NR Kumar	 b Broad	3	9	4	0	0	75.00
+R Gunasekera	c Prior b Broad	7	39	16	1	0	43.75
+A Bagai	c Pietersen b Broad	5	11	9	1	0	55.55
+AS Hansra	lbw b Shahzad	1	4	3	0	0	33.33
+ZE Surkari	c Collingwood b Yardy	22	72	45	3	0	48.88
+Rizwan Cheema	c Bell b Broad	93	100	71	10	5	130.98
+Khurram Chohan	lbw b Broad	44	111	74	3	1	59.45
+H Patel	c Strauss b Collingwood	13	23	25	2	0	52.00
+HS Baidwan	c Collingwood b Tredwell	14	21	17	2	0	82.35
+WD Balaji Rao	not out	6	19	13	0	0	46.15
+TG Gordon
+H Osinde
+PA Desai
+K Whatham

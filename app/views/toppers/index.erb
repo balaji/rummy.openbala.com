@@ -1,0 +1,13 @@
+<% content_for :title, "Toppers" %>
+<%= render :partial => "partials/stats_sub_menu", :locals => {:src => 'toppers'}  %>
+<%= javascript_include_tag "raphael_bar" %>
+<%= javascript_include_tag "g.bar-min" %>
+<br/>
+<div id="raphael_top_runs" align="center" style="height:430px;"></div>
+<div class="grid_12" align="center"><strong>Top Run Scorers</strong></div>
+<br/>
+<div id="raphael_top_wickets" align="center" style="height:430px;"></div>
+<div class="grid_12" align="center"><strong>Top Wicket Takers</strong></div>
+<br/>
+<div id="raphael_top_points" align="center" style="height:430px;"></div>
+<div class="grid_12" align="center"><strong>Top Rummy Points</strong></div>

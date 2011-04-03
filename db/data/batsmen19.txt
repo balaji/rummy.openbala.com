@@ -1,0 +1,22 @@
+AN Kervezee	c Prior b Bresnan	16	25	25	2	0	64.00
+W Barresi	st Prior b Swann	29	49	25	6	0	116.00
+TLW Cooper	c Anderson b Collingwood	47	84	73	3	0	64.38
+RN ten Doeschate	c Bopara b Broad	119	160	110	9	3	108.18
+B Zuiderent	c Collingwood b Swann	1	19	10	0	0	10.00
+TN de Grooth	 b Broad	28	47	31	3	0	90.32
+PW Borren	not out	35	41	24	4	0	145.83
+Mudassar Bukhari	not out	6	11	5	0	0	120.00
+PM Seelaar
+BP Loots
+BA Westdijk
+AJ Strauss	c Cooper b Mudassar Bukhari	88	x	83	9	0	106.02
+KP Pietersen	c Borren b Seelaar	39	x	61	5	0	63.93
+IJL Trott	st Barresi b ten Doeschate	62	x	65	4	0	95.38
+IR Bell	 b ten Doeschate	33	x	40	1	0	82.5
+PD Collingwood	not out	30	x	23	3	0	130.43
+RS Bopara	not out	30	x	20	2	1	150
+MJ Prior
+TT Bresnan
+SCJ Broad
+GP Swann
+JM Anderson

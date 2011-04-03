@@ -1,0 +1,24 @@
+<% content_for :title, "Available Matches to Play" %>
+<div class="grid_12" align="center">
+    <strong class="desc">Next 3 days matches</strong>
+</div>
+<div class="clearfix">&nbsp;</div>
+<% @latest_matches.each do |match| %>
+    <div class="grid_1">&nbsp;</div>
+    <div class="grid_2 matches"><%= match.country_one.name %></div>
+    <div class="grid_1 matches" align="center">v.</div>
+    <div class="grid_2 matches"><%= match.country_two.name %></div>
+    <div class="grid_2 matches"><%= match.stadium.city %></div>
+    <div class="grid_2 matches"><%= match.date.strftime("%d-%b, %a") %>&nbsp;
+        <% if match.day_night? %>
+            <%= image_tag "moon.png", {:style => "bottom: 0; position: absolute", :size => "16x16"} %>
+        <% else %>
+            &nbsp;
+        <% end %>
+    </div>
+    <div class="grid_1 matches">
+        <div class="play"><%= link_to 'Play', {:action => 'play', :match => match.id} %></div>
+    </div>
+    <div class="grid_1">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+<% end %>

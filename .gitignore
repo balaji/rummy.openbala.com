@@ -1,0 +1,13 @@
+*.swp
+*.swo
+log/*.log
+tmp/**/*
+doc/api
+doc/app
+rummy.iml
+.idea
+db/batsmen*.txt
+db/bowlers*.txt
+db/totals*.txt
+Gemfile.lock
+config/initializers/constants.rb

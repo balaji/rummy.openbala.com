@@ -1,0 +1,12 @@
+CB Mpofu	5	1	12	0	2.40	(1w)
+RW Price	8	4	16	3	2.00
+P Utseya	7	0	24	2	3.42	(2w)
+GA Lamb	8	0	29	2	3.62	(6w)
+AG Cremer	9.1	1	31	3	3.38
+SC Williams	5	0	11	0	2.20
+Khurram Chohan	10	0	44	2	4.40	(1nb, 1w)
+HS Baidwan	9	0	47	2	5.22
+AS Hansra	4	0	41	0	10.25
+Rizwan Cheema	9	0	51	1	5.66
+WD Balaji Rao	10	0	57	4	5.70
+JM Davison	8	0	56	0	7.00

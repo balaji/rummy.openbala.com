@@ -1,0 +1,14 @@
+SL Malinga	8	0	33	3	4.12	(2w)
+NLTC Perera	5	0	45	0	9.00	(1w)
+CRD Fernando	6	0	50	0	8.33	(6w)
+CK Kapugedera	1	0	7	0	7.00
+M Muralitharan	10	0	54	1	5.40
+BAW Mendis	10	0	45	2	4.50	(1w)
+HMRKB Herath	10	0	39	3	3.90	(1w)
+R Rampaul	9	1	49	0	5.44	(1nb, 3w)
+DJG Sammy	5	0	29	1	5.80
+AD Russell	4	0	42	1	10.50	(1nb)
+SJ Benn	10	0	40	3	4.00
+DJ Bravo	8.3	0	55	0	6.47	(1nb, 2w)
+CH Gayle	10	0	42	1	4.20	(2w)
+RR Sarwan	1	0	11	0	11.00	(2w)

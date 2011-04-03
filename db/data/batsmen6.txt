@@ -1,0 +1,30 @@
+G Gambhir	c White b Bollinger	6	14	15	1	0	40.00
+V Sehwag	 b Krejza	54	114	56	8	1	96.42
+V Kohli	c Hussey b Hastings	21	42	33	3	0	63.63
+Yuvraj Singh	c Paine b Johnson	1	14	7	0	0	14.28
+MS Dhoni	 b Hastings	11	31	24	1	0	45.83
+SK Raina	c Paine b Lee	12	28	16	1	0	75.00
+YK Pathan	c Krejza b Hussey	32	74	38	0	2	84.21
+Harbhajan Singh	 b Lee	4	2	2	1	0	200.00
+PP Chawla	 b Lee	0	9	6	0	0	0.00
+R Ashwin	not out	25	64	47	2	0	53.19
+A Nehra	c Krejza b Hussey	19	21	24	3	0	79.16
+MM Patel
+S Sreesanth
+Z Khan
+SR Tendulkar
+SR Watson	c Chawla b Sreesanth	33	35	26	7	0	126.92
+TD Paine	c Patel b Yuvraj Singh	37	87	57	4	0	64.91
+RT Ponting	st Dhoni b Harbhajan Singh	57	102	85	4	0	67.05
+MJ Clarke	 b Chawla	0	4	4	0	0	0.00
+CL White	c Ashwin b Chawla	4	17	13	0	0	30.76
+DJ Hussey	st Dhoni b Chawla	0	2	1	0	0	0.00
+CJ Ferguson	c Kohli b Chawla	8	8	9	1	0	88.88
+MG Johnson	st Dhoni b Harbhajan Singh	15	23	19	0	1	78.94
+JW Hastings	not out	1	14	3	0	0	33.33
+JJ Krejza	lbw b Harbhajan Singh	0	2	3	0	0	0.00
+B Lee	 b Ashwin	1	3	7	0	0	14.28
+SPD Smith
+SW Tait
+DE Bollinger
+BJ Haddin

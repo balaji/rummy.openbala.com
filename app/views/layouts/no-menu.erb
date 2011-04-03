@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Rummy - IPL</title>
+  <meta http-equiv="Content-Type" content="text/html; utf-8"/>
+  <%= javascript_include_tag "jquery-1.5.min" %>
+  <%= javascript_include_tag "ipl" %>
+  <%= stylesheet_link_tag "grid" %>
+  <%= stylesheet_link_tag "main" %>
+  <%= stylesheet_link_tag "fade" %>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15904486-3']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+<div class="container container_12">
+  <div id="iplDiv">
+    <div class="clearfix">&nbsp;</div>
+    <div align="center"><a href="/ipl"><span class="logo"></span></a></div>
+    <div class="clearfix">&nbsp;</div>
+  </div>
+  <%= yield %>
+  <div class="clear">&nbsp;</div>
+  <div class="woodFooter">
+    <div class="footer grid_12" align="center">
+      <a href="/session/wc">Rummy - World Cup</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&#169;&nbsp;<a href="http://openbala.com">openbala</a> 2011
+    </div>
+    <div class="clear">&nbsp;</div>
+  </div>
+</div>
+</body>
+</html>

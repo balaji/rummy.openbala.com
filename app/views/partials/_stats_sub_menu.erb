@@ -1,0 +1,9 @@
+<div class="grid_6">&nbsp;</div>
+<div align="center" class="grid_5">
+    <ul id="profile">
+      <li><%= link_to 'Country-wise', {:controller => 'statistics'}, :class => ('high_play' if src == 'statistics') %></li>
+      <li><%= link_to 'Complete Stats', {:controller => 'raw_stats'}, :class => ('high_play' if src == 'raw_stats') %></li>
+      <li><%= link_to 'Top 10', {:controller => 'toppers'}, :class => ('high_play' if src == 'toppers') %></li>
+    </ul>
+</div>
+<div class="clear clearfix">&nbsp;</div>

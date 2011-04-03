@@ -1,0 +1,23 @@
+Ahmed Shehzad	c Sangakkara b Perera	13	x	23	2	0	56.52
+Mohammad Hafeez	run out (Herath/Jayawardene/Sangakkara/Muralitharan)	32	x	31	4	1	103.22
+Kamran Akmal	st Sangakkara b Herath	39	x	48	5	0	81.25
+Younis Khan	c Jayawardene b Herath	72	x	76	4	0	94.73
+Misbah-ul-Haq	not out	83	x	91	6	0	91.2
+Umar Akmal	c Dilshan b Muralitharan	10	x	15	1	0	66.66
+Shahid Afridi	c Dilshan b Mathews	16	x	12	3	0	133.33
+Abdul Razzaq	c sub (CK Kapugedera) b Perera	3	x	4	0	0	75
+Umar Gul			x				
+Abdur Rehman			x				
+Shoaib Akhtar			x				
+WU Tharanga	c Shahid Afridi b Mohammad Hafeez	33	x	43	6	0	76.74
+TM Dilshan	 b Shahid Afridi	41	x	55	5	0	74.54
+KC Sangakkara	c Ahmed Shehzad b Shahid Afridi	49	x	61	2	1	80.32
+DPMD Jayawardene	 b Shoaib Akhtar	2	x	10	0	0	20
+TT Samaraweera	st Kamran Akmal b Shahid Afridi	1	x	4	0	0	25
+LPC Silva	st Kamran Akmal b Abdur Rehman	57	x	78	5	0	73.07
+AD Mathews	c Ahmed Shehzad b Shahid Afridi	18	x	20	2	0	90
+NLTC Perera	 b Shoaib Akhtar	8	x	6	1	0	133.33
+KMDN Kulasekara	c Umar Akmal b Umar Gul	24	x	14	2	1	171.42
+HMRKB Herath	not out	4	x	10	0	0	40
+M Muralitharan	not out	0	x	1	0	0	0
+CK Kapugedera			x				

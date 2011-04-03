@@ -1,0 +1,51 @@
+<% content_for :title, "My History" %>
+<%= render :partial => "partials/ranking_sub_menu", :locals => {:src => 'myspace'}  %>
+<div class="grid_1">&nbsp;</div>
+<div class="grid_10">
+    <% @matches.length.times do |m| %>
+        <div class="myspace">
+            <div class="scorecard" align="center"><strong><%= @matches[m].country_one.name %>
+                v. <%= @matches[m].country_two.name %></strong></div>
+            <div align="center" class="scorecard" <%= 'style="color:red;font-weight:bold;"' if @matches[m].status == 'active' %>><%= @matches[m].date.strftime("%d-%m-%Y") %></div>
+            <br/>
+            <% game_data = UserGameData.played(session[:user_id], @matches[m].id)
+               if !game_data.nil?
+                   game_data.player_order.split(',').each do |j| %>
+                    <span class="scorecard"><%= Player.find(j).display_name %></span>
+
+                    <div style="float:right;">
+                        <% player_match = PlayerMatchPoint.find_by_player_id_and_match_id(Player.find(j).id, @matches[m].id) %>
+                        <strong class="scorecard"><%= player_match.points if player_match %>&nbsp;</strong>
+                    </div>
+                    <div class='clear'>&nbsp;</div>
+                <% end %>
+                <div class='clearfix'>&nbsp;</div>
+                <span class="scorecard">Points:</span>
+
+                <div style="color: #a52a2a;float:right;">
+                    <strong class="scorecard"><%= game_data.match.status == "finished" ? game_data.points : "---" %>&nbsp;</strong>
+                </div>
+                <div align="center">
+                    <span class="scorecard">Rank: </span>
+                    <strong>
+                        <% data = UserGameData.find_all_by_match_id(@matches[m].id) %>
+                        <%= data.sort_by { |pm| -pm.points }.index(game_data) + 1 if @matches[m].status == 'finished' %>
+                        / <%= data.length if @matches[m].status == 'finished' %>
+                    </strong>
+                </div>
+                </div>
+                <% if (m + 1) % 3 == 0 %>
+                    <div class="clear"></div>
+                <% end %>
+            <% else %>
+                <div align="center" class="scorecard">
+                    <% if (@matches[m].status == 'active' and Time.now < @matches[m].date) %>
+                        <a href="/game/play?match=<%= @matches[m].id %>">Play Now!</a>
+                    <% else %>
+                        Didn't Play
+                    <% end %>
+                </div>
+                </div>
+            <% end %>
+    <% end %>
+    </div>

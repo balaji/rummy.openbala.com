@@ -1,0 +1,9 @@
+TM Odoyo	3	0	25	0	8.33	(1w)
+E Otieno	2	0	18	0	9.00
+JK Kamande	2	0	21	0	10.50	(1w)
+NN Odhiambo	1	0	5	0	5.00	(1nb, 1w)
+TG Southee	6	0	13	3	2.16	(1nb)
+NL McCullum	4	0	15	0	3.75	(1w)
+HK Bennett	5	0	16	4	3.20	(1w)
+DL Vettori	6	1	16	0	2.66
+JDP Oram	2.5	1	2	3	0.70

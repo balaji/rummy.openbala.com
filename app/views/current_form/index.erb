@@ -1,0 +1,47 @@
+<% content_for :title, "Current Form" %>
+<%= render :partial => "partials/ranking_sub_menu", :locals => {:src => 'current_form'}  %>
+<div class="grid_12" align="center"><strong>Last 3 matches' performance</strong></div>
+<div class="clear"></div>
+<br/>
+<div class="grid_3">&nbsp;</div>
+<div class="grid_1" align="center"><strong>Rank</strong></div>
+<div class="grid_3" align="center"><strong>User</strong></div>
+<div class="grid_1" align="center"><strong>Points</strong></div>
+<div class="grid_2" align="center"><strong>Previous Rank</strong></div>
+<div class="clearfix"></div>
+<div class="grid_3">&nbsp;</div>
+<div class="grid_8">
+  <% @current_form.each do |current_form| %>
+    <div class="highlight highlight_p_width <%= (self.current_user.id == current_form.user.id if signed_in?)? "highlight_c_rank" : "highlight_rank" %>"><%= current_form.rank %></div> 
+    <div class="highlight highlight_u_width <%= (self.current_user.id == current_form.user.id if signed_in?)? "highlight_c_user" : "highlight_user" %>">&nbsp;<%= current_form.user.name %><%= image_tag current_form.user.image, :class => 'image_pos' %></div>
+    <div class="highlight highlight_p_width <%= (self.current_user.id == current_form.user.id if signed_in?)? "highlight_c_points" : "highlight_points" %>"><%= current_form.points %></div>
+    <% prev = CurrentForm.find_by_user_id_and_match_id(current_form.user_id, current_form.match_id - 1) %>
+    <% if prev  
+        if prev.rank == current_form.rank %>
+    <div class="grid_1">
+      <%= image_tag "nochange.png"%>
+    </div>
+      <div class="grid_1 highlight scorecard" align="center" style="top:10px;"><%= prev.rank%></div>
+      <% elsif prev.rank > current_form.rank %>
+    <div class="grid_1">
+      <%= image_tag "up.png"%>
+    </div>
+      <div class="grid_1 highlight scorecard" align="center" style="top:10px;"><%= prev.rank%></div>
+      <% elsif prev.rank < current_form.rank %>
+    <div class="grid_1">
+      <%= image_tag "down.png"%>
+    </div>
+      <div class="grid_1 highlight scorecard" align="center" style="top:10px;"><%= prev.rank%></div>
+      <% end %>
+    <% else %>
+    <div class="grid_1">
+      <%= image_tag "new.png"%>
+    </div>
+    <div class="grid_1 highlight scorecard" style="top:10px;"><strong>new</strong></div>
+    <% end %>
+    <div class="clear"></div>
+  <% end %>
+</div>
+<div class="clearfix">&nbsp;</div>
+<div class="grid_3">&nbsp;</div>
+<div class="grid_4" align="center"><%= will_paginate @current_form %></div>

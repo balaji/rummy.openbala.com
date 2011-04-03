@@ -1,0 +1,96 @@
+<% content_for :title, "Home" %>
+<div class="clearfix">&nbsp;
+  <div id="fb-root"></div>
+</div>
+<script>
+  FB.init({
+    appId:'190939097590526', cookie:true,
+    status:true, xfbml:true
+  });
+
+  function postToWall() {
+    FB.ui({ method: 'feed', message: 'Facebook for Websites is super-cool'});
+  }
+
+  function inviteFriends() {
+    FB.ui({method: 'apprequests', message: 'You should learn more about this game.', data: 'tracking information for the user'});
+  }
+</script>
+<div class="grid_7 desc" align="center">
+  <div class="graublau">IPL Preview</div>
+  <a href="/ipl"><%= image_tag "ipl.png", {:style => "border:0;"} %></a>
+</div>
+
+<div class="grid_1">&nbsp;</div>
+<div class="grid_4" align="right">
+  <script src="http://connect.facebook.net/en_US/all.js#appId=190939097590526&amp;xfbml=1"></script>
+  <fb:like href="http://www.facebook.com/apps/application.php?id=190939097590526" width="300"></fb:like>
+</div>
+<div class="clearfix">&nbsp;</div>
+<br/>
+<br/>
+<br/>
+<div class="grid_12 inner_shadow" style="color:gray;font-family:Tahoma, 'trebuchet ms';font-weight:bold;font-size:26px" align="center">Your
+  Attention Please!
+</div>
+<div class="grid_12" align="center">
+  <% ipl_time = Time.now.in_time_zone('Chennai')
+     ipl_time = ipl_time.change({:month => 4, :day => 8})
+     time_left = ((ipl_time - Time.now.in_time_zone('Chennai')) / 60 / 60 / 24).round %>
+  <strong style="color:red;"><%= time_left %></strong> days left for IPL 4. What will you want in the new Rummy?
+</div>
+<div class="grid_3">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+<div class="grid_2">&nbsp;</div>
+<form method="post" action="/session/save">
+  <input type="hidden" name="authenticity_token" id="authenticity_token" value="<%= form_authenticity_token %>"/>
+  <input type="checkbox" class="jsCheck grid_1" name="no" id="no"><label for="no" class="grid_8">Naaa, I won't be
+  playing this anymore.</label>
+
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <input type="checkbox" class="jsCheck grid_1" name="rule" id="rule"><label for="rule" class="grid_8">T20 is more
+  intense, your app's rules won't fit.</label>
+
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <input type="checkbox" class="jsCheck grid_1" name="prizes" id="prizes"><label for="prizes" class="grid_8">What will I
+  get out of playing? If there is a T-Shirt for winners, then...</label>
+
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <input type="checkbox" class="jsCheck grid_1" name="mobile" id="mobile"><label for="mobile" class="grid_8">I want this
+  game as an app on my Android/iPhone/Symbian/WP7 device.</label>
+
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <input type="checkbox" class="jsCheck grid_1" name="laf" id="laf"><label for="laf" class="grid_8">Change the website's
+  UI, this is not that friendly.</label>
+
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <input type="checkbox" class="jsCheck grid_1" name="more" id="more"><label for="more" class="grid_8">Have more variety
+  of Games, there should be a take away for non-regulars</label>
+
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <input type="checkbox" class="jsCheck grid_1" name="pop" id="pop"><label for="pop" class="grid_8">This is not popular,
+  do you know anything about Marketing at all?</label>
+
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <input type="checkbox" class="jsCheck grid_1" name="suggest" id="suggest"><label for="suggest" class="grid_8">Hey, I
+  have this idea for IPL 4, can you add this to your app?</label>
+
+  <div class="clear"></div>
+  <div class="grid_2">&nbsp;</div>
+  <input type="checkbox" class="jsCheck grid_1" name="feedback" id="feedback"><label for="feedback" class="grid_8">Some
+  Random thoughts about your website.</label>
+
+  <div class="clear"></div>
+  <br/>
+
+  <div class="grid_11" align="center">
+    <input type="submit" class="button" value="submit"/>
+  </div>
+</form>
