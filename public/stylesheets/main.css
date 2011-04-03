@@ -2,6 +2,23 @@
   font-family: Graublau;
   src: url('GraublauWebBold.otf');
 }
+@font-face {
+  font-family: Lobster;
+  src: url('Lobster.otf');
+}
+
+.logo {
+  position: relative;
+  display: block;
+  height: 70px;
+  width: 196px;
+  background: url("/images/rummy-logo.png") 0 0 no-repeat;
+}
+
+.woodFooter {
+  height:28px;
+  background: url("/images/wood-bg.jpg") 0 0 repeat-x scroll;
+}
 
 body {
     font-family: 'PT Sans', "lucida grande", tahoma, verdana, arial, sans-serif;
@@ -21,7 +38,15 @@ div#wcDiv {
 }
 
 div#iplDiv {
-  background-color: #990033;
+  background: url("/images/wood-bg.jpg") 0 0 repeat-x scroll;
+}
+
+div.container {
+  background-image:url("/images/laminat.jpg");
+}
+
+.white {
+  color:white;
 }
 
 img.jsShadow {
@@ -33,7 +58,7 @@ div#mainMenu {
 }
 
 .banner {
-    font-family: 'Lobster', arial, serif;
+    font-family: Lobster, arial, serif;
     font-size: 84px;
 }
 
@@ -69,7 +94,7 @@ td.space_5 {
 }
 
 .ipl_select{
-    color: #ffffff;
+    color: red;
     font-weight: bold;
 }
 
@@ -267,8 +292,13 @@ ul#menu li a:hover {
 }
 
 .footer {
-    color: gray;
+    color: white;
     font-size: small;
+}
+
+.footer > a {
+  text-decoration:none;
+  color:white;
 }
 
 .draggable {

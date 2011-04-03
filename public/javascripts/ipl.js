@@ -1,5 +1,4 @@
 var teamImages = new Array();
-var indexImages = new Array();
 var promoImages = new Array();
 
 var loadTeamImages = function() {
@@ -24,24 +23,6 @@ var loadTeamImages = function() {
   }
 };
 
-var loadIndexImages = function() {
-  if (indexImages.length == 0) {
-    var images = new Array();
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/stadia-over.jpg");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/teams-over.jpg");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/schedule-over.jpg");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/gilli-over.jpg");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/rummyg-over.jpg");
-    images.push("https://s3-ap-southeast-1.amazonaws.com/openbala/mangatha-over.jpg");
-
-    for (i = 0; i < images.length; i++) {
-      var img = new Image();
-      img.src = images[i];
-      indexImages.push(img);
-    }
-  }
-};
-
 var loadPromoImages = function() {
   if (promoImages.length == 0) {
     var images = new Array();
@@ -58,11 +39,18 @@ var loadPromoImages = function() {
 
 $(document).ready(function() {
 
+  $('.fade').append('<span class="hover"></span>').each(function () {
+    var $span = $('> span.hover', this).css('opacity', 0);
+    $(this).hover(function () {
+      $span.stop().fadeTo(500, 1);
+    }, function () {
+      $span.stop().fadeTo(500, 0);
+    });
+  });
+
   var imageSrc = function(element) {
     if (element.hasClass('jsTeam'))
       return teamImages[element.attr("name")].src;
-    else if (element.hasClass('jsIndex'))
-      return indexImages[element.attr("name")].src;
     else
       return promoImages[element.attr("name")].src;
   };

@@ -1,0 +1,68 @@
+.fade {
+  position: relative;
+  display: block;
+  height: 180px;
+  width: 180px;
+  box-shadow: 3px 3px 7px #777;
+}
+
+.fade * {
+  display: none;
+}
+
+.fade span.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 180px;
+  width: 180px;
+}
+
+.fadeMangatha span.hover {
+  background: url("/images/manga.jpg") 0 -180px no-repeat;
+}
+
+.fadeMangatha {
+  background: url("/images/manga.jpg") 0 0 no-repeat;
+}
+
+.fadeRummy span.hover {
+  background: url("/images/rumm.jpg") 0 -180px no-repeat;
+}
+
+.fadeRummy {
+  background: url("/images/rumm.jpg") 0 0 no-repeat;
+}
+
+.fadeSchedule span.hover {
+  background: url("/images/sched.jpg") 0 -180px no-repeat;
+}
+
+.fadeSchedule {
+  background: url("/images/sched.jpg") 0 0 no-repeat;
+}
+
+.fadeStadium span.hover {
+  background: url("/images/stad.jpg") 0 -180px no-repeat;
+}
+
+.fadeStadium {
+  background: url("/images/stad.jpg") 0 0 no-repeat;
+}
+
+.fadeTeams span.hover {
+  background: url("/images/team.jpg") 0 -180px no-repeat;
+}
+
+.fadeTeams {
+  background: url("/images/team.jpg") 0 0 no-repeat;
+}
+
+.fadeGilli span.hover {
+  background: url("/images/gill.jpg") 0 -180px no-repeat;
+}
+
+.fadeGilli {
+  background: url("/images/gill.jpg") 0 0 no-repeat;
+}
