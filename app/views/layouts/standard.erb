@@ -1,77 +1,91 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; utf-8"/>
-    <title>Rummy - <%= h yield(:title) %></title>
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css' />
-    <%= javascript_include_tag "jquery-1.5.min" %>
-    <%= javascript_include_tag "prototype" %>
-    <%= javascript_include_tag "json2" %>
-    <%= javascript_include_tag "raphael-min" %>
-    <%= javascript_include_tag "g.raphael-min" %>
-    <%= javascript_include_tag "g.pie-min" %>
-    <%= javascript_include_tag "effects" %>
-    <%= javascript_include_tag "dragdrop" %>
-    <%= javascript_include_tag "application" %>
-    <%= stylesheet_link_tag "new_twitter" %>
-    <%= stylesheet_link_tag "grid" %>
-    <%= stylesheet_link_tag "main" %>
-    <script src="http://connect.facebook.net/en_US/all.js#appId=190939097590526&amp;xfbml=1"></script>
-  </head>
-  <body>
-    <div id="wcDiv" class="container_12">
-        <div class="grid_2">&nbsp;</div>
-        <div class="grid_2">&nbsp;<%= image_tag "icc-world-cup.png", {:style => "position: absolute; right: 0;"} %></div>
-        <div class="grid_4 inner_shadow banner wcColor" align="center">Rummy</div>
-        <div class="grid_2">&nbsp;<%= image_tag "rummy.png", {:style => "position: absolute; height: 120px;"} %></div> 
-        <%
-            rank = if self.signed_in? and self.current_user.total_points > 0
-                     User.all.sort_by {|u| -u.total_points}.index(self.current_user) + 1 
-                   else
-                     'NA'
-                   end
-                 %>
-               <div class="grid_1" style="float:left;top:60px;"><strong style="font-size:13px;">Rank: <%= rank%></strong></div>
-               <div id="profile_pic" class="grid_1" align="right">
-                 <%= image_tag (self.signed_in? ? current_user.image : "incognito.png"), {:style => "position: absolute; bottom: 0; right: 0"} %>
-               </div>
-               <div id="sign_out" class="grid_12" align="right">&nbsp;&nbsp;<%= link_to 'sign out', logout_path %></div>
-               <% matches = Match.find(:all, :conditions => ['Date(date) = ?', Time.now])
-               if !matches.empty?
-                 matches.each do |match|
-                   if Time.now > match.date and match.status == 'active' %>
-                 <div class="scorecard grid_12 highlight_message" align="center">
-                   <%= "#{match.country_one.name} v. #{match.country_two.name} is in progress. Check back once the game is over for updated rankings." %>
-                 </div>
-               <% end %>
-             <% end %>
-           <% end %>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; utf-8"/>
+  <title>Rummy - <%= h yield(:title) %></title>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'/>
+  <%= javascript_include_tag "jquery-1.5.min" %>
+  <%= javascript_include_tag "prototype" %>
+  <%= javascript_include_tag "json2" %>
+  <%= javascript_include_tag "raphael-min" %>
+  <%= javascript_include_tag "g.raphael-min" %>
+  <%= javascript_include_tag "g.pie-min" %>
+  <%= javascript_include_tag "effects" %>
+  <%= javascript_include_tag "dragdrop" %>
+  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "new_twitter" %>
+  <%= stylesheet_link_tag "grid" %>
+  <%= stylesheet_link_tag "main" %>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15904486-3']);
+    _gaq.push(['_trackPageview']);
 
-           <div id="mainMenu" class="grid_12">
-             <ul id="menu">
-               <li><%= link_to 'Home', {:controller => 'session', :action => "wc"}, :class => ("high_play" if yield(:title) == 'Home') %></li>
-               <li><%= link_to 'Schedule', {:controller => 'schedule'}, :class => ("high_play" if yield(:title) == 'World Cup Match Schedule')  %></li>
-               <li><%= link_to 'Rules', {:controller => 'rules'}, :class => ("high_play" if yield(:title) == 'Game Rules')  %></li>
-               <li><%= link_to 'Play!', {:controller => 'game'}, :class => ("high_play" if yield(:title) == 'Available Matches to Play' or /^Play!/.match(yield(:title)))  %></li>
-               <li><%= link_to 'Ranking', {:controller => 'profile'}, :class => ("high_play" if yield(:title) == 'Current Form' or 
-                                                                                 yield(:title) == 'Analysis' or
-                                                                                 yield(:title) == 'My History' or
-                                                                                 yield(:title) == 'Ranking')  %></li>
-               <li><%= link_to 'Trends', {:controller => 'trends'}, :class => ("high_play" if yield(:title) == 'World Cup - Completed Matches' or /^Score Card of/.match(yield(:title)))  %></li>
-               <li><%= link_to 'Stats', {:controller => 'statistics'}, :class => ("high_play" if yield(:title) == 'Stats' or 
-                                                                                                 yield(:title) == 'World Cup Statistics' or
-                                                                                                 yield(:title)== 'Toppers')  %></li>
-               <li><%= link_to 'Feedback', {:controller => 'feedback'}, :class => ("high_play" if yield(:title) == 'Feedback')  %></li>
-             </ul>
-           </div>
-         <div class="clear clearfix">&nbsp;</div>
-         <%= yield %>
-        <div class="clear clearfix">&nbsp;</div>
-       <br/>
-       <div style="background-color:#6495ed;padding:3px;">
-         <div class="footer grid_12" align="center">&#169;&nbsp;<a href="http://openbala.com">openbala</a> 2011</div>
-         <div class="clear">&nbsp;</div>
-       </div>
-     </div>
-   </body>
- </html>
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+<div id="wcDiv" class="container_12">
+  <div class="grid_2">&nbsp;</div>
+  <div class="grid_2">&nbsp;<%= image_tag "icc-world-cup.png", {:style => "position: absolute; right: 0;"} %></div>
+  <div class="grid_4 inner_shadow banner wcColor" align="center">Rummy</div>
+  <div class="grid_2">&nbsp;<%= image_tag "rummy.png", {:style => "position: absolute; height: 120px;"} %></div>
+  <%
+     rank = if self.signed_in? and self.current_user.total_points > 0
+       User.all.sort_by { |u| -u.total_points }.index(self.current_user) + 1
+            else
+              'NA'
+            end
+  %>
+  <div class="grid_1" style="float:left;top:60px;"><strong style="font-size:13px;">Rank: <%= rank %></strong></div>
+  <div id="profile_pic" class="grid_1" align="right">
+    <%= image_tag (self.signed_in? ? current_user.image : "incognito.png"), {:style => "position: absolute; bottom: 0; right: 0"} %>
+  </div>
+  <div id="sign_out" class="grid_12" align="right">&nbsp;&nbsp;<%= link_to 'sign out', logout_path %></div>
+  <% matches = Match.find(:all, :conditions => ['Date(date) = ?', Time.now])
+     if !matches.empty?
+       matches.each do |match|
+         if Time.now > match.date and match.status == 'active' %>
+        <div class="scorecard grid_12 highlight_message" align="center">
+          <%= "#{match.country_one.name} v. #{match.country_two.name} is in progress. Check back once the game is over for updated rankings." %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <div id="mainMenu" class="grid_12">
+    <ul id="menu">
+      <li><%= link_to 'Home', {:controller => 'session', :action => "wc"}, :class => ("high_play" if yield(:title) == 'Home') %></li>
+      <li><%= link_to 'Schedule', {:controller => 'schedule'}, :class => ("high_play" if yield(:title) == 'World Cup Match Schedule') %></li>
+      <li><%= link_to 'Rules', {:controller => 'rules'}, :class => ("high_play" if yield(:title) == 'Game Rules') %></li>
+      <li><%= link_to 'Play!', {:controller => 'game'}, :class => ("high_play" if yield(:title) == 'Available Matches to Play' or /^Play!/.match(yield(:title))) %></li>
+      <li><%= link_to 'Ranking', {:controller => 'profile'}, :class => ("high_play" if yield(:title) == 'Current Form' or
+          yield(:title) == 'Analysis' or
+          yield(:title) == 'My History' or
+          yield(:title) == 'Ranking') %></li>
+      <li><%= link_to 'Trends', {:controller => 'trends'}, :class => ("high_play" if yield(:title) == 'World Cup - Completed Matches' or /^Score Card of/.match(yield(:title))) %></li>
+      <li><%= link_to 'Stats', {:controller => 'statistics'}, :class => ("high_play" if yield(:title) == 'Stats' or
+          yield(:title) == 'World Cup Statistics' or
+          yield(:title)== 'Toppers') %></li>
+      <li><%= link_to 'Feedback', {:controller => 'feedback'}, :class => ("high_play" if yield(:title) == 'Feedback') %></li>
+    </ul>
+  </div>
+  <div class="clear clearfix">&nbsp;</div>
+  <%= yield %>
+  <div class="clear clearfix">&nbsp;</div>
+  <br/>
+
+  <div style="background-color:#6495ed;padding:3px;">
+    <div class="footer grid_12" align="center">&#169;&nbsp;<a href="http://openbala.com">openbala</a> 2011</div>
+    <div class="clear">&nbsp;</div>
+  </div>
+</div>
+</body>
+</html>
